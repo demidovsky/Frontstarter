@@ -1,0 +1,373 @@
+// ---------------------------------------------- Для отладки ----------------------------------------------
+
+// * { outline: 1px solid rgba(255,0,0,0.5) }
+
+
+
+
+
+
+// ----------------------------------------------- Константы -----------------------------------------------
+
+@img: "../../img/";
+
+@maincolor: #ffe800;
+
+
+
+
+
+
+// ------------------------------------------------ Объекты ------------------------------------------------
+
+.button(@fore-color, @bg-color:transparent, @w:200px, @h:40px)
+{
+	.inline-block();
+	width: @w;
+	height: @h;
+	line-height: @h;
+	text-align: center;
+	font-size: 15px;
+	color: @fore-color;
+	border: 2px solid @fore-color;
+	background-color: @bg-color;
+	.border-radius(8px);
+}
+
+
+
+
+
+// ----------------------------------------------- Сглаживания ---------------------------------------------
+
+@sine-out: cubic-bezier(0.39, 0.575, 0.565, 1);
+@quad-out:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+@cubic-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@quart-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+@quint-out: cubic-bezier(0.23, 1, 0.32, 1);
+@expo-out:  cubic-bezier(0.19, 1, 0.22, 1);
+@back-out:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+@sine-in: cubic-bezier(0.47, 0, 0.745, 0.715);
+@quad-in: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+@cubic-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@quart-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+@quint-in: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@expo-in: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+@back-in: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+@sine-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+@quad-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+@cubic-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@quart-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+@quint-in-out: cubic-bezier(0.86, 0, 0.07, 1);
+@expo-in-out: cubic-bezier(1, 0, 0, 1);
+@back-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+
+// ----------------------------------------------- CSS3 -----------------------------------------------
+
+.border-radius(@args)
+{
+	-webkit-border-radius: @args;
+	   -moz-border-radius: @args;
+	        border-radius: @args;
+}
+
+
+
+.columns(@args)
+{
+	-webkit-columns: @args;
+	   -moz-columns: @args;
+	        columns: @args;
+}
+
+
+
+.column-count(@cols)
+{
+	-webkit-column-count: @cols;
+	   -moz-column-count: @cols;
+	        column-count: @cols;
+}
+
+
+
+.opacity(@opacity: 0.5) {
+	-webkit-opacity: @opacity;
+	   -moz-opacity: @opacity;
+	        opacity: @opacity;
+
+	@ie: @opacity * 100;
+	filter: alpha(opacity=@ie);
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ie})";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie);
+}
+
+
+
+.box-shadow(@args) {
+	-webkit-box-shadow: @args;
+	   -moz-box-shadow: @args;
+	        box-shadow: @args;
+}
+
+
+
+.text-shadow(@args) {
+	-webkit-text-shadow: @args;
+	   -moz-text-shadow: @args;
+	        text-shadow: @args;
+}
+
+
+
+.user-select(@argument) {
+	-webkit-user-select: @argument;
+	   -moz-user-select: @argument;
+	    -ms-user-select: @argument;
+	        user-select: @argument;
+}
+
+
+
+.border-box()
+{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+
+.background-clip()
+{
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding-box;
+	        background-clip: padding-box;
+}
+
+
+
+.background-size(@args)
+{
+	-webkit-background-size: @args;
+	   -moz-background-size: @args;
+	     -o-background-size: @args;
+	        background-size: @args;
+}
+
+
+
+.transition(@args) {
+	-webkit-transition: @args;
+	   -moz-transition: @args;
+	        transition: @args;
+}
+
+
+
+.vertical-gradient(@top, @bottom) {
+	background: mix(@top, @bottom); // совсем старые браузеры
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @bottom), color-stop(1, @top)); // старые вебкиты
+	background: -webkit-linear-gradient(top, @top 0%, @bottom 100%); // новые вебкиты
+	background: -ms-linear-gradient(bottom, @bottom, @top); // новые ИЕ
+	background: -moz-linear-gradient(center bottom, @bottom 0%, @top 100%); // фокс
+	background: -o-linear-gradient(center bottom, @bottom 0%, @top 100%); // опера
+	background: linear-gradient(to bottom, @top 0%, @bottom 100%); // стандарт
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @top, @bottom)); // старые ИЕ
+}
+
+
+
+.horizontal-gradient(@l, @r)
+{
+	background: -moz-linear-gradient(left,  @r 0%, @l 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(0%,@r), color-stop(100%,@l)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right,  @r 0%,@l 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right,  @r 0%,@l 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(right,  @r 0%,@l 100%); /* IE10+ */
+	background: linear-gradient(to left,  @r 0%,@l 100%); /* W3C */
+	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr='@{r}', endColorstr=@{l}, GradientType=1 )"); /* IE6-9 */
+}
+
+
+
+.backface()
+{
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	    -ms-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
+
+
+
+.preserve-3d()
+{
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	    -ms-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+}
+
+
+
+.transform(@args, @perspective:300px)
+{
+	-webkit-perspective: @perspective;
+	   -moz-perspective: @perspective;
+	    -ms-perspective: @perspective;
+	        perspective: @perspective;
+
+	-webkit-transform: @args;
+	   -moz-transform: @args;
+	    -ms-transform: @args;
+	        transform: @args;
+
+	.backface();
+	.preserve-3d();
+}
+
+
+
+.rotate(@deg)
+{
+	@value: ~"@{deg}deg";
+	-webkit-transform: rotate(@value);
+	   -moz-transform: rotate(@value);
+	    -ms-transform: rotate(@value);
+	        transform: rotate(@value);
+}
+
+
+
+.ellipsis()
+{
+	-ms-text-overflow: ellipsis;
+	 -o-text-overflow: ellipsis;
+	    text-overflow: ellipsis;
+}
+
+
+
+.grab()
+{
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+
+	&:active
+	{
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+	}
+}
+
+
+
+.placeholder(@color: @input-color-placeholder)
+{
+	&:-moz-placeholder            { color: @color; } // Firefox 4-18
+	&::-moz-placeholder           { color: @color; } // Firefox 19+
+	&:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+
+// ----------------------------------------------- Приблуды -----------------------------------------------
+
+.clearfix()
+{
+	&:after
+	{
+		clear: both;
+		content: "";
+		display: block;
+		width: 100%;
+	}
+}
+
+
+
+.font(@size, @line-height:normal)
+{
+	font-size: @size;
+	line-height: @line-height;
+}
+
+
+
+.inline-block(@valign: auto)
+{
+	display: inline-block;
+	vertical-align: @valign;
+}
+
+
+
+.arrow-down(@w, @h, @color)
+{
+	width: 0;
+	height: 0;
+	border-left: @w/2 solid transparent;
+	border-right: @w/2 solid transparent;
+	border-top: @h solid @color;
+}
+
+.arrow-up(@w, @h, @color)
+{
+	width: 0;
+	height: 0;
+	border-left: @w/2 solid transparent;
+	border-right: @w/2 solid transparent;
+	border-bottom: @h solid @color;
+}
+
+.arrow-right(@w, @h, @color)
+{
+	width: 0;
+	height: 0;
+	border-top: @h/2 solid transparent;
+	border-bottom: @h/2 solid transparent;
+	border-left: @w solid @color;
+}
+
+.arrow-left(@w, @h, @color)
+{
+	width: 0;
+	height: 0;
+	border-top: @h/2 solid transparent;
+	border-bottom: @h/2 solid transparent;
+	border-right: @w solid @color;
+}
+
+
+
+.sprite(@x, @y, @w, @h)
+{
+	@bg-x: -@x*@w;
+	@bg-y: -@y*@h;
+	background-position: @bg-x @bg-y;
+}
+
+
+
+.image-overlay(@url, @color:transparent)
+{
+	position: relative;
+
+	&:after
+	{
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: @color url(@url) left top no-repeat;
+	}
+}
