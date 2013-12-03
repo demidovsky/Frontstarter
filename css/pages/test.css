@@ -1,0 +1,182 @@
+/*
+<div class="checkbox">
+	<label class="checkbox2">
+		<input type="checkbox">
+		<span class="pic"></span>
+		<span class="text">�������</span>
+	</label>
+</div>
+*/
+/*
+<div class="placeholder">
+	<label>������� �����</label>
+	<input type="text">
+</div>
+*/
+/*
+<... data-tooltip="���������">�����</...>
+*/
+/*
+	Test Module name
+*/
+/*-------------------------------------- 320 --------------------------------------*/
+/*-------------------------------------- 480 --------------------------------------*/
+/*-------------------------------------- 768 --------------------------------------*/
+/*-------------------------------------- 1024 -------------------------------------*/
+body.test {
+  padding: 30px;
+  background: #333;
+  color: #ddd;
+}
+body.test .content section > * {
+  margin: 20px 0;
+}
+body.test .title {
+  color: #ab39f2;
+  font-weight: normal;
+}
+body.test .is-bold {
+  font-weight: bold;
+}
+body.test .checkbox {
+  width: 300px;
+  position: relative;
+  line-height: 32px;
+  min-height: 32px;
+}
+body.test .checkbox input {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+body.test .checkbox input:checked + .pic {
+  background-position: center center;
+}
+body.test .checkbox .pic {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  background-image: url("../../img/form/checkbox.png");
+  background-position: center -100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+body.test .checkbox .text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding-left: 41.6px;
+  cursor: pointer;
+}
+body.test .checkbox .pic {
+  background-color: white;
+  border: 1px solid #888;
+}
+body.test .combobox.with-bg .ufd {
+  background: #ffffff;
+}
+body.test .combobox.with-bg .ufd input {
+  color: #000000 !important;
+}
+body.test .combobox.with-dash .ufd {
+  border-bottom: 1px dashed #ab39f2;
+}
+body.test .placeholder {
+  color: #333;
+  width: 300px;
+  position: relative;
+}
+body.test .placeholder label {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 32px;
+  line-height: 33px;
+  padding-left: 7px;
+  width: 100%;
+  height: 100%;
+  cursor: text;
+}
+body.test .placeholder input,
+body.test .placeholder textarea {
+  width: 100%;
+  padding-left: 7px;
+  height: 32px;
+  line-height: 32px;
+}
+body.test .placeholder textarea {
+  line-height: normal;
+  padding-top: 4px;
+}
+body.test .placeholder label {
+  color: #888888;
+}
+body.test .placeholder textarea {
+  height: 100px;
+}
+body.test .tooltip {
+  position: relative;
+  display: inline;
+  border-bottom: 1px dashed;
+  cursor: help;
+  /* ���� ��������� */
+  /* ������� */
+}
+body.test .tooltip:before {
+  content: attr(data-tooltip);
+  display: none;
+  white-space: nowrap;
+  background: #000000;
+  color: #ffffff;
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-left: 20px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+body.test .tooltip:after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 12px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #000000;
+}
+body.test .tooltip:hover:before,
+body.test .tooltip:hover:after {
+  display: block;
+}
+body.test .polyfills {
+  width: 800px;
+}
+body.test .has-columns {
+  width: 800px;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+body.test .is-rounded {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  background: #444;
+}

@@ -113,6 +113,58 @@
 
 
 
+/*
+<... data-tooltip="подсказка">текст</...>
+*/
+
+.custom-tooltip(@bgcolor: black, @textcolor:white, @pad:10px)
+{
+	position: relative;
+	display: inline;
+	border-bottom: 1px dashed;
+	cursor: help;
+
+	/* тело подсказки */
+	&:before
+	{
+		content: attr(data-tooltip);
+		display: none;
+		white-space: nowrap;
+	    background: @bgcolor;
+	    color: @textcolor;
+	    position: absolute;
+	    left: 100%;
+	    top: -@pad;
+	    margin-left: 20px;
+	    padding: @pad;
+	    .border-radius(5px);
+	}
+
+	/* хвостик */
+	&:after
+	{
+		content: "";
+	    display: none;
+	    position: absolute;
+	    top: 0;
+	    left: 100%;
+	    margin-left: 12px;
+	    .arrow-left(10px, 20px, @bgcolor);
+	}
+
+	&:hover
+	{
+		&:before,
+		&:after
+		{
+			display: block;
+		}
+	}
+}
+
+
+
+
 
 // ----------------------------------------------- Сглаживания ---------------------------------------------
 

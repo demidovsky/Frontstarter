@@ -63,14 +63,14 @@
 			<button class="js-datepicker-open">Выбрать дату</button>
 		</div>
 
-		<div class="tooltip" data-tooltip="Подсказка">Текст с подсказкой</div>
+		<div class="tooltip" data-tooltip="Только CSS">Подсказка</div>
 
 	</section>
 
 
 	<section class="polyfills">
 
-		<h2 class="title">Заплатки</h2>
+		<h2 class="title">Заплатки <i>(cм. в IE8)</i></h2>
 
 		<div class="has-columns">
 			<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
