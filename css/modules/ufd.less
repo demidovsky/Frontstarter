@@ -5,11 +5,14 @@
 	edited
 */
 
-@height: 28px;
-@border: 1px solid #a3a3a3;
+@size: 28px;
+@padding: 4px;
+@border: 0px dashed #a3a3a3;
 @font: 15px sans-serif;
-@color: #3e8cb5;
-@arrow: "@{img}arrow/blue-down.png";
+@arrow: "@{img}form/combobox.png";
+@hovercolor: #ab39f2;
+@bgcolor: transparent;
+@textcolor: white;
 
 
 
@@ -23,7 +26,6 @@
 	border: 0;
 	margin: 0;
 	padding: 0;
-		
 }
 
 .ufd {
@@ -33,10 +35,12 @@
 	white-space: nowrap;
 	border: @border;
 	font: @font;
-	background: white;
+	background: @bgcolor;
+	color: @textcolor;
 	vertical-align: middle;
 	cursor: pointer;
-	padding-left: 8px;
+	padding-left: @padding;
+	.border-box();
 }
 
 .ufd,
@@ -79,14 +83,14 @@
 	z-index: 1;
 	right: 0;
 	cursor: pointer;
-	width: 26px;
-	height: @height;
-	background: white url(@arrow) center center no-repeat;
+	width: @size;
+	height: @size;
+	background: @bgcolor url(@arrow) center center no-repeat;
 }
 
 .ufd input {
-	height: @height;
-	line-height: @height;
+	height: @size;
+	line-height: @size;
 	width: 100% !important;
 	padding-left: 0 !important;
 	-ms-text-overflow: ellipsis;
@@ -94,11 +98,13 @@
 	text-overflow: ellipsis;
 	cursor: pointer;
 	border: 0 !important;
+	background: @bgcolor;
+	color: @textcolor;
 }
 
 //.ufd input::-webkit-selection { background: none; color: black }
-.ufd input::-moz-selection { background: none; color: black }
-.ufd input::selection { background: none; color: black }
+//.ufd input::-moz-selection { background: none; color: @textcolor }
+//.ufd input::selection { background: none; color: @textcolor }
 
 .ufd input.focus {
 	outline: 0 !important;
@@ -107,8 +113,8 @@
 #ufd-container div.list-wrapper {
 	position: absolute;
 	background: white;
-	font-size: 14px;
-	line-height: @height;
+	font: @font;
+	line-height: @size;
 	border: 1px solid #888;
 }
 
@@ -119,19 +125,18 @@ html.boxshadow #ufd-container div.list-wrapper {
 
 #ufd-container li {
 	font: @font;
-	padding: 0 7px;
-	-ms-text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
+	padding: 0 @padding;
+	.ellipsis();
 	cursor: pointer;
-	height: @height;
-	line-height: @height;
+	height: @size;
+	line-height: @size;
 	display: block;
 	white-space: nowrap;
+	color: black;
 }
 
 #ufd-container div.list-wrapper li:hover {
-	background: @color;
+	background: @hovercolor;
 	color: white;
 }
 

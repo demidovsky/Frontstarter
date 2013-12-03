@@ -4,13 +4,82 @@
 @import "../modules/testmodule.less";
 
 
+
 @pagename: test;
 
 
 //-------------------------------------- 320 --------------------------------------
 body.@{pagename}
 {
-	
+
+	padding: 30px;
+	background: #333;
+	color: #ddd;
+
+	.content section > * { margin: 20px 0; }
+
+	.title
+	{
+		color: @maincolor;
+		font-weight: normal;
+	}
+
+	.is-bold
+	{
+		font-weight: bold;
+	}
+
+	.checkbox
+	{
+		width: 300px;
+		.custom-checkbox();
+		.pic { background-color: white; border: 1px solid #888; }
+	}
+
+	.combobox.with-bg
+	{
+		.ufd { background: white }
+		.ufd input { color: black !important }
+	}
+
+	.combobox.with-dash
+	{
+		.ufd { border-bottom: 1px dashed @maincolor }
+	}
+
+	.placeholder
+	{
+		color: #333;
+		width: 300px;
+		.custom-placeholder();
+
+		label { color: #888 }
+		textarea { height: 100px }
+	}
+
+	.tooltip
+	{
+		.custom-tooltip();
+	}
+
+	.polyfills
+	{
+		width: 800px;
+	}
+
+	.has-columns
+	{
+		width: 800px;
+		.column-count(3);
+	}
+
+	.is-rounded
+	{
+		.border-radius(20px);
+		padding: 20px;
+		background: #444;
+	}
+
 }
 
 
