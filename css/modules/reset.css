@@ -28,3 +28,7 @@ noscript {
   background: #cc0000;
   color: white;
 }
+input::-ms-clear {
+  width: 0;
+  height: 0;
+}
