@@ -1,3 +1,8 @@
+/*
+	Скрипты, необходимые на каждой странице.
+*/
+
+
 /* заглушка для консоли */
 if (typeof(console) == "undefined")
 {
@@ -5,7 +10,7 @@ if (typeof(console) == "undefined")
 	console.log = console.error = console.warn = function(){};
 }
 
-console.log("common.js loaded");
+console.log("loaded: common.js");
 
 
 
@@ -58,6 +63,8 @@ $(function()
 						safari3: true
 			        }  
 				});
+
+				console.log("finished: RejectUnsupportedBrowsers");
 			}
 		});
 	})();
@@ -65,15 +72,6 @@ $(function()
 
 
 
-	/* Новый класс */
-	(function NewClassName()
-	{
-		// Да будет код!
-	})();
-
-
-
-
 });
 
-	
+
