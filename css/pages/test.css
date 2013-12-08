@@ -15,6 +15,12 @@ body.test .title {
   color: #ab39f2;
   font-weight: normal;
 }
+body.test .subtitle {
+  font-size: 1px;
+}
+body.test .link {
+  color: white;
+}
 body.test .is-bold {
   font-weight: bold;
 }
@@ -147,13 +153,16 @@ body.test .tooltip:hover:after {
 body.test .demo-form > * {
   margin-bottom: 20px;
 }
-body.test .demo-form .email.valid {
+body.test .demo-form input {
+  border: 1px solid transparent;
+}
+body.test .demo-form .valid {
   -webkit-box-shadow: 0 0 10px #00ff00;
   -moz-box-shadow: 0 0 10px #00ff00;
   box-shadow: 0 0 10px #00ff00;
   border: 1px solid lime;
 }
-body.test .demo-form .email.error {
+body.test .demo-form .error {
   -webkit-box-shadow: 0 0 10px #ff0000;
   -moz-box-shadow: 0 0 10px #ff0000;
   box-shadow: 0 0 10px #ff0000;

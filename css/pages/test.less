@@ -24,6 +24,16 @@ body.@{classname}
 		font-weight: normal;
 	}
 
+	.subtitle
+	{
+		font-size: 1px;
+	}
+
+	.link
+	{
+		color: white;
+	}
+
 	.is-bold
 	{
 		font-weight: bold;
@@ -66,20 +76,21 @@ body.@{classname}
 	{
 		> * { margin-bottom: 20px; }
 
-		//.phone,
-		.email
+		input
 		{
-			&.valid
-			{
-				.box-shadow(0 0 10px lime);
-				border: 1px solid lime;
-			}
+			border: 1px solid transparent;
+		}
 
-			&.error
-			{
-				.box-shadow(0 0 10px red);
-				border: 1px solid red;
-			}
+		.valid
+		{
+			.box-shadow(0 0 10px lime);
+			border: 1px solid lime;
+		}
+
+		.error
+		{
+			.box-shadow(0 0 10px red);
+			border: 1px solid red;
 		}
 	}
 

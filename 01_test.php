@@ -66,19 +66,21 @@
 			<button class="js-datepicker-open">Выбрать дату</button>
 		</div>
 
-		<div class="tooltip" data-tooltip="На одном CSS">Подсказка</div>
-
-		<div class="placeholder js-placeholder">
-			<label>Телефон с маской</label>
-			<input class="phone js-masked" type="tel" name="phone">
-		</div>
-
 		<form class="demo-form js-validation">
 			<div class="placeholder js-placeholder">
+				<label>Телефон с маской</label>
+				<input class="phone js-masked js-tel" type="tel" name="phone">
+			</div>
+
+			<div class="placeholder js-placeholder">
 				<label>E-mail с валидацией</label>
-				<input class="email" type="email" name="email">
+				<input class="email js-email" type="email" name="email">
 			</div>
 		</form>
+
+		<div class="basic-tooltip">
+			<div class="tooltip" data-tooltip="На одном CSS">Подсказка</div>
+		</div>
 
 	</section>
 
@@ -124,6 +126,29 @@
 		<div class="is-rounded js-rounded">
 			Я круглый.
 		</div>
+	</section>
+
+
+
+
+	<section class="templates">
+
+		<h2 class="title">Шаблонизация <i>(см. исходник .php)</i></h2>
+
+		<?
+			$template_example_list = array('Главная', 'О компании', 'Проекты', 'Услуги', 'Контакты');
+			require('templates/example_list.php');
+		?>
+
+		<? 
+			$template_example_key_value = array
+			(
+				'Ссылка абсолютная' => 'http://localhost/Frontstarter/index.php',
+				'Ссылка относительная' => '...php',
+				'Ссылка локальная' => 'file:///.../Frontstarter/index.php'
+			);
+			require('templates/example_key_value.php');
+		?>
 	</section>
 
 
