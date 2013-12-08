@@ -10,9 +10,12 @@
 
 	<h1 class="title is-bold">Тестовая страница</h1>
 
+
+
+
 	<section class="forms">
 
-		<h2 class="title">Формы</h2>
+		<h2 class="title">Элементы форм</h2>
 
 		<div class="checkbox">
 			<label>
@@ -63,9 +66,23 @@
 			<button class="js-datepicker-open">Выбрать дату</button>
 		</div>
 
-		<div class="tooltip" data-tooltip="Только CSS">Подсказка</div>
+		<div class="tooltip" data-tooltip="На одном CSS">Подсказка</div>
+
+		<div class="placeholder js-placeholder">
+			<label>Телефон с маской</label>
+			<input class="phone js-masked" type="tel" name="phone">
+		</div>
+
+		<form class="demo-form js-validation">
+			<div class="placeholder js-placeholder">
+				<label>E-mail с валидацией</label>
+				<input class="email" type="email" name="email">
+			</div>
+		</form>
 
 	</section>
+
+
 
 
 	<section class="polyfills">
@@ -108,6 +125,9 @@
 			Я круглый.
 		</div>
 	</section>
+
+
+
 
 </div>
 
