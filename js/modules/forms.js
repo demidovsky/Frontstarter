@@ -29,8 +29,9 @@ $(function()
 					{
 						var $this = $(element);
 
-						if ($this.is("[type=tel]"))
+						if ($this.hasClass('js-tel'))
 						{
+
 							$this.mask('+7 (999) 999-99-99', { placeholder: ' ' });
 						}
 					});
@@ -155,8 +156,8 @@ $(function()
 				complete: function()
 				{
 
-					$('input[type=email]').attr("data-validate", "email");
-					$('input[type=tel]').attr(  "data-validate", "phone");
+					$('.js-email').attr("data-validate", "email");
+					$('.js-tel').attr(  "data-validate", "phone");
 
 					/* фикс для выбора мышкой из списка: */
 					$form.find('input').on("input", function(){ $(this).keyup(); });
