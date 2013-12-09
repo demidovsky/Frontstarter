@@ -7,6 +7,15 @@ body.test {
   padding: 30px;
   background: #333;
   color: #ddd;
+  /*
+		Элементы форм
+	*/
+  /*
+		Заплатки
+	*/
+  /*
+		Образцы шаблонов
+	*/
 }
 body.test .content section > * {
   margin: 20px 0;
@@ -15,22 +24,19 @@ body.test .title {
   color: #ab39f2;
   font-weight: normal;
 }
-body.test .subtitle {
-  font-size: 1px;
-}
 body.test .link {
   color: white;
 }
 body.test .is-bold {
   font-weight: bold;
 }
-body.test .checkbox {
+body.test section.forms .checkbox {
   width: 300px;
   position: relative;
   line-height: 32px;
   min-height: 32px;
 }
-body.test .checkbox input {
+body.test section.forms .checkbox input {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -41,10 +47,10 @@ body.test .checkbox input {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
-body.test .checkbox input:checked + .pic {
+body.test section.forms .checkbox input:checked + .pic {
   background-position: center center;
 }
-body.test .checkbox .pic {
+body.test section.forms .checkbox .pic {
   position: absolute;
   left: 0;
   display: inline-block;
@@ -56,32 +62,32 @@ body.test .checkbox .pic {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-body.test .checkbox .text {
+body.test section.forms .checkbox .text {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
   padding-left: 41.6px;
   cursor: pointer;
 }
-body.test .checkbox .pic {
+body.test section.forms .checkbox .pic {
   background-color: white;
   border: 1px solid #888;
 }
-body.test .combobox.with-bg .ufd {
+body.test section.forms .combobox.with-bg .ufd {
   background: #ffffff;
 }
-body.test .combobox.with-bg .ufd input {
+body.test section.forms .combobox.with-bg .ufd input {
   color: #000000 !important;
 }
-body.test .combobox.with-dash .ufd {
+body.test section.forms .combobox.with-dash .ufd {
   border-bottom: 1px dashed #ab39f2;
 }
-body.test .placeholder {
+body.test section.forms .placeholder {
   color: #333;
   width: 300px;
   position: relative;
 }
-body.test .placeholder label {
+body.test section.forms .placeholder label {
   display: none;
   position: absolute;
   left: 0;
@@ -93,24 +99,24 @@ body.test .placeholder label {
   height: 100%;
   cursor: text;
 }
-body.test .placeholder input,
-body.test .placeholder textarea {
+body.test section.forms .placeholder input,
+body.test section.forms .placeholder textarea {
   width: 100%;
   padding-left: 7px;
   height: 32px;
   line-height: 32px;
 }
-body.test .placeholder textarea {
+body.test section.forms .placeholder textarea {
   line-height: normal;
   padding-top: 4px;
 }
-body.test .placeholder label {
+body.test section.forms .placeholder label {
   color: #888888;
 }
-body.test .placeholder textarea {
+body.test section.forms .placeholder textarea {
   height: 100px;
 }
-body.test .tooltip {
+body.test section.forms .tooltip {
   position: relative;
   display: inline;
   border-bottom: 1px dashed;
@@ -118,7 +124,7 @@ body.test .tooltip {
   /* ���� ��������� */
   /* ������� */
 }
-body.test .tooltip:before {
+body.test section.forms .tooltip:before {
   content: attr(data-tooltip);
   display: none;
   white-space: nowrap;
@@ -133,7 +139,7 @@ body.test .tooltip:before {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-body.test .tooltip:after {
+body.test section.forms .tooltip:after {
   content: "";
   display: none;
   position: absolute;
@@ -146,43 +152,46 @@ body.test .tooltip:after {
   border-bottom: 10px solid transparent;
   border-right: 10px solid #000000;
 }
-body.test .tooltip:hover:before,
-body.test .tooltip:hover:after {
+body.test section.forms .tooltip:hover:before,
+body.test section.forms .tooltip:hover:after {
   display: block;
 }
-body.test .demo-form > * {
+body.test section.forms .demo-form > * {
   margin-bottom: 20px;
 }
-body.test .demo-form input {
+body.test section.forms .demo-form input {
   border: 1px solid transparent;
 }
-body.test .demo-form .valid {
+body.test section.forms .demo-form .valid {
   -webkit-box-shadow: 0 0 10px #00ff00;
   -moz-box-shadow: 0 0 10px #00ff00;
   box-shadow: 0 0 10px #00ff00;
   border: 1px solid lime;
 }
-body.test .demo-form .error {
+body.test section.forms .demo-form .error {
   -webkit-box-shadow: 0 0 10px #ff0000;
   -moz-box-shadow: 0 0 10px #ff0000;
   box-shadow: 0 0 10px #ff0000;
   border: 1px solid red;
 }
-body.test .polyfills {
+body.test section.polyfills {
   width: 800px;
 }
-body.test .has-columns {
+body.test section.polyfills .has-columns {
   width: 800px;
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
 }
-body.test .is-rounded {
+body.test section.polyfills .is-rounded {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   padding: 20px;
   background: #444;
+}
+body.test section.templates ul.list-of-key-value > li {
+  margin-bottom: 10px;
 }
 /*-------------------------------------- 480 --------------------------------------*/
 /*-------------------------------------- 768 --------------------------------------*/
