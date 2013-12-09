@@ -30,8 +30,17 @@ noscript
     color: white;
 }
 
+// убираем крестик в IE10
 input::-ms-clear
 {
 	width: 0;
 	height: 0;
+}
+
+// убираем подсветку полей, чтобы не пересекалась с кастомной
+input,
+textarea
+{
+	box-shadow: none;
+	outline: none;
 }
