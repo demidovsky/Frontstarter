@@ -157,7 +157,7 @@ $(function()
 				{
 
 					$('.js-email').attr("data-validate", "email");
-					$('.js-tel').attr(  "data-validate", "phone");
+					$('.js-tel').attr("data-validate", "phone");
 
 					/* фикс для выбора мышкой из списка: */
 					$form.find('input').on("input", function(){ $(this).keyup(); });
@@ -173,7 +173,7 @@ $(function()
 
 						valid: function()
 						{
-							console.log("finished: validation passed");
+							console.log("Validation passed");
 						},
 
 						eachInvalidField: function()
@@ -192,11 +192,13 @@ $(function()
 					{
 						email:
 						{
+							required: false,
 							pattern : /^[a-z0-9\._\-\+]+@[a-z0-9\.\-]+\.[a-z0-9]{2,}$/i
 						},
 
 						phone:
 						{
+							required: false,
 							pattern : /^\+?[0-9\-\(\)\s]+$/
 						}
 					});
