@@ -133,22 +133,56 @@
 
 	<section class="templates">
 
-		<h2 class="title">Шаблонизация <i>(см. исходник .php)</i></h2>
+		<h2 class="title">Шаблонизация <i>(см. php-исходники)</i></h2>
 
-		<?
-			$template_example_list = array('Главная', 'О компании', 'Проекты', 'Услуги', 'Контакты');
-			require('templates/example_list.php');
-		?>
+		<div class="example">
+			<?
+				$template_example_list = array('Главная', 'О компании', 'Проекты', 'Услуги', 'Контакты');
+				require('templates/example_list.php');
+			?>
+		</div>
 
-		<? 
-			$template_example_key_value = array
-			(
-				'Ссылка абсолютная' => 'http://localhost/Frontstarter/index.php',
-				'Ссылка относительная' => '...php',
-				'Ссылка локальная' => 'file:///.../Frontstarter/index.php'
-			);
-			require('templates/example_key_value.php');
-		?>
+		<div class="example">
+			<? 
+				$template_example_key_value = array
+				(
+					'Ссылка абсолютная' => 'http://localhost/Frontstarter/index.php',
+					'Ссылка относительная' => '...php',
+					'Ссылка локальная' => 'file:///.../Frontstarter/index.php'
+				);
+				require('templates/example_key_value.php');
+			?>
+		</div>
+
+		<div class="example">
+			<? 
+				$template_example_list_of_key_value = array
+				(
+					array
+					(
+						'title' => 'Акция "Двойные бонусы"',
+						'date' => 'действует до 15.10.13',
+						'description' => 'При каждой покупке баллы удваиваются'
+					),
+
+					array
+					(
+						'title' => 'Акция "Мили"',
+						'date' => 'действует до 01.11.13',
+						'description' => 'Для карт, участвующих в программе'
+					),
+
+					array
+					(
+						'title' => 'Акция "Бронь со скидкой"',
+						'date' => 'действует до 31.12.13',
+						'description' => 'Забронируй отель по выгодной цене'
+					)
+				);
+				require('templates/example_list_of_key_value.php');
+			?>
+		</div>
+
 	</section>
 
 
