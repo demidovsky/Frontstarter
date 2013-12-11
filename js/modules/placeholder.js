@@ -1,3 +1,11 @@
+/*
+ * jQuery placeholder
+ * Скрипт для отображения плейсхолдера с произвольным содержимым.
+ * См. mixins.less: .custom-placeholder()
+ * 
+ * d.demidovsky@gmail.com
+ */
+
 $.fn.placeholder = function()
 {
 	return this.each(function(index, element)
