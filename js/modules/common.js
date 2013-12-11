@@ -54,11 +54,10 @@ $(function()
 						msie7: true,
 						firefox1: true,
 						firefox2: true,
-						firefox3: true,
 						opera7: true,
 						opera8: true,
 						opera9: true,
-						opera10: true,
+						opera10: true, // есть проблемы с асинхронной загрузкой скриптов, может не сработать.
 						safari2: true,
 						safari3: true
 			        }  
