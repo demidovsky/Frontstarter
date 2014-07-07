@@ -1,6 +1,6 @@
 <?
 	$siteTitle = "Frontstarter";
-	SITE_TEMPLATE_PATH = '';
+	$SITE_TEMPLATE_PATH = '';
 
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
