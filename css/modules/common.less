@@ -1,0 +1,85 @@
+@import "../mixins.less";
+@import "../../fonts/fonts.less";
+@import "normalize.less";
+@import "reset.less";
+
+// Модули, необходимые на каждой странице:
+// @import "имя-модуля.less";
+
+
+
+/*
+	Общие стили
+*/
+
+/*-------------------------------------- 320 --------------------------------------*/
+
+// Отобразить границы всех блоков (для отладки)
+// * { outline: 1px solid rgba(255,0,0,0.5) }
+
+
+
+
+
+
+.action-button
+{
+	.inline-block(middle);
+	width: auto;
+	height: 48px;
+	padding: 0 30px;
+	background: @maincolor;
+	.box-shadow(0 0 15px rgba(0,0,0,0.5));
+	.border-radius(7px);
+	.font(24px, 48px);
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	.transition(background 0.3s);
+	cursor: pointer;
+
+	&:hover
+	{
+		background: @hovercolor;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------- 480 --------------------------------------*/
+@media screen and (min-width: 480px)
+{
+	
+}
+
+
+
+
+
+
+
+/*-------------------------------------- 768 --------------------------------------*/
+@media screen and (min-width: 768px) 
+{
+	
+}
+
+
+
+
+
+
+
+/*-------------------------------------- 1024 -------------------------------------*/
+@media screen and (min-width: 1024px)
+{
+	
+}
+
