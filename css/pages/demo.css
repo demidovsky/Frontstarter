@@ -1,0 +1,122 @@
+@import "../../fonts/stylesheet.css";
+/* Демо-страница (начало) */
+/*-------------------------------------- 320 --------------------------------------*/
+.tinyscrollbar {
+  overflow-y: scroll;
+}
+.tinyscrollbar .viewport {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.tinyscrollbar .overview {
+  position: absolute;
+}
+.tinyscrollbar .scrollbar {
+  position: relative;
+  float: right;
+  width: 10px;
+}
+.tinyscrollbar .track {
+  background: #e2e0e0;
+}
+.tinyscrollbar .thumb {
+  background: #ff037a;
+  position: absolute;
+  width: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.tinyscrollbar .disable {
+  display: none;
+}
+.action-button {
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: 48px;
+  padding: 0 30px;
+  border: 0;
+  font-size: 24px;
+  line-height: 48px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
+  background: #456;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.action-button:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  left: 1px;
+  top: 2px;
+}
+.action-button:hover {
+  background: #586e85;
+}
+.jcarousel-wrapper,
+.jcarousel {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+.jcarousel {
+  overflow: hidden;
+}
+.jcarousel-list {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+.jcarousel-list > li {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+.jcarousel-control-prev,
+.jcarousel-control-next {
+  position: absolute;
+  top: 50%;
+}
+.jcarousel-control-prev {
+  left: 0;
+}
+.jcarousel-control-next {
+  right: 0;
+}
+.jcarousel-pagination {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+section.demo {
+  font-family: 'pt_sans', Helvetica, Arial, sans-serif;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+.jcarousel-wrapper {
+  float: left;
+  margin: 30px;
+  background: #eee;
+}
+/*-------------------------------------- 480 --------------------------------------*/
+/*-------------------------------------- 768 --------------------------------------*/
+/*-------------------------------------- 1024 -------------------------------------*/
+/* Демо-страница (конец) */

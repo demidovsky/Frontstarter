@@ -1,27 +1,16 @@
 $(function()
 {
-
 	var $window = $(window);
+	var $body = $('body');
 
 
 
 
-	// обработка событий с таймаутом
-	(function()
+	// описание
+	(function YourTextHere()
 	{
-		$.fn.onTimeout = function(eventType, callback, timeout)
-		{
-			var timer = null;
-			var start = function()
-			{
-				if (timer) clearTimeout(timer);
-				timer = setTimeout(callback, timeout);
-			}
-			return this.on(eventType, start);
-		}
+		
 	})();
-
-
 
 
 

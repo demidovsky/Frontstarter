@@ -1,23 +1,37 @@
-@import "../default/normalize.less";
-@import "../default/reset.less";
 @import "../default/mixins.less";
-
 @import "../../fonts/stylesheet.css";
 
 
-
-/* общие стили (начало) */
+/* Демо-страница (начало) */
 
 
 
 /*-------------------------------------- 320 --------------------------------------*/
 
+ 
+
+.use-tinyscrollbar();
+
+.use-action-button();
+
+.use-jcarousel(200px, 100px);
 
 
+section.demo
+{
+	//.inline-block(top);
+	font-family: 'pt_sans', Helvetica, Arial, sans-serif;
+	border: 1px solid #eee;
+	padding: 20px;
+}
 
 
-
-
+.jcarousel-wrapper
+{
+	float: left;
+	margin: 30px;
+	background: #eee;
+}
 
 
 
@@ -55,4 +69,4 @@
 
 
 
-/* общие стили (конец) */
+/* Демо-страница (конец) */

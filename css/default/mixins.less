@@ -1,9 +1,6 @@
 
-// ----------------------------------------------- Константы -----------------------------------------------
+// ---------------------------------- Индивидуально для текущего проекта -----------------------------------
 
-@img: "../../img/";
-
-@maincolor: #ab39f2;
 
 
 
@@ -14,25 +11,104 @@
 
 
 
-.action-button
+// см. snippets/scrollbars
+.use-tinyscrollbar()
 {
-	.inline-block(middle);
-	width: auto;
-	height: 48px;
-	padding: 0 30px;
-	background: #456;
-	color: white;
-	.transition(background 0.3s);
-	.box-shadow(0 0 5px rgba(0,0,0,0.5));
-	.border-radius(7px);
-	.font(24px, 48px);
-	font-weight: bold;
-	text-decoration: none;
-	cursor: pointer;
+	.tinyscrollbar { overflow-y: scroll; }
+	.tinyscrollbar .viewport { height: 100%; overflow: hidden; position: relative; }
+	.tinyscrollbar .overview { position: absolute; }
+	.tinyscrollbar .scrollbar{  position: relative; float: right; width: 10px; }
+	.tinyscrollbar .track { background: #e2e0e0; } 
+	.tinyscrollbar .thumb { background: #ff037a; position: absolute; width: 10px; .border-radius(5px); }
+	.tinyscrollbar .disable { display: none; }
+}
 
-	&:hover
+
+
+// см. snippets/carousel
+.use-jcarousel(@width:100%, @height:320px)
+{
+	.jcarousel-wrapper,
+	.jcarousel
 	{
-		background: lighten(#456, 10%);
+		position: relative;
+		width: @width;
+		height: @height;
+	}
+
+	.jcarousel { overflow: hidden }
+
+	.jcarousel-list
+	{
+		position: relative;
+		width: @width;
+		height: @height;
+
+		& > li
+		{
+			float: left;
+			width: @width;
+			height: @height;
+		}
+	}
+
+	.jcarousel-control-prev,
+	.jcarousel-control-next
+	{
+		position: absolute;
+		top: 50%;
+	}
+
+	.jcarousel-control-prev { left: 0 }
+	.jcarousel-control-next { right: 0 }
+
+	.jcarousel-pagination
+	{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+
+// Применимо к <a>, <button> или <input>
+.use-action-button()
+{
+	.action-button
+	{
+		-webkit-appearance: none;
+		.inline-block(middle);
+		width: auto;
+		height: 48px;
+		padding: 0 30px;
+		border: 0;
+		.font(24px, 48px);
+		font-weight: bold;
+		text-decoration: none;
+		white-space: nowrap;
+		color: white;
+		background: #456;
+		cursor: pointer;
+		.transition(background 0.3s);
+		.box-shadow(1px 2px 3px rgba(0,0,0,0.5));
+		.border-radius(7px);
+		position: relative;
+		left: 0;
+		top: 0;
+
+		&:active
+		{
+			.box-shadow(none);
+			left: 1px;
+			top: 2px;
+		}
+
+		&:hover
+		{
+			background: lighten(#456, 10%);
+		}
 	}
 }
 
@@ -462,11 +538,11 @@
 
 
 // http://jsfiddle.net/mbHB4/3/
-.inset-text-shadow(@textcolor, @bgcolor, @opacity: 0.8, @size: 2px)
+.inset-text-shadow(@textcolor, @bgcolor, @opacity: 0.5, @size: 1px)
 {
 	background: @bgcolor;
 	color: rgba(red(@textcolor), green(@textcolor), blue(@textcolor), @opacity);
-	text-shadow: @size @size @size @bgcolor, 0 0 0 #000;
+	text-shadow: @size @size @size @bgcolor, 0 0 0 #000, @size @size @size @bgcolor;
 
 	&::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
 	&::selection { background: #5af; color: #fff; text-shadow: none; }

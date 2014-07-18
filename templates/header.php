@@ -10,7 +10,6 @@
 	if (isset($_GET['html']) || $saveHTML) ob_start();
 ?>
 
-
 <!doctype html>
 <!--[if IE 8]> <html class="ie8"> <![endif]-->
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
@@ -26,28 +25,28 @@
 	<!-- production --><!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
 
 
-	<?
-		function antiCache($path)
-		{
-			if (!file_exists($path)) return;
-			$ver = date('d.m.y-H:i', filemtime($path));
-			$anticache = $path.'?'.$ver;
-			if (preg_match('/.css$/', $path)) echo '<link rel="stylesheet" href="'.$anticache.'"/>'."\n";
-			if (preg_match('/.js$/', $path)) echo '<script src="'.$anticache.'"/></script>'."\n";
-		}
+<?
+	function antiCache($path)
+	{
+		if (!file_exists($path)) return;
+		$ver = date('d.m.y-H:i', filemtime($path));
+		$anticache = $path.'?'.$ver;
+		if (preg_match('/.css$/', $path)) echo "\t".'<link rel="stylesheet" href="'.$anticache.'">'."\n";
+		if (preg_match('/.js$/', $path)) echo "\t".'<script src="'.$anticache.'"></script>'."\n";
+	}
 
-		// общий CSS:
-		antiCache('css/modules/common.css');
+	// общий CSS:
+	antiCache('css/modules/common.css');
 
-		// CSS для конкретной страницы:
-		antiCache('css/pages/'.$pageId.'.css');
+	// CSS для конкретной страницы:
+	antiCache('css/pages/'.$pageId.'.css');
 
-		// общий JS:
-		antiCache('js/modules/common.js');
+	// общий JS:
+	antiCache('js/modules/common.js');
 
-		// JS для конкретной страницы:
-		antiCache('js/pages/'.$pageId.'.js');
-	?>
+	// JS для конкретной страницы:
+	antiCache('js/pages/'.$pageId.'.js');
+?>
 
 
 

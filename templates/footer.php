@@ -1,3 +1,6 @@
+
+<script>window.ROOT = "";</script>
+
 </body>
 </html>
 
