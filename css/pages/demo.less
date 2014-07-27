@@ -69,7 +69,22 @@ section.demo
 
 	label
 	{
-	width: 100px;
+		vertical-align: middle;
+
+		&:first-child
+		{
+			.inline-block(middle);
+			width: 200px;
+			padding: 0 8px;
+			text-align: right;
+		}
+	}
+
+	input
+	{
+		vertical-align: middle;
+		margin-right: 8px;
+		&[type=checkbox] { margin-right: 0 }
 	}
 }
 

@@ -45,7 +45,21 @@ section.demo.line {
   margin: 10px 0;
 }
 .form-fields > li label {
-  width: 100px;
+  vertical-align: middle;
+}
+.form-fields > li label:first-child {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  padding: 0 8px;
+  text-align: right;
+}
+.form-fields > li input {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.form-fields > li input[type=checkbox] {
+  margin-right: 0;
 }
 /*-------------------------------------- 480 --------------------------------------*/
 /*-------------------------------------- 768 --------------------------------------*/

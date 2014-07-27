@@ -11,6 +11,101 @@
 			<h1>Demo/Test page</h1>
 
 
+
+
+
+			<!-- Формы -->
+
+			<script src="js/default/jquery.validate.js"></script>
+			<script src="js/default/masked-min-jquery.js"></script>
+			<script src="js/default/jquery.keyfilter.js"></script>
+			<script src="js/default/snippets/frontstarter.forms.js"></script>
+
+			<section class="demo forms">
+				<h2>Формы</h2>
+
+
+				<form name="" action="POST" class="js-validate">
+
+					<ul class="form-fields">
+						<li>
+							<label>Текст:</label>
+							<input id="text" type="text" name="FORM_TEXT_10" class="" placeholder="Введите текст">
+						</li>
+
+						<li>
+							<label>Только цифры:</label>
+							<input id="digits_soft" type="text" name="FORM_TEXT_25" class="" placeholder="Введите текст">
+						</li>
+
+						<li>
+							<label>Только цифры (фильтр):</label>
+							<input id="digits" type="text" name="FORM_TEXT_20" class="js-filter-digits" placeholder="Введите текст">
+						</li>
+
+						<li>
+							<label>Только русские:</label>
+							<input id="rus" type="text" name="FORM_TEXT_30" class="js-filter-rus" placeholder="Введите текст">
+						</li>
+
+						<li>
+							<label>Номер банковской карты:</label>
+							<input id="card" type="text" name="FORM_TEXT_40" class="js-mask-card" placeholder="0000 0000 0000 0000">
+						</li>
+
+						<li>
+							<label>Дата:</label>
+							<input id="date" type="text" name="FORM_TEXT_45" class="" placeholder="01.01.2000">
+						</li>
+
+						<li>
+							<label>Телефон:</label>
+							<input id="tel" type="tel" name="FORM_TEXT_50" class="js-mask-tel" placeholder="+7 (999) 123-45-67">
+						</li>
+
+						<li>
+							<label>E-mail:</label>
+							<input id="email" type="email" name="FORM_TEXT_60" class="js-email" placeholder="name@example.ru">
+						</li>
+
+						<li>
+							<label>Чекбокс:</label>
+							<input id="check" type="checkbox" name="FORM_TEXT_70" class="">
+							<label for="check">Согласен с условиями.</label>
+						</li>
+
+						<li>
+							<label>Селект:</label>
+							<select>
+								<option>вариант 1</option>
+								<option>вариант 2</option>
+								<option>вариант 3</option>
+							</select>
+						</li>
+
+						<li>
+							<label>
+								Календарь:
+							</label>
+							<input id="" type="date" name="" class="js-calendar">
+						</li>
+					</ul>
+
+					<input type="submit" value="Cохранить" class="action-button">
+
+				</form>
+
+
+			</section>
+
+
+
+
+
+
+
+
+
 			<!-- Скроллы -->
 
 			<link rel="stylesheet" href="css/default/snippets/tinyscrollbar.css">
@@ -157,60 +252,6 @@
 
 
 
-
-
-
-
-			<!-- Формы -->
-
-			<script src="js/default/jquery.validate.js"></script>
-			<script src="js/default/snippets/frontstarter.forms.js"></script>
-
-			<section class="demo">
-				<h2>Формы</h2>
-
-
-				<form name="" action="POST">
-
-					<ul class="form-fields">
-						<li>
-							<label>Текст:</label>
-							<input id="" type="text" name="" class="" placeholder="Введите текст">
-						</li>
-
-						<li>
-							<label>Телефон:</label>
-							<input type="tel" name="" class="js-tel" placeholder="+7 (999) 123-45-67">
-						</li>
-
-						<li>
-							<label>E-mail:</label>
-							<input type="email" name="" class="js-email" placeholder="name@example.ru">
-						</li>
-
-						<li>
-							<label>
-								<input type="checkbox" name="" class="js-tel">
-								Чекбокс
-							</label>
-						</li>
-
-						<li>
-							<label>Селект:</label>
-							<select>
-								<option>вариант 1</option>
-								<option>вариант 2</option>
-								<option>вариант 3</option>
-							</select>
-						</li>
-
-
-					</ul>
-
-				</form>
-
-
-			</section>
 
 
 
