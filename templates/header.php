@@ -25,6 +25,11 @@
 	<!-- production --><!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
 
 
+	<!-- libs
+	<script src="js/default/...js"></script>
+	<link rel="stylesheet" href="css/default/...css">
+	-->
+
 <?
 	function antiCache($path)
 	{
