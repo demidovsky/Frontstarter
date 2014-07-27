@@ -17,6 +17,9 @@ section.demo.line {
   display: inline-block;
   vertical-align: top;
 }
+.js-fullscreen {
+  background: #fed;
+}
 .jcarousel-wrapper {
   display: inline-block;
   margin: 30px;
