@@ -8,17 +8,17 @@
 	<div class="content">
 
 
-			<!-- script src="js/default/snippets/frontstarter.fullscreen.js"></script -->
-
+			<h1>Demo/Test page</h1>
 
 
 			<!-- Скроллы -->
 
+			<link rel="stylesheet" href="css/default/snippets/tinyscrollbar.css">
 			<script src="js/default/jquery.tinyscrollbar.js"></script>
 			<script src="js/default/jquery.nicescroll.js"></script>
 			<script src="js/default/snippets/frontstarter.scrollbars.js"></script>
 
-			<section class="demo js-fullscreen">
+			<section class="demo line">
 				<h2>TinyScrollbar</h2>
 
 				<div class="tinyscrollbar" style="width: 300px; height: 200px; overflow-y:scroll">
@@ -28,7 +28,7 @@
 				</div>
 			</section>
 
-			<section class="demo js-fullscreen">
+			<section class="demo line">
 				<h2>NiceScroll</h2>
 
 				<div class="nicescroll" style="width: 300px; height: 200px; overflow-y:scroll">
@@ -43,8 +43,8 @@
 
 
 			<!-- Кнопки -->
-
-			<section class="demo js-fullscreen">
+			<link rel="stylesheet" href="css/default/snippets/action-button.css">
+			<section class="demo">
 				<h2>Action button</h2>
 
 				<a class="action-button" href="#">a</a>
@@ -57,13 +57,16 @@
 
 
 
-			<!-- Слайдер -->
+			<!-- Слайдеры -->
 
+			<link rel="stylesheet" href="css/default/snippets/owl.carousel.css">
+			<link rel="stylesheet" href="css/default/snippets/jcarousel.css">
 			<script src="js/default/owl.carousel.min.js"></script>
 			<script src="js/default/jquery.jcarousel.min.js"></script>
 			<script src="js/default/snippets/frontstarter.carousel.js"></script>
+
 			
-			<section class="demo js-fullscreen">
+			<section class="demo">
 				<h2>jCarousel</h2>
 
 
@@ -78,8 +81,8 @@
 							<li>six</li>
 						</ul>
 					</div>
-					<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-					<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+					<a href="#" class="jcarousel-control-prev">&#9664;</a>
+					<a href="#" class="jcarousel-control-next">&#9654;</a>
 					<div class="jcarousel-pagination"></div>
 				</div>
 
@@ -93,30 +96,50 @@
 							<li>четыре</li>
 						</ul>
 					</div>
-					<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-					<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+					<a href="#" class="jcarousel-control-prev">&#9664;</a>
+					<a href="#" class="jcarousel-control-next">&#9654;</a>
 					<div class="jcarousel-pagination"></div>
 				</div>
 
+			</section>
 
+
+			<section class="demo">
 				<h2>owlCarousel</h2>
 
+				<h3>CSS-width, centered, no-loop</h3>
+				<div class="owl-carousel-1">
+					<div class="owl-item-wrapper"><h4>1</h4></div>
+					<div class="owl-item-wrapper"><h4>2</h4></div>
+					<div class="owl-item-wrapper"><h4>3</h4></div>
+					<div class="owl-item-wrapper"><h4>4</h4></div>
+					<div class="owl-item-wrapper"><h4>5</h4></div>
+					<div class="owl-item-wrapper"><h4>6</h4></div>
+					<div class="owl-item-wrapper"><h4>7</h4></div>
+					<div class="owl-item-wrapper"><h4>8</h4></div>
+					<div class="owl-item-wrapper"><h4>9</h4></div>
+					<div class="owl-item-wrapper"><h4>10</h4></div>
+					<div class="owl-item-wrapper"><h4>11</h4></div>
+					<div class="owl-item-wrapper"><h4>12</h4></div>
+				</div>
 
-				<ul class="owl-carousel">
-				    <li class="owl-item"><h4>1</h4></li>
-				    <li class="owl-item"><h4>2</h4></li>
-				    <li class="owl-item"><h4>3</h4></li>
-				    <li class="owl-item"><h4>4</h4></li>
-				    <li class="owl-item"><h4>5</h4></li>
-				    <li class="owl-item"><h4>6</h4></li>
-				    <li class="owl-item"><h4>7</h4></li>
-				    <li class="owl-item"><h4>8</h4></li>
-				    <li class="owl-item"><h4>9</h4></li>
-				    <li class="owl-item"><h4>10</h4></li>
-				    <li class="owl-item"><h4>11</h4></li>
-				    <li class="owl-item"><h4>12</h4></li>
-				</ul>
+				<br>
 
+				<h3>JS-width, left, loop</h3>
+				<div class="owl-carousel-2">
+					<div class="owl-item-wrapper"><h4>1</h4></div>
+					<div class="owl-item-wrapper"><h4>2</h4></div>
+					<div class="owl-item-wrapper"><h4>3</h4></div>
+					<div class="owl-item-wrapper"><h4>4</h4></div>
+					<div class="owl-item-wrapper"><h4>5</h4></div>
+					<div class="owl-item-wrapper"><h4>6</h4></div>
+					<div class="owl-item-wrapper"><h4>7</h4></div>
+					<div class="owl-item-wrapper"><h4>8</h4></div>
+					<div class="owl-item-wrapper"><h4>9</h4></div>
+					<div class="owl-item-wrapper"><h4>10</h4></div>
+					<div class="owl-item-wrapper"><h4>11</h4></div>
+					<div class="owl-item-wrapper"><h4>12</h4></div>
+				</div>
 
 			</section>
 
@@ -135,7 +158,7 @@
 			<script src="js/default/jquery.validate.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
 
-			<section class="demo js-fullscreen">
+			<section class="demo">
 				<h2>Формы</h2>
 
 

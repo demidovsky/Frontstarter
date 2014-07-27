@@ -1,3 +1,13 @@
+        var $window = $(window);
+        var $htmlbody = $('html,body');
+        var $first = $('.first-slider');
+        var $second = $('.second-slider');
+
+        var isWheelBlocked = false;
+        var timerWheelBlock = null;
+
+
+
 function snapToScreen($this, event, from)
         {
             var wy = Math.round($window.scrollTop()); // Window Y

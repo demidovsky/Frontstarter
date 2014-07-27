@@ -1,0 +1,47 @@
+.jcarousel-wrapper
+{
+	@width: 200px;
+	@height: 100px;
+
+	overflow: hidden;
+
+	&,.jcarousel
+	{
+		position: relative;
+		width: @width;
+		height: @height;
+	}
+
+	.jcarousel-list
+	{
+		position: relative;
+		width: @width;
+		height: @height;
+		line-height: @height;
+
+		& > li
+		{
+			float: left;
+			width: @width;
+			height: @height;
+		}
+	}
+
+	.jcarousel-control-prev,
+	.jcarousel-control-next
+	{
+		position: absolute;
+		top: 50%;
+	}
+
+	.jcarousel-control-prev { left: 0 }
+	.jcarousel-control-next { right: 0 }
+
+	.jcarousel-pagination
+	{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+}

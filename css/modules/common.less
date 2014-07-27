@@ -13,7 +13,21 @@
 /*-------------------------------------- 320 --------------------------------------*/
 
 
+body
+{
+}
 
+
+a
+{
+	@color: blue;
+	color: @color;
+	text-decoration: underline;
+
+	&:visited { color: @color }
+	&:hover { color: lighten(@color, 15%) }
+	&:active { color: lighten(@color, 30%) }
+}
 
 
 

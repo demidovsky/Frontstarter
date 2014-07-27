@@ -1,0 +1,72 @@
+/* Подсказки (начало) */
+	
+[data-tooltip]
+{
+	position: relative;
+	cursor: help;
+}
+
+/* тело подсказки */
+[data-tooltip]:before
+{
+	content: attr(data-tooltip);
+	display: none;
+	width: 100%;
+	white-space: normal;
+	line-height: normal;
+	background: white;
+	color: black;
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	margin-bottom: -6px;
+	margin-left: 20px;
+	padding: 10px;
+	border-radius:5px;
+	font-size: 11px;
+	text-shadow: none;
+	box-shadow: 0 3px 7px rgba(0,0,0,0.5);
+	box-sizing: border-box;
+}
+
+/* хвостик */
+[data-tooltip]:after
+{
+	display: none;
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-bottom: -15px;
+	margin-left: 20px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid white;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after
+{
+	display: block;
+}
+/* Подсказки (конец) */
+
+
+
+
+/* 
+
+
+
+box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    content: "";
+    display: none;
+    height: 10px;
+    left: 50%;
+    margin-bottom: -10px;
+    margin-left: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 10px; */
