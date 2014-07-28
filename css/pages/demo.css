@@ -54,12 +54,18 @@ section.demo.line {
   padding: 0 8px;
   text-align: right;
 }
+.form-fields > li label.error {
+  color: #a00;
+}
 .form-fields > li input {
   vertical-align: middle;
   margin-right: 8px;
 }
 .form-fields > li input[type=checkbox] {
   margin-right: 0;
+}
+.form-fields > li input.error {
+  outline: 1px solid #c00;
 }
 /*-------------------------------------- 480 --------------------------------------*/
 /*-------------------------------------- 768 --------------------------------------*/
