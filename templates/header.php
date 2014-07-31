@@ -18,17 +18,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?=$pageTitle;?> - <?=$siteTitle;?></title>
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+	<?/* <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"> */?>
 
 
-	<!-- development --><script src="js/default/jquery-1.10.2.min.js"></script>
-	<!-- production --><!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
+	<script src="js/default/jquery-1.10.2.min.js"></script>
+	<?/* <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> */?>
 
+	<?/* <link href="css/default/____.css" rel="stylesheet"> */?>
+	<?/* <script src="js/default/____.js"></script> */?>
 
-	<!-- libs
-	<script src="js/default/...js"></script>
-	<link rel="stylesheet" href="css/default/...css">
-	-->
 
 <?
 	function antiCache($path)
