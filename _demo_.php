@@ -44,7 +44,7 @@
 						</li>
 
 						<li>
-							<label>Только русские:</label>
+							<label>Только русские (фильтр):</label>
 							<input id="rus" type="text" name="FORM_TEXT_30" class="js-filter-rus" placeholder="Введите текст">
 						</li>
 
@@ -166,6 +166,10 @@
 
 
 				<div class="jcarousel-wrapper">
+					<a href="#" class="jcarousel-control-prev">&#9664;</a>
+					<a href="#" class="jcarousel-control-next">&#9654;</a>
+					<div class="jcarousel-pagination"></div>
+
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
 							<li>one</li>
@@ -176,13 +180,14 @@
 							<li>six</li>
 						</ul>
 					</div>
-					<a href="#" class="jcarousel-control-prev">&#9664;</a>
-					<a href="#" class="jcarousel-control-next">&#9654;</a>
-					<div class="jcarousel-pagination"></div>
 				</div>
 
 
 				<div class="jcarousel-wrapper">
+					<a href="#" class="jcarousel-control-prev">&#9664;</a>
+					<a href="#" class="jcarousel-control-next">&#9654;</a>
+					<div class="jcarousel-pagination"></div>
+
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
 							<li>один</li>
@@ -191,9 +196,6 @@
 							<li>четыре</li>
 						</ul>
 					</div>
-					<a href="#" class="jcarousel-control-prev">&#9664;</a>
-					<a href="#" class="jcarousel-control-next">&#9654;</a>
-					<div class="jcarousel-pagination"></div>
 				</div>
 
 			</section>
