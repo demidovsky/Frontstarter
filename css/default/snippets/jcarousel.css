@@ -1,11 +1,11 @@
 .jcarousel-wrapper {
+  position: relative;
   width: 200px;
   height: 100px;
-  position: relative;
-  overflow: hidden;
 }
 .jcarousel-wrapper .jcarousel {
   position: relative;
+  overflow: hidden;
   width: 200px;
   height: 100px;
 }

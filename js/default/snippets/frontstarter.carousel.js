@@ -8,9 +8,11 @@ $(function()
 		{
 			$wrapper = $(element);
 
+			// задаём ширину, вмещающую все элементы:
 			$ul = $('.jcarousel-list', $wrapper);
 			$ul.width($ul.children('li').length * $ul.children('li').width());
 
+			// инициализация:
 			$('.jcarousel', $wrapper)
 				.jcarousel(
 				{
@@ -19,32 +21,34 @@ $(function()
 					animation: { duration: 500, easing: "linear" }
 				})
 
+				// обработка текущего элемента
 				/*.on('jcarousel:visiblein', 'li', function(event, carousel)
 				{
-					console.log("visible", $(carousel._target).text());
-				})*/
+					console.log("current visible: ", $(carousel._target).attr("data-index"));
+				})
 
 				.on('jcarousel:animate', function(event, carousel)
 				{
-					console.log("animate", $(carousel._target).text());
-				});
+					console.log("current animate: ", $(carousel._target).attr("data-index"));
+				});*/
 
-			// элементы управления:
+			// стрелка влево:
 			$('.jcarousel-control-prev', $wrapper)
 				.on('jcarouselcontrol:active', function() { $(this).removeClass('inactive'); })
 				.on('jcarouselcontrol:inactive', function() { $(this).addClass('inactive'); })
 				.jcarouselControl({ target: '-=1' });
 
+			// стрелка вправо:
 			$('.jcarousel-control-next', $wrapper)
 				.on('jcarouselcontrol:active', function() { $(this).removeClass('inactive'); })
 				.on('jcarouselcontrol:inactive', function() { $(this).addClass('inactive'); })
 				.jcarouselControl({ target: '+=1' });
 
+			// пэйджинг:
 			$('.jcarousel-pagination', $wrapper)
 				.on('jcarouselpagination:active', 'a', function() {$(this).addClass('active'); })
 				.on('jcarouselpagination:inactive', 'a', function() {$(this).removeClass('active'); })
-				.jcarouselPagination({});
-
+				.jcarouselPagination();
 		});
 
 	})();
@@ -66,6 +70,8 @@ $(function()
 			loop: false,
 			autoWidth: true,
 			margin: 10,
+			URLhashListener: true,
+			navRewind: false
 		});
 
 

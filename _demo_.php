@@ -166,28 +166,23 @@
 
 
 				<div class="jcarousel-wrapper">
-					<a href="#" class="jcarousel-control-prev">&#9664;</a>
-					<a href="#" class="jcarousel-control-next">&#9654;</a>
-					<div class="jcarousel-pagination"></div>
-
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
-							<li>one</li>
-							<li>two</li>
-							<li>three</li>
-							<li>four</li>
-							<li>five</li>
-							<li>six</li>
+							<li data-index="1">one</li>
+							<li data-index="2">two</li>
+							<li data-index="3">three</li>
+							<li data-index="4">four</li>
+							<li data-index="5">five</li>
+							<li data-index="6">six</li>
 						</ul>
 					</div>
+					<div class="jcarousel-pagination"></div>
+					<a href="#" class="jcarousel-control-prev">&#9664;</a>
+					<a href="#" class="jcarousel-control-next">&#9654;</a>
 				</div>
 
 
 				<div class="jcarousel-wrapper">
-					<a href="#" class="jcarousel-control-prev">&#9664;</a>
-					<a href="#" class="jcarousel-control-next">&#9654;</a>
-					<div class="jcarousel-pagination"></div>
-
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
 							<li>один</li>
@@ -196,6 +191,9 @@
 							<li>четыре</li>
 						</ul>
 					</div>
+					<div class="jcarousel-pagination"></div>
+					<a href="#" class="jcarousel-control-prev">&#9664;</a>
+					<a href="#" class="jcarousel-control-next">&#9654;</a>
 				</div>
 
 			</section>
