@@ -1,7 +1,9 @@
 .jcarousel-wrapper {
+  width: 200px;
+  height: 100px;
+  position: relative;
   overflow: hidden;
 }
-.jcarousel-wrapper,
 .jcarousel-wrapper .jcarousel {
   position: relative;
   width: 200px;
@@ -11,7 +13,6 @@
   position: relative;
   width: 200px;
   height: 100px;
-  line-height: 100px;
 }
 .jcarousel-wrapper .jcarousel-list > li {
   float: left;
@@ -30,8 +31,6 @@
   right: 0;
 }
 .jcarousel-wrapper .jcarousel-pagination {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   text-align: center;
 }
