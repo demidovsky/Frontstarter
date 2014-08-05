@@ -3031,7 +3031,7 @@
 				items = this._core.$stage.children(),
 				position = this._hashes[hash] && items.index(this._hashes[hash]) || null;
 
-			if (!hash) {
+			if (!hash || position == null) {
 				return false;
 			}
 
