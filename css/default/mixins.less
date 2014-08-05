@@ -269,8 +269,9 @@
 
 
 
-// ----------------------------------------------- Приблуды -----------------------------------------------
+// ----------------------------------------------- Типовые решения -----------------------------------------------
 
+// очистка потока
 .clearfix()
 {
 	&:after
@@ -284,6 +285,7 @@
 
 
 
+// короткая запись шрифта
 .font(@size, @line-height:normal)
 {
 	font-size: @size;
@@ -292,6 +294,7 @@
 
 
 
+// короткая запись инлайн-блока
 .inline-block(@valign: auto)
 {
 	display: inline-block;
@@ -300,6 +303,7 @@
 
 
 
+// горизонтальный ряд элементов
 .inline-block-row()
 {
 	white-space: nowrap;
@@ -316,45 +320,35 @@
 
 
 
-
-
-
-
-.arrow-down(@w, @h, @color)
-{
+// стрелки
+.arrow-down(@w, @h, @color){
 	width: 0;
 	height: 0;
 	border-left: @w/2 solid transparent;
 	border-right: @w/2 solid transparent;
-	border-top: @h solid @color;
-}
-.arrow-up(@w, @h, @color)
-{
+	border-top: @h solid @color;}
+.arrow-up(@w, @h, @color){
 	width: 0;
 	height: 0;
 	border-left: @w/2 solid transparent;
 	border-right: @w/2 solid transparent;
-	border-bottom: @h solid @color;
-}
-.arrow-right(@w, @h, @color)
-{
+	border-bottom: @h solid @color;}
+.arrow-right(@w, @h, @color){
 	width: 0;
 	height: 0;
 	border-top: @h/2 solid transparent;
 	border-bottom: @h/2 solid transparent;
-	border-left: @w solid @color;
-}
-.arrow-left(@w, @h, @color)
-{
+	border-left: @w solid @color;}
+.arrow-left(@w, @h, @color){
 	width: 0;
 	height: 0;
 	border-top: @h/2 solid transparent;
 	border-bottom: @h/2 solid transparent;
-	border-right: @w solid @color;
-}
+	border-right: @w solid @color;}
 
 
 
+// круг
 .circle(@r)
 {
 	width: @r;
@@ -367,6 +361,7 @@
 
 
 
+// вытащить картинку из спрайта по координатам
 .sprite(@x, @y, @w, @h)
 {
 	@bg-x: -@x*@w;
@@ -376,6 +371,7 @@
 
 
 
+// накрыть элемент картинкой
 .image-overlay(@url, @bgcolor:transparent)
 {
 	position: relative;
@@ -394,7 +390,7 @@
 
 
 
-// http://jsfiddle.net/mbHB4/3/
+// Вдавленный текст http://jsfiddle.net/mbHB4/3/
 .inset-text-shadow(@textcolor, @bgcolor, @opacity: 0.5, @size: 1px)
 {
 	background: @bgcolor;
@@ -407,8 +403,7 @@
 
 
 
-
-// http://css-tricks.com/centering-in-the-unknown/
+// Выравнивание по вертикали блока неизвестной высоты http://css-tricks.com/centering-in-the-unknown/
 .centering-the-unknown()
 {
 	text-align: center;
@@ -431,7 +426,7 @@
 
 
 
-
+// Выравнивание по вертикали блока известной высоты 
 .centering-the-known(@width, @height)
 {
 	position: absolute;
