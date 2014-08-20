@@ -1,5 +1,5 @@
 
-// ---------------------------------- Индивидуально для текущего проекта -----------------------------------
+// ---------------------------------- РРЅРґРёРІРёРґСѓР°Р»СЊРЅРѕ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїСЂРѕРµРєС‚Р° -----------------------------------
 
 
 
@@ -9,7 +9,7 @@
 
 
 
-// ----------------------------------------------- Сглаживания ---------------------------------------------
+// ----------------------------------------------- РЎРіР»Р°Р¶РёРІР°РЅРёСЏ ---------------------------------------------
 
 @sine-out: cubic-bezier(0.39, 0.575, 0.565, 1);
 @quad-out:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -37,7 +37,7 @@
 
 
 
-// ----------------------------------------------- Кроссбраузерность -----------------------------------------------
+// ----------------------------------------------- РљСЂРѕСЃСЃР±СЂР°СѓР·РµСЂРЅРѕСЃС‚СЊ -----------------------------------------------
 
 .border-radius(@args)
 {
@@ -142,14 +142,14 @@
 
 
 .vertical-gradient(@top, @bottom) {
-	background: mix(@top, @bottom); // совсем старые браузеры
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @bottom), color-stop(1, @top)); // старые вебкиты
-	background: -webkit-linear-gradient(top, @top 0%, @bottom 100%); // новые вебкиты
-	background: -ms-linear-gradient(bottom, @bottom, @top); // новые ИЕ
-	background: -moz-linear-gradient(center bottom, @bottom 0%, @top 100%); // фокс
-	background: -o-linear-gradient(center bottom, @bottom 0%, @top 100%); // опера
-	background: linear-gradient(to bottom, @top 0%, @bottom 100%); // стандарт
-	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @top, @bottom)); // старые ИЕ
+	background: mix(@top, @bottom); // СЃРѕРІСЃРµРј СЃС‚Р°СЂС‹Рµ Р±СЂР°СѓР·РµСЂС‹
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @bottom), color-stop(1, @top)); // СЃС‚Р°СЂС‹Рµ РІРµР±РєРёС‚С‹
+	background: -webkit-linear-gradient(top, @top 0%, @bottom 100%); // РЅРѕРІС‹Рµ РІРµР±РєРёС‚С‹
+	background: -ms-linear-gradient(bottom, @bottom, @top); // РЅРѕРІС‹Рµ РР•
+	background: -moz-linear-gradient(center bottom, @bottom 0%, @top 100%); // С„РѕРєСЃ
+	background: -o-linear-gradient(center bottom, @bottom 0%, @top 100%); // РѕРїРµСЂР°
+	background: linear-gradient(to bottom, @top 0%, @bottom 100%); // СЃС‚Р°РЅРґР°СЂС‚
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @top, @bottom)); // СЃС‚Р°СЂС‹Рµ РР•
 }
 
 
@@ -269,9 +269,9 @@
 
 
 
-// ----------------------------------------------- Типовые решения -----------------------------------------------
+// ----------------------------------------------- РўРёРїРѕРІС‹Рµ СЂРµС€РµРЅРёСЏ -----------------------------------------------
 
-// очистка потока
+// РѕС‡РёСЃС‚РєР° РїРѕС‚РѕРєР°
 .clearfix()
 {
 	&:after
@@ -285,7 +285,7 @@
 
 
 
-// короткая запись шрифта
+// РєРѕСЂРѕС‚РєР°СЏ Р·Р°РїРёСЃСЊ С€СЂРёС„С‚Р°
 .font(@size, @line-height:normal)
 {
 	font-size: @size;
@@ -294,7 +294,7 @@
 
 
 
-// короткая запись инлайн-блока
+// РєРѕСЂРѕС‚РєР°СЏ Р·Р°РїРёСЃСЊ РёРЅР»Р°Р№РЅ-Р±Р»РѕРєР°
 .inline-block(@valign: auto)
 {
 	display: inline-block;
@@ -303,7 +303,7 @@
 
 
 
-// горизонтальный ряд элементов
+// РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ СЂСЏРґ СЌР»РµРјРµРЅС‚РѕРІ
 .inline-block-row()
 {
 	white-space: nowrap;
@@ -320,7 +320,7 @@
 
 
 
-// стрелки
+// СЃС‚СЂРµР»РєРё
 .arrow-down(@w, @h, @color){
 	width: 0;
 	height: 0;
@@ -348,7 +348,7 @@
 
 
 
-// круг
+// РєСЂСѓРі
 .circle(@r)
 {
 	width: @r;
@@ -361,7 +361,7 @@
 
 
 
-// вытащить картинку из спрайта по координатам
+// РІС‹С‚Р°С‰РёС‚СЊ РєР°СЂС‚РёРЅРєСѓ РёР· СЃРїСЂР°Р№С‚Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
 .sprite(@x, @y, @w, @h)
 {
 	@bg-x: -@x*@w;
@@ -371,7 +371,7 @@
 
 
 
-// накрыть элемент картинкой
+// РЅР°РєСЂС‹С‚СЊ СЌР»РµРјРµРЅС‚ РєР°СЂС‚РёРЅРєРѕР№
 .image-overlay(@url, @bgcolor:transparent)
 {
 	position: relative;
@@ -390,7 +390,7 @@
 
 
 
-// Вдавленный текст http://jsfiddle.net/mbHB4/3/
+// Р’РґР°РІР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ http://jsfiddle.net/mbHB4/3/
 .inset-text-shadow(@textcolor, @bgcolor, @opacity: 0.5, @size: 1px)
 {
 	background: @bgcolor;
@@ -403,7 +403,7 @@
 
 
 
-// Выравнивание по вертикали блока неизвестной высоты http://css-tricks.com/centering-in-the-unknown/
+// Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ РІРµСЂС‚РёРєР°Р»Рё Р±Р»РѕРєР° РЅРµРёР·РІРµСЃС‚РЅРѕР№ РІС‹СЃРѕС‚С‹ http://css-tricks.com/centering-in-the-unknown/
 .centering-the-unknown()
 {
 	text-align: center;
@@ -426,7 +426,7 @@
 
 
 
-// Выравнивание по вертикали блока известной высоты 
+// Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ РІРµСЂС‚РёРєР°Р»Рё Р±Р»РѕРєР° РёР·РІРµСЃС‚РЅРѕР№ РІС‹СЃРѕС‚С‹ 
 .centering-the-known(@width, @height)
 {
 	position: absolute;
