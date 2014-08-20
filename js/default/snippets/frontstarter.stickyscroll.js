@@ -1,5 +1,6 @@
 $(function()
 {
+	"use strict";
 
 	var $window = $(window);
 	var $htmlbody = $('html,body');

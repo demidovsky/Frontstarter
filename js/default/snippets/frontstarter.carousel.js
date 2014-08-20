@@ -1,5 +1,6 @@
 $(function()
 {
+	"use strict";
 
 	// http://sorgalla.com/jcarousel/
 	(function jCarousel()

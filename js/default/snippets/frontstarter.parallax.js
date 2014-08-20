@@ -1,5 +1,6 @@
 $(function()
 {
+	"use strict";
 
 	// http://ianlunn.co.uk/plugins/jquery-parallax/
 	(function Parallax()
