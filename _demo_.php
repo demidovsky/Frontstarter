@@ -168,12 +168,12 @@
 				<div class="jcarousel-wrapper">
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
-							<li data-index="1">one</li>
-							<li data-index="2">two</li>
-							<li data-index="3">three</li>
-							<li data-index="4">four</li>
-							<li data-index="5">five</li>
-							<li data-index="6">six</li>
+							<li>one</li>
+							<li>two</li>
+							<li>three</li>
+							<li>four</li>
+							<li>five</li>
+							<li>six</li>
 						</ul>
 					</div>
 					<div class="jcarousel-pagination"></div>
@@ -182,13 +182,14 @@
 				</div>
 
 
+				<!-- карусель меняет порядок li, поэтому в data-index сохраняется исходный порядок -->
 				<div class="jcarousel-wrapper">
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
-							<li>один</li>
-							<li>два</li>
-							<li>три</li>
-							<li>четыре</li>
+							<li data-index="1">один</li>
+							<li data-index="2">два</li>
+							<li data-index="3">три</li>
+							<li data-index="4">четыре</li>
 						</ul>
 					</div>
 					<div class="jcarousel-pagination"></div>
