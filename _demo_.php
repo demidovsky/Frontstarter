@@ -138,6 +138,7 @@
 
 
 			<!-- Кнопки -->
+
 			<link rel="stylesheet" href="css/default/snippets/action-button.css">
 			<section class="demo">
 				<h2>Action button</h2>
@@ -164,7 +165,6 @@
 			<section class="demo">
 				<h2>jCarousel</h2>
 
-
 				<div class="jcarousel-wrapper">
 					<div class="jcarousel">
 						<ul class="jcarousel-list">
@@ -180,7 +180,6 @@
 					<a href="#" class="jcarousel-control-prev">&#9664;</a>
 					<a href="#" class="jcarousel-control-next">&#9654;</a>
 				</div>
-
 
 				<!-- карусель меняет порядок li, поэтому в data-index сохраняется исходный порядок -->
 				<div class="jcarousel-wrapper">
@@ -198,7 +197,6 @@
 				</div>
 
 			</section>
-
 
 
 			<script src="js/default/jquery.mousewheel.js"></script>
@@ -251,7 +249,38 @@
 
 
 
+			<!-- Лайтбокс -->
 
+			<link rel="stylesheet" href="css/default/snippets/lightbox.css">
+			<script src="js/default/lightbox.min.js"></script>
+
+			<section class="demo">
+
+				<h2>Lightbox</h2>
+
+				<div class="lightbox-wrapper">
+					<ul class="lightbox-list">
+						<li>
+							<a class="lightbox-link" href="img/jreject/browser_chrome.gif" data-lightbox="gallery" data-title="Хром">
+								<img src="img/jreject/browser_chrome.gif">
+							</a>
+						</li>
+						
+						<li>
+							<a class="lightbox-link" href="img/jreject/browser_firefox.gif" data-lightbox="gallery" data-title="Фокс">
+								<img src="img/jreject/browser_firefox.gif">
+							</a>
+						</li>
+						
+						<li>
+							<a class="lightbox-link" href="img/jreject/browser_safari.gif" data-lightbox="gallery" data-title="Сафари">
+								<img src="img/jreject/browser_safari.gif">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</section>
 
 
 

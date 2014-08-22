@@ -75,6 +75,9 @@ index.html содержит список всех страниц проекта.
 
 2. РЕАЛИЗАЦИЯ ТИПОВЫХ ЭЛЕМЕНТОВ
 
+См. /js/snippets и /css/snippets
+
+
     кнопки:
         action-button.less
 
@@ -108,6 +111,9 @@ index.html содержит список всех страниц проекта.
     вкладки:
         [TODO]
 
+    лайтбокс:
+        lightbox.css
+
     прилипающий скролл:
         frontstarter.stickyscroll.js
 
@@ -127,7 +133,7 @@ index.html содержит список всех страниц проекта.
         [TODO]
 
     вывод данных в консоль по условию:
-        см. common.js
+        debug=true в localStorage
 
 
 
