@@ -22,7 +22,7 @@ $(function()
 	// подстройка по высоте экрана
 	(function FullScreen()
 	{
-		if (typeof($window) == "undefined") $window = $(window);
+		var $window = $(window);
 
 		var minHeight = 500; // px
 		var $full = $('.js-fullscreen').css({"margin":0, "padding":0});
@@ -30,8 +30,8 @@ $(function()
 		{
 			console.log("onResize");
 			$full.height($window.height() > minHeight ? $window.height() : minHeight);
-			return arguments.callee;
-		}();
+		};
+		onResize();
 
 		$window.onTimeout("resize", onResize, 100);
 	})();

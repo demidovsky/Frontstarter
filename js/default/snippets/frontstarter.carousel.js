@@ -7,10 +7,10 @@ $(function()
 	{
 		$('.jcarousel-wrapper').each(function(index, element)
 		{
-			$wrapper = $(element);
+			var $wrapper = $(element);
 
 			// задаём ширину, вмещающую все элементы:
-			$ul = $('.jcarousel-list', $wrapper);
+			var $ul = $('.jcarousel-list', $wrapper);
 			$ul.width($ul.children('li').length * $ul.children('li').width());
 
 			// инициализация:
