@@ -64,7 +64,7 @@
 
 
 
-<body class="page-<?=$pageId.(isset($pageSubId) ? ' subpage-'.$pageSubId : '');?>">
+<body class="page-<?=$pageId?>">
 
 	<noscript><b>В вашем браузере выключен javascript!</b> Полная функциональность сайта может быть недоступна.</noscript>
 
