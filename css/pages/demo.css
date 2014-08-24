@@ -11,7 +11,6 @@ body.demo h1 {
 section.demo {
   border: 1px solid #eee;
   padding: 20px;
-  overflow: hidden;
 }
 section.demo.line {
   display: inline-block;

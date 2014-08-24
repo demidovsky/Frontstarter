@@ -16,9 +16,13 @@
 
 			<!-- Формы -->
 
+			<link rel="stylesheet" href="css/default/snippets/selectboxit.css">
+			<link rel="stylesheet" href="css/default/jquery-ui.all.min.css">
 			<script src="js/default/jquery.validate.js"></script>
 			<script src="js/default/masked-min-jquery.js"></script>
 			<script src="js/default/jquery.keyfilter.js"></script>
+			<script src="js/default/jquery-ui.all.min.js"></script>
+			<script src="js/default/jquery.selectBoxIt.min.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
 
 			<section class="demo forms">
@@ -75,11 +79,30 @@
 						</li>
 
 						<li>
-							<label>Селект:</label>
-							<select>
+							<label>Селекты:</label>
+							<select class="js-selectboxit">
+								<option>Выберите значение</option>
 								<option>вариант 1</option>
-								<option>вариант 2</option>
-								<option>вариант 3</option>
+								<option>вариант 2 чуть длиннее</option>
+								<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
+							</select>
+
+							<select class="js-selectboxit">
+								<option>И еще один селект</option>
+								<option>А</option>
+								<option>Б</option>
+								<option>В</option>
+								<option>Г</option>
+								<option>Д</option>
+								<option>Е</option>
+								<option>Ё</option>
+								<option>Ж</option>
+								<option>З</option>
+								<option>И</option>
+								<option>Й</option>
+								<option>К</option>
+								<option>Л</option>
+								<option>М</option>
 							</select>
 						</li>
 

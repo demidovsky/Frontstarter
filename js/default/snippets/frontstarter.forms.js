@@ -129,4 +129,26 @@ $(function()
 
 
 
+
+
+
+
+	/*
+		Выпадающие списки
+		http://gregfranko.com/jquery.selectBoxIt.js (зависит от jQueryUI)
+	*/
+	(function SelectBox()
+	{
+
+		$('select.js-selectboxit').selectBoxIt({theme:"jqueryui", showFirstOption: false});
+
+	})();
+
+
+
+
+
+
+
+
 })
