@@ -24,7 +24,7 @@ $(function()
 	{
 		var $window = $(window);
 
-		var minHeight = 500; // px
+		var minHeight = 600; // px
 		var $full = $('.js-fullscreen').css({"margin":0, "padding":0});
 		var onResize = function()
 		{

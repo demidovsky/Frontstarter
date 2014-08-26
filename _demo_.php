@@ -310,6 +310,30 @@
 
 
 
+			<!-- Вкладки -->
+
+			<script src="js/default/jquery.history.js"></script>
+			<script src="js/default/snippets/frontstarter.tabs.js"></script>
+
+			<section class="demo">
+
+				<h2>Вкладки <sup style="font-weight:normal"><small>(с поддержкой History API)</small></sup></h2>
+
+				<a   data-tab-control="tab" data-tab="first"  href="#">Вкладка 1</a>
+				<a   data-tab-control="tab" data-tab="second" href="#">Вкладка 2</a>
+				<a   data-tab-control="tab" data-tab="third" href="#">Вкладка 3</a>
+
+				<div data-tab-content="tab" data-tab="first" >Контент 1</div>
+				<div data-tab-content="tab" data-tab="second">Контент 2</div>
+				<div data-tab-content="tab" data-tab="third">Контент 3</div>
+
+			</section>
+
+
+
+
+
+
 	</div>
 
 <? require('templates/footer.php'); ?>
