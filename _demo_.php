@@ -17,7 +17,7 @@
 			<!-- Формы -->
 
 			<link rel="stylesheet" href="css/default/snippets/selectboxit.css">
-			<link rel="stylesheet" href="css/default/jquery-ui.all.min.css">
+			<link rel="stylesheet" href="css/default/jquery-ui.all.edit.css">
 			<script src="js/default/jquery.validate.js"></script>
 			<script src="js/default/masked-min-jquery.js"></script>
 			<script src="js/default/jquery.keyfilter.js"></script>
@@ -81,14 +81,14 @@
 						<li>
 							<label>Селекты:</label>
 							<select class="js-selectboxit">
-								<option>Выберите значение</option>
+								<option>Макс. ширина</option>
 								<option>вариант 1</option>
 								<option>вариант 2 чуть длиннее</option>
 								<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
 							</select>
 
 							<select class="js-selectboxit">
-								<option>И еще один селект</option>
+								<option>Мин. ширина</option>
 								<option>А</option>
 								<option>Б</option>
 								<option>В</option>
