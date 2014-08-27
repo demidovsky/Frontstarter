@@ -1,16 +1,16 @@
 
-
-/* Макс. ширина: */
+/* Макс. и мин. ширина: */
 select.js-selectboxit,
+.selectboxit,
 .selectboxit-container .selectboxit-options {
-  max-width: 200px;
+  min-width: 100px;
+  max-width: 300px;
 }
 
 /* Макс. высота: */
 .selectboxit-container .selectboxit-options {
   max-height: 200px;
 }
-
 
 /*
  * jquery.selectBoxIt.css 3.8.1
@@ -32,7 +32,7 @@ select.js-selectboxit,
 
 /* Styles that apply to all SelectBoxIt elements */
 .selectboxit-container * {
-  font: 14px Helvetica, Arial;
+  /* font: 14px Helvetica, Arial; */
   /* Prevents text selection */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -96,8 +96,8 @@ select.js-selectboxit,
 
 /* Options List */
 .selectboxit-container .selectboxit-options {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+/*   -moz-box-sizing: border-box;
+box-sizing: border-box; */
   min-width: 100%;  /* Minimum Width of the dropdown list box options */
   *width: 100%;
   margin: 0;
