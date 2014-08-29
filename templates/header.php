@@ -18,15 +18,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?=$pageTitle;?> - <?=$siteTitle;?></title>
 	<meta name="description" content="">
-	<?/* <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"> */?>
+<?
+	require_once 'Mobile_Detect.php';
+	$detect = new Mobile_Detect;
+	$isMobile = $detect->isMobile();
+	$isTablet = $detect->isTablet();
+?>
+<? if($isTablet){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
+<? if(!$isMobile){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
 
 
-	<script src="js/default/jquery-1.10.2.min.js"></script>
-	<?/* <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> */?>
-
+	<!--development--><script src="js/default/jquery-1.10.2.min.js"></script>
+	<!--production--><!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
 	<?/* <link href="css/default/____.css" rel="stylesheet"> */?>
 	<?/* <script src="js/default/____.js"></script> */?>
-
 
 <?
 	function antiCache($path)
@@ -51,14 +56,11 @@
 	antiCache('js/pages/'.$pageId.'.js');
 ?>
 
-
-
 	<!--[if lte IE 8]>
 		<script type="text/javascript" src="js/default/html5.js"></script>
 		<script type="text/javascript" src="js/default/css3-mediaqueries.js"></script>
 		<script type="text/javascript" src="js/modules/selectivizr-min.js"></script>
 	<![endif]-->
-
 </head>
 
 
