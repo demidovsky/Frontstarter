@@ -3,7 +3,7 @@
 	$pageId = 'empty';
 ?>
 
-<? require('templates/header.php'); ?>
+<? require_once('templates/header.php'); ?>
 
 	<div class="content">
 
@@ -14,4 +14,4 @@
 
 	</div>
 
-<? require('templates/footer.php'); ?>
+<? require_once('templates/footer.php'); ?>
