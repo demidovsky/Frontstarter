@@ -272,14 +272,17 @@
 
 
 
-			<!-- Лайтбокс -->
+			<!-- Лайтбоксы -->
 
-			<link rel="stylesheet" href="css/default/snippets/lightbox.css">
+			<link rel="stylesheet" href="css/default/snippets/lightbox.edit.css">
 			<script src="js/default/lightbox.min.js"></script>
+
+			<link rel="stylesheet" href="css/default/snippets/litebox.edit.css">
+			<script src="js/default/litebox.min.js"></script>
 
 			<section class="demo">
 
-				<h2>Lightbox</h2>
+				<h2>Lightbox & Litebox</h2>
 
 				<div class="lightbox-wrapper">
 					<ul class="lightbox-list">
@@ -300,8 +303,15 @@
 								<img src="img/jreject/browser_safari.gif">
 							</a>
 						</li>
+
+						<li>
+							Внезапно
+							<a data-litebox="true" href="http://www.youtube.com/watch?v=y-yCXfv0FNw">YouTube</a>
+						</li>
 					</ul>
 				</div>
+
+				
 
 			</section>
 
