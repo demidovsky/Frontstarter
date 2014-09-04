@@ -278,7 +278,7 @@
 			<script src="js/default/lightbox.min.js"></script>
 
 			<link rel="stylesheet" href="css/default/snippets/litebox.edit.css">
-			<script src="js/default/litebox.min.js"></script>
+			<script src="js/default/litebox.min.edit.js"></script>
 
 			<section class="demo">
 
