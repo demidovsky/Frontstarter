@@ -76,14 +76,19 @@ $(function()
 		});
 
 
-		$('.owl-carousel-2').owlCarousel(
-		{
-			items: 5,
-			center: false,
-			loop: true,
-			autoWidth: false,
-			margin: 10,
-		});
+		$('.owl-carousel-2')
+			.owlCarousel(
+			{
+				items: 5,
+				center: false,
+				loop: true,
+				autoWidth: false,
+				margin: 10,
+			})
+			.on('changed.owl.carousel', function(event)
+			{
+				console.log(event.item.index);
+			});
 
 
 	})();
