@@ -87,7 +87,14 @@ $(function()
 			})
 			.on('changed.owl.carousel', function(event)
 			{
-				console.log(event.item.index);
+				console.log(event.item.index); // loop=true увеличивает индекс на единицу o_O
+			});
+
+
+		$('.owl-carousel-3')
+			.owlCarousel(
+			{
+				items: 1
 			});
 
 

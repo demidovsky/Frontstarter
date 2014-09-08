@@ -224,50 +224,68 @@
 
 			<script src="js/default/jquery.mousewheel.js"></script>
 			<script src="js/default/jquery.easing.1.3.js"></script>
+
+			<section class="demo">
+				<h2>Owl Carousel + Sticky Scroll</h2>
+
+				<h3>CSS-width, centered, no-loop</h3>
+				<div class="owl-carousel-1">
+					<div class="owl-item-wrapper"><h4>1</h4></div>
+					<div class="owl-item-wrapper"><h4>2</h4></div>
+					<div class="owl-item-wrapper"><h4>3</h4></div>
+					<div class="owl-item-wrapper"><h4>4</h4></div>
+					<div class="owl-item-wrapper"><h4>5</h4></div>
+					<div class="owl-item-wrapper"><h4>6</h4></div>
+					<div class="owl-item-wrapper"><h4>7</h4></div>
+					<div class="owl-item-wrapper"><h4>8</h4></div>
+					<div class="owl-item-wrapper"><h4>9</h4></div>
+					<div class="owl-item-wrapper"><h4>10</h4></div>
+					<div class="owl-item-wrapper"><h4>11</h4></div>
+					<div class="owl-item-wrapper"><h4>12</h4></div>
+				</div>
+
+				<br>
+
+				<h3>JS-width, left, loop</h3>
+				<div class="owl-carousel-2">
+					<div class="owl-item-wrapper"><h4>1</h4></div>
+					<div class="owl-item-wrapper"><h4>2</h4></div>
+					<div class="owl-item-wrapper"><h4>3</h4></div>
+					<div class="owl-item-wrapper"><h4>4</h4></div>
+					<div class="owl-item-wrapper"><h4>5</h4></div>
+					<div class="owl-item-wrapper"><h4>6</h4></div>
+					<div class="owl-item-wrapper"><h4>7</h4></div>
+					<div class="owl-item-wrapper"><h4>8</h4></div>
+					<div class="owl-item-wrapper"><h4>9</h4></div>
+					<div class="owl-item-wrapper"><h4>10</h4></div>
+					<div class="owl-item-wrapper"><h4>11</h4></div>
+					<div class="owl-item-wrapper"><h4>12</h4></div>
+				</div>
+
+				<br>
+
+				<h3>Single & responsive</h3>
+				<div class="owl-carousel-3">
+					<div class="owl-item-wrapper"><h4>1</h4></div>
+					<div class="owl-item-wrapper"><h4>2</h4></div>
+					<div class="owl-item-wrapper"><h4>3</h4></div>
+					<div class="owl-item-wrapper"><h4>4</h4></div>
+				</div>
+
+			</section>
+
+
+
+
+			<!-- Полноэкранный скролл -->
+
 			<script src="js/default/snippets/frontstarter.fullscreen.js"></script>
 			<script src="js/default/snippets/frontstarter.stickyscroll.js"></script>
-
 			<div class="js-fullscreen js-stickyscroll">
 				<section class="demo">
-					<h2>Owl Carousel + Fullscreen + Sticky Scroll</h2>
-
-					<h3>CSS-width, centered, no-loop</h3>
-					<div class="owl-carousel-1">
-						<div class="owl-item-wrapper"><h4>1</h4></div>
-						<div class="owl-item-wrapper"><h4>2</h4></div>
-						<div class="owl-item-wrapper"><h4>3</h4></div>
-						<div class="owl-item-wrapper"><h4>4</h4></div>
-						<div class="owl-item-wrapper"><h4>5</h4></div>
-						<div class="owl-item-wrapper"><h4>6</h4></div>
-						<div class="owl-item-wrapper"><h4>7</h4></div>
-						<div class="owl-item-wrapper"><h4>8</h4></div>
-						<div class="owl-item-wrapper"><h4>9</h4></div>
-						<div class="owl-item-wrapper"><h4>10</h4></div>
-						<div class="owl-item-wrapper"><h4>11</h4></div>
-						<div class="owl-item-wrapper"><h4>12</h4></div>
-					</div>
-
-					<br>
-
-					<h3>JS-width, left, loop</h3>
-					<div class="owl-carousel-2">
-						<div class="owl-item-wrapper"><h4>1</h4></div>
-						<div class="owl-item-wrapper"><h4>2</h4></div>
-						<div class="owl-item-wrapper"><h4>3</h4></div>
-						<div class="owl-item-wrapper"><h4>4</h4></div>
-						<div class="owl-item-wrapper"><h4>5</h4></div>
-						<div class="owl-item-wrapper"><h4>6</h4></div>
-						<div class="owl-item-wrapper"><h4>7</h4></div>
-						<div class="owl-item-wrapper"><h4>8</h4></div>
-						<div class="owl-item-wrapper"><h4>9</h4></div>
-						<div class="owl-item-wrapper"><h4>10</h4></div>
-						<div class="owl-item-wrapper"><h4>11</h4></div>
-						<div class="owl-item-wrapper"><h4>12</h4></div>
-					</div>
-
+					<h2>Fullscreen + Sticky Scroll</h2>
 				</section>
 			</div>
-
 
 
 
