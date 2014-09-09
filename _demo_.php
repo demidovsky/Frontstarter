@@ -226,7 +226,7 @@
 			<script src="js/default/jquery.easing.1.3.js"></script>
 
 			<section class="demo">
-				<h2>Owl Carousel + Sticky Scroll</h2>
+				<h2>Owl Carousel</h2>
 
 				<h3>CSS-width, centered, no-loop</h3>
 				<div class="owl-carousel-1">
@@ -281,12 +281,16 @@
 
 			<script src="js/default/snippets/frontstarter.fullscreen.js"></script>
 			<script src="js/default/snippets/frontstarter.stickyscroll.js"></script>
-			<div class="js-fullscreen js-stickyscroll">
+			<div class="js-fullscreen js-stickyscroll demo-centering-the-unknown">
 				<section class="demo">
-					<h2>Fullscreen + Sticky Scroll</h2>
+					<h2>Fullscreen + Sticky Scroll + Centering the Unknown</h2>
 				</section>
 			</div>
-
+			<div class="js-fullscreen js-stickyscroll demo-centering-the-unknown" style="background:#eef">
+				<section class="demo">
+					<h2>Fullscreen + Sticky Scroll + Centering the Unknown<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut enim nobis, voluptates, delectus ea reprehenderit ut soluta. Voluptate nesciunt voluptates earum facere porro distinctio id, voluptatum perferendis fuga quaerat?</h2>
+				</section>
+			</div>
 
 
 
