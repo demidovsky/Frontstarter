@@ -406,7 +406,10 @@
 // Выравнивание по вертикали блока неизвестной высоты http://css-tricks.com/centering-in-the-unknown/
 .centering-the-unknown()
 {
+	width: 100%;
+	height: 100%;
 	text-align: center;
+	font-size: 0;
 
 	&:before
 	{
@@ -421,6 +424,7 @@
 	{
 		display: inline-block;
 		vertical-align: middle;
+		font-size: medium;
 	}
 }
 
