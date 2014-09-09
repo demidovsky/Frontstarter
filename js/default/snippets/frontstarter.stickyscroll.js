@@ -6,7 +6,7 @@ $(function()
 	var $htmlbody = $('html,body');
 	var isWheelBlocked = false;
 	var DURATION = 300;
-	var EASING = "easeOutQuad"
+	var EASING = typeof($.easing) != "undefined" ? "easeOutQuad" : "linear";
 
 	// проверить положение скролла и доскроллить, если нужно
 	function snapToScreen($this, event, from)
