@@ -223,7 +223,6 @@
 
 
 			<script src="js/default/jquery.mousewheel.js"></script>
-			<script src="js/default/jquery.easing.1.3.js"></script>
 
 			<section class="demo">
 				<h2>Owl Carousel</h2>
@@ -280,7 +279,10 @@
 			<!-- Полноэкранный скролл -->
 
 			<script src="js/default/snippets/frontstarter.fullscreen.js"></script>
+			<script src="js/default/jqueryeasing.1.3.js"></script>
+			<script src="js/default/jquery.mousewheel.js"></script>
 			<script src="js/default/snippets/frontstarter.stickyscroll.js"></script>
+
 			<div class="js-fullscreen js-stickyscroll demo-centering-the-unknown">
 				<section class="demo">
 					<h2>Fullscreen + Sticky Scroll + Centering the Unknown</h2>
