@@ -12,7 +12,7 @@ $(function()
 
 
 	// 
-	(function YourNameHere()
+	(function Main()
 	{
 
 	})();
