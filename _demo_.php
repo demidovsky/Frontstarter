@@ -21,8 +21,8 @@
 			<script src="js/default/jquery.validate.js"></script>
 			<script src="js/default/masked-min-jquery.js"></script>
 			<script src="js/default/jquery.keyfilter.js"></script>
-			<script src="js/default/jquery-ui.all.min.js"></script>
-			<script src="js/default/jquery.selectBoxIt.min.js"></script>
+			<script src="js/default/jquery-ui.core.min.js"></script>
+			<script src="js/default/jquery.selectBoxIt.min.edit.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
 
 			<section class="demo forms">
