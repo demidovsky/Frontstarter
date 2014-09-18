@@ -279,7 +279,7 @@
 			<!-- Полноэкранный скролл -->
 
 			<script src="js/default/snippets/frontstarter.fullscreen.js"></script>
-			<script src="js/default/jqueryeasing.1.3.js"></script>
+			<script src="js/default/jquery.easing.1.3.js"></script>
 			<script src="js/default/jquery.mousewheel.js"></script>
 			<script src="js/default/snippets/frontstarter.stickyscroll.js"></script>
 
