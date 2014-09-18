@@ -8,7 +8,7 @@
 	<div class="content">
 
 
-			<h1>Demo/Test page</h1>
+			<h1><i class="fa fa-cog fa-spin"></i> Demo/Test page</h1>
 
 
 

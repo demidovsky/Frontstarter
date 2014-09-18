@@ -36,6 +36,7 @@
 
 	<link href="css/default/reset.css" rel="stylesheet">
 	<link href="css/fonts/stylesheet.css" rel="stylesheet">
+	<link href="css/default/font-awesome.min.edit.css" rel="stylesheet">
 
 <?
 	function antiCache($path)
