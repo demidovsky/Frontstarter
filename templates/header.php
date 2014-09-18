@@ -30,8 +30,12 @@
 
 	<!--development--><script src="js/default/jquery-1.10.2.min.js"></script>
 	<!--production--><!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
+
 	<?/* <link href="css/default/____.css" rel="stylesheet"> */?>
 	<?/* <script src="js/default/____.js"></script> */?>
+
+	<link href="css/default/reset.css" rel="stylesheet">
+	<link href="css/fonts/stylesheet.css" rel="stylesheet">
 
 <?
 	function antiCache($path)
