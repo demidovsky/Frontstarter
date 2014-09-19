@@ -80,14 +80,17 @@ body.page-demo .form-fields > li label:first-child {
 body.page-demo .form-fields > li label.error {
   color: #a00;
 }
-body.page-demo .form-fields > li input {
+body.page-demo .form-fields > li input,
+body.page-demo .form-fields > li textarea {
   vertical-align: middle;
   margin-right: 8px;
 }
-body.page-demo .form-fields > li input[type=checkbox] {
+body.page-demo .form-fields > li input[type=checkbox],
+body.page-demo .form-fields > li textarea[type=checkbox] {
   margin-right: 0;
 }
-body.page-demo .form-fields > li input.error {
+body.page-demo .form-fields > li input.error,
+body.page-demo .form-fields > li textarea.error {
   outline: 1px solid #c00;
 }
 /*-------------------------------------- 480 --------------------------------------*/

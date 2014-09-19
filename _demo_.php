@@ -21,7 +21,9 @@
 			<script src="js/default/jquery.validate.js"></script>
 			<script src="js/default/masked-min-jquery.js"></script>
 			<script src="js/default/jquery.keyfilter.js"></script>
-			<script src="js/default/jquery-ui.core.min.js"></script>
+			<!-- селектбоксу достаточно ui.core-->
+			<!-- script src="js/default/jquery-ui.core.min.js"></script -->
+			<script src="js/default/jquery-ui.all.min.js"></script>
 			<script src="js/default/jquery.selectBoxIt.min.edit.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
 
@@ -29,53 +31,59 @@
 				<h2>Формы</h2>
 
 
-				<form name="" action="POST" class="js-validate">
+				<form name="" action="" method="POST" class="js-validate">
 
 					<ul class="form-fields">
 						<li>
 							<label>Текст:</label>
-							<input id="text" type="text" name="FORM_TEXT_10" class="" placeholder="Введите текст">
+							<input type="text" name="ANY_NAME_10" class="" placeholder="Введите текст" required>
+						</li>
+
+						<li>
+							<label>Текст:</label>
+							<textarea name="ANY_NAME_15" class="" placeholder="Введите текст" required></textarea>
 						</li>
 
 						<li>
 							<label>Только цифры:</label>
-							<input id="digits_soft" type="text" name="FORM_TEXT_25" class="" placeholder="Введите текст">
+							<input type="number" name="ANY_NAME_25" class="" placeholder="Введите текст">
 						</li>
 
 						<li>
 							<label>Только цифры (фильтр):</label>
-							<input id="digits" type="text" name="FORM_TEXT_20" class="js-filter-digits" placeholder="Введите текст">
+							<input type="number" name="ANY_NAME_20" class="js-filter-digits" placeholder="Введите текст">
+						</li>
+
+						<li>
+							<label>Только русские:</label>
+							<input type="text" name="ANY_NAME_30" class="js-ru-letters" placeholder="Введите текст">
 						</li>
 
 						<li>
 							<label>Только русские (фильтр):</label>
-							<input id="rus" type="text" name="FORM_TEXT_30" class="js-filter-rus" placeholder="Введите текст">
-						</li>
-
-						<li>
-							<label>Номер банковской карты:</label>
-							<input id="card" type="text" name="FORM_TEXT_40" class="js-mask-card" placeholder="0000 0000 0000 0000">
-						</li>
-
-						<li>
-							<label>Дата:</label>
-							<input id="date" type="text" name="FORM_TEXT_45" class="" placeholder="01.01.2000">
+							<input type="text" name="ANY_NAME_35" class="js-filter-ru" placeholder="Введите текст">
 						</li>
 
 						<li>
 							<label>Телефон:</label>
-							<input id="tel" type="tel" name="FORM_TEXT_50" class="js-mask-tel" placeholder="+7 (999) 123-45-67">
+							<input type="tel" name="ANY_NAME_55" class="" placeholder="+7 (999) 123-45-67">
+						</li>
+
+						<li>
+							<label>Телефон (маска):</label>
+							<input type="tel" name="ANY_NAME_50" class="js-mask-tel" placeholder="+7 (999) 123-45-67">
 						</li>
 
 						<li>
 							<label>E-mail:</label>
-							<input id="email" type="email" name="FORM_TEXT_60" class="js-email" placeholder="name@example.ru">
+							<input type="email" name="ANY_NAME_60" class="js-email" placeholder="name@example.ru">
 						</li>
 
 						<li>
 							<label>Чекбокс:</label>
-							<input id="check" type="checkbox" name="FORM_TEXT_70" class="">
-							<label for="check">Согласен с условиями.</label>
+							<input type="checkbox" name="ANY_NAME_70" class="" required>
+							<label for="check">Согласен с условиями. </label>
+							<label for="ANY_NAME_70" class="error" style="display:none">Это поле необходимо заполнить</label>
 						</li>
 
 						<li>
@@ -107,11 +115,20 @@
 						</li>
 
 						<li>
-							<label>
-								Календарь:
-							</label>
-							<input id="" type="date" name="" class="js-calendar">
+							<label>Дата (станд.):</label>
+							<input type="date" name="ANY_NAME_80" class="" placeholder="01.01.2000">
 						</li>
+
+						<li>
+							<label>Дата (календарь):</label>
+							<input type="date" name="ANY_NAME_90" class="js-datepicker" placeholder="01.01.2000">
+						</li>
+
+						<li>
+							<label>Номер банковской карты:</label>
+							<input type="text" name="ANY_NAME_40" class="js-mask-card" placeholder="0000 0000 0000 0000">
+						</li>
+
 					</ul>
 
 					<input type="submit" value="Cохранить" class="action-button">
