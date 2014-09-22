@@ -213,12 +213,18 @@
 
 						<li>
 							<label>Файл:</label>
-							<input type="file" name="ANY_NAME_100">
+							<div style="display:inline-block">
+								<div><input type="file" name="ANY_NAME_100" required></div>
+								<label for="ANY_NAME_100" class="error" style="display:none"></label>
+							</div>
 						</li>
 
 						<li>
 							<label>Ещё файл:</label>
-							<input type="file" name="ANY_NAME_101">
+							<div style="display:inline-block">
+								<div><input type="file" name="ANY_NAME_101" required></div>
+								<label for="ANY_NAME_101" class="error" style="display:none"></label>
+							</div>
 						</li>
 
 					</ul>
@@ -392,7 +398,7 @@
 			<script src="js/default/jquery.mousewheel.js"></script>
 			<script src="js/default/snippets/frontstarter.stickyscroll.js"></script>
 
-			<div class="js-fullscreen js-stickyscroll demo-centering-the-unknown">
+			<div class="js-fullscreen js-stickyscroll demo-centering-the-unknown" style="background:#fed">
 				<section class="demo">
 					<h2>Fullscreen + Sticky Scroll + Centering the Unknown</h2>
 				</section>

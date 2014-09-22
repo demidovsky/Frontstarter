@@ -19,9 +19,6 @@ body.page-demo section.demo.line {
   vertical-align: top;
   margin-bottom: 5px;
 }
-body.page-demo .js-fullscreen {
-  background: #fed;
-}
 body.page-demo .demo-centering-the-unknown {
   width: 100%;
   height: 100%;
