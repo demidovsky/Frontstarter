@@ -175,6 +175,7 @@ box-sizing: border-box; */
   width: 30px;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 /* Drop Down down arrow */
