@@ -98,7 +98,7 @@ $(function()
 				var type = $this.attr("type");
 
 				// игнорируем поля без имени:
-				if (typeof(name) == "undefined") { console.warn("Не задан атрибут name", $this); return }
+				if (typeof(name) == "undefined" || !name) { console.warn("Не задан атрибут name", $this); return }
 
 				rules[name] = {};
 
