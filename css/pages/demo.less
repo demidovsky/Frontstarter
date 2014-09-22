@@ -1,5 +1,4 @@
 @import "../default/mixins.less";
-@import "../../fonts/stylesheet.css";
 
 
 /* Демо-страница (начало) */
@@ -33,6 +32,7 @@ body.page-demo
 		&.line
 		{
 			.inline-block(top);
+			margin-bottom: 5px;
 		}
 	}
 
@@ -83,31 +83,54 @@ body.page-demo
 
 			&:first-child
 			{
-				.inline-block(middle);
+				.inline-block(top);
 				width: 200px;
+				line-height: 25px;
 				padding: 0 8px;
 				text-align: right;
 			}
 
 			&.error
 			{
-				color: #a00;
+				color: #b00;
 			}
 		}
 
 		input,
 		textarea
 		{
+			width: 200px;
 			vertical-align: middle;
 			margin-right: 8px;
-			&[type=checkbox] { margin-right: 0 }
+		}
 
+		select
+		{
+			min-width: 100px;
+  			max-width: 300px;
+		}
+
+		input[type=checkbox],
+		input[type=radio]
+		{
+			width: auto;
+			margin-right: 0;
+			margin-top: -3px;
+		}
+
+		input,
+		textarea,
+		select
+		{
 			&.error
 			{
-				outline: 1px solid #c00;
+				.box-shadow(0 0 0 1px #f00);
 			}
 		}
 	}
+
+	.NFI-wrapper { padding-bottom: 4px; }
+	.NFI-filename { margin-left: -5px; padding-left: 10px; border: 0; line-height: 32px; }
 }
 
 

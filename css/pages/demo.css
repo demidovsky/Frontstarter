@@ -1,4 +1,3 @@
-@import "../../fonts/stylesheet.css";
 /* Демо-страница (начало) */
 /*-------------------------------------- 320 --------------------------------------*/
 body.page-demo {
@@ -18,6 +17,7 @@ body.page-demo section.demo {
 body.page-demo section.demo.line {
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 5px;
 }
 body.page-demo .js-fullscreen {
   background: #fed;
@@ -72,26 +72,46 @@ body.page-demo .form-fields > li label {
 }
 body.page-demo .form-fields > li label:first-child {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 200px;
+  line-height: 25px;
   padding: 0 8px;
   text-align: right;
 }
 body.page-demo .form-fields > li label.error {
-  color: #a00;
+  color: #b00;
 }
 body.page-demo .form-fields > li input,
 body.page-demo .form-fields > li textarea {
+  width: 200px;
   vertical-align: middle;
   margin-right: 8px;
 }
+body.page-demo .form-fields > li select {
+  min-width: 100px;
+  max-width: 300px;
+}
 body.page-demo .form-fields > li input[type=checkbox],
-body.page-demo .form-fields > li textarea[type=checkbox] {
+body.page-demo .form-fields > li input[type=radio] {
+  width: auto;
   margin-right: 0;
+  margin-top: -3px;
 }
 body.page-demo .form-fields > li input.error,
-body.page-demo .form-fields > li textarea.error {
-  outline: 1px solid #c00;
+body.page-demo .form-fields > li textarea.error,
+body.page-demo .form-fields > li select.error {
+  -webkit-box-shadow: 0 0 0 1px #ff0000;
+  -moz-box-shadow: 0 0 0 1px #ff0000;
+  box-shadow: 0 0 0 1px #ff0000;
+}
+body.page-demo .NFI-wrapper {
+  padding-bottom: 4px;
+}
+body.page-demo .NFI-filename {
+  margin-left: -5px;
+  padding-left: 10px;
+  border: 0;
+  line-height: 32px;
 }
 /*-------------------------------------- 480 --------------------------------------*/
 /*-------------------------------------- 768 --------------------------------------*/

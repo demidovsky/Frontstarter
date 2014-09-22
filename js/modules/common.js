@@ -1,8 +1,6 @@
-// для включения консоли задать localStorage.debug = true
-if (typeof(localStorage) != "undefined" && !localStorage.debug)
-{
-	console.log = console.info = console.warn = console.error = function(){};
-}
+// для включения консоли задать localStorage.debug = "on"
+if (typeof(localStorage) != "undefined" && localStorage.debug != "on")
+{ console.log = console.info = console.warn = console.error = function(){}; }
 
 
 

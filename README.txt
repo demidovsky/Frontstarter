@@ -117,14 +117,13 @@ index.html содержит список всех страниц проекта.
         frontstarter.forms.js
 
     выпадающие списки:
-        frontstarter.forms.js
-        selectboxit.css
+        selectboxit.js
 
     выбор файла:
-        [TODO]:
+        nicefileinput.js
 
     выбор даты:
-        [TODO]:
+        frontstarter.forms.js
 
     модальные окна:
         [TODO]
@@ -136,7 +135,8 @@ index.html содержит список всех страниц проекта.
         frontstarter.tabs.js
 
     лайтбоксы:
-        lightbox & litebox
+        lightbox
+        litebox
 
     прилипающий скролл:
         frontstarter.stickyscroll.js
@@ -160,7 +160,7 @@ index.html содержит список всех страниц проекта.
         [TODO]
 
     вывод данных в консоль по условию:
-        debug=true в localStorage
+        localStorage.debug="on"
 
     условный вывод для устройств (backend):
         $isMobile, $isTablet

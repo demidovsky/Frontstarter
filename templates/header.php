@@ -35,7 +35,7 @@
 	<?/* <script src="js/default/____.js"></script> */?>
 
 	<link href="css/default/reset.css" rel="stylesheet">
-	<link href="css/fonts/stylesheet.css" rel="stylesheet">
+	<link href="fonts/stylesheet.css" rel="stylesheet">
 	<link href="css/default/font-awesome.min.edit.css" rel="stylesheet">
 
 <?

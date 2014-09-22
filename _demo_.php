@@ -18,17 +18,19 @@
 
 			<link rel="stylesheet" href="css/default/snippets/selectboxit.css">
 			<link rel="stylesheet" href="css/default/jquery-ui.all.edit.css">
-			<script src="js/default/jquery.validate.js"></script>
+			<script src="js/default/jquery.validate.min.js"></script>
 			<script src="js/default/masked-min-jquery.js"></script>
 			<script src="js/default/jquery.keyfilter.js"></script>
 			<!-- селектбоксу достаточно ui.core-->
 			<!-- script src="js/default/jquery-ui.core.min.js"></script -->
 			<script src="js/default/jquery-ui.all.min.js"></script>
 			<script src="js/default/jquery.selectBoxIt.min.edit.js"></script>
+			<script src="js/default/jquery.nicefileinput.min.edit.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
 
-			<section class="demo forms">
-				<h2>Формы</h2>
+
+			<section class="demo">
+				<h2>Форма А</h2>
 
 
 				<form name="" action="" method="POST" class="js-validate">
@@ -36,32 +38,32 @@
 					<ul class="form-fields">
 						<li>
 							<label>Текст:</label>
-							<input type="text" name="ANY_NAME_10" class="" placeholder="Введите текст" required>
+							<input type="text" name="ANY_NAME_10" class="" placeholder="введите текст" required>
 						</li>
 
 						<li>
 							<label>Текст:</label>
-							<textarea name="ANY_NAME_15" class="" placeholder="Введите текст" required></textarea>
+							<textarea name="ANY_NAME_15" class="" placeholder="введите текст" required></textarea>
 						</li>
 
 						<li>
 							<label>Только цифры:</label>
-							<input type="number" name="ANY_NAME_25" class="" placeholder="Введите текст">
+							<input type="number" name="ANY_NAME_25" class="" placeholder="введите текст">
 						</li>
 
 						<li>
 							<label>Только цифры (фильтр):</label>
-							<input type="number" name="ANY_NAME_20" class="js-filter-digits" placeholder="Введите текст">
+							<input type="number" name="ANY_NAME_20" class="js-filter-digits" placeholder="введите текст">
 						</li>
 
 						<li>
-							<label>Только русские:</label>
-							<input type="text" name="ANY_NAME_30" class="js-ru-letters" placeholder="Введите текст">
+							<label>Только русские (pattern):</label>
+							<input type="text" name="ANY_NAME_30" pattern="^[а-яА-Я\s]+$" data-pattern-message="Допускаются только русские буквы" class="" placeholder="введите текст" required>
 						</li>
 
 						<li>
 							<label>Только русские (фильтр):</label>
-							<input type="text" name="ANY_NAME_35" class="js-filter-ru" placeholder="Введите текст">
+							<input type="text" name="ANY_NAME_35" class="js-filter-ru" placeholder="введите текст">
 						</li>
 
 						<li>
@@ -81,41 +83,121 @@
 
 						<li>
 							<label>Чекбокс:</label>
-							<input type="checkbox" name="ANY_NAME_70" class="" required>
-							<label for="check">Согласен с условиями. </label>
-							<label for="ANY_NAME_70" class="error" style="display:none">Это поле необходимо заполнить</label>
+							<label>
+								<input type="checkbox" name="ANY_NAME_65" class="" required>
+								Согласен с условиями.
+							</label>
+							<label for="ANY_NAME_65" class="error" style="display:none"></label>
 						</li>
 
 						<li>
-							<label>Селекты:</label>
-							<select class="js-selectboxit">
-								<option>Макс. ширина</option>
-								<option>вариант 1</option>
-								<option>вариант 2 чуть длиннее</option>
-								<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
-							</select>
+							<label>Радио:</label>
+							<label>
+								<input type="radio" name="ANY_NAME_69" class="" required>
+								FM
+							</label>
+							<label>
+								<input type="radio" name="ANY_NAME_69" class="" required>
+								AM
+							</label>
+							<label>
+								<input type="radio" name="ANY_NAME_69" class="" required>
+								УКВ
+							</label>
+							<label for="ANY_NAME_69" class="error" style="display:none"></label>
+						</li>
+					</ul>
 
-							<select class="js-selectboxit">
-								<option>Мин. ширина</option>
-								<option>А</option>
-								<option>Б</option>
-								<option>В</option>
-								<option>Г</option>
-								<option>Д</option>
-								<option>Е</option>
-								<option>Ё</option>
-								<option>Ж</option>
-								<option>З</option>
-								<option>И</option>
-								<option>Й</option>
-								<option>К</option>
-								<option>Л</option>
-								<option>М</option>
-							</select>
+					<input type="submit" value="Cохранить" class="action-button">
+
+				</form>
+
+			</section>
+
+
+
+			<section class="demo">
+				<h2>Форма Б</h2>
+
+
+				<form name="" action="" method="POST" class="js-validate">
+
+					<ul class="form-fields">
+
+						<li>
+							<label>Селекты стильные:</label>
+							<div style="display:inline-block">
+								<div>
+									<select name="ANY_NAME_71" class="js-selectboxit" required>
+										<option>&laquo;Макс. ширина селекта&raquo;</option>
+										<option>вариант 1</option>
+										<option>вариант 2 &laquo;чуть длиннее&raquo;</option>
+										<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
+									</select>
+									<label for="ANY_NAME_71" class="error" style="display:none"></label>
+								</div>
+								
+								<div>
+									<select name="ANY_NAME_72" class="js-selectboxit" required>
+										<option>&laquo;Мин. ширина селекта&raquo;</option>
+										<option>А</option>
+										<option>Б</option>
+										<option>В</option>
+										<option>Г</option>
+										<option>Д</option>
+										<option>Е</option>
+										<option>Ё</option>
+										<option>Ж</option>
+										<option>З</option>
+										<option>И</option>
+										<option>Й</option>
+										<option>К</option>
+										<option>Л</option>
+										<option>М</option>
+									</select>
+									<label for="ANY_NAME_72" class="error" style="display:none"></label>
+								</div>
+							</div>
 						</li>
 
 						<li>
-							<label>Дата (станд.):</label>
+							<label>Селекты нативные:</label>
+							<div style="display:inline-block">
+								<div>
+									<select name="ANY_NAME_73" class="" required>
+										<option>&laquo;Макс. ширина селекта&raquo;</option>
+										<option>вариант 1</option>
+										<option>вариант 2 &laquo;чуть длиннее&raquo;</option>
+										<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
+									</select>
+									<label for="ANY_NAME_73" class="error" style="display:none"></label>
+								</div>
+								
+								<div>
+									<select name="ANY_NAME_74" class="" required>
+										<option>&laquo;Мин. ширина селекта&raquo;</option>
+										<option>А</option>
+										<option>Б</option>
+										<option>В</option>
+										<option>Г</option>
+										<option>Д</option>
+										<option>Е</option>
+										<option>Ё</option>
+										<option>Ж</option>
+										<option>З</option>
+										<option>И</option>
+										<option>Й</option>
+										<option>К</option>
+										<option>Л</option>
+										<option>М</option>
+									</select>
+									<label for="ANY_NAME_74" class="error" style="display:none"></label>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<label>Дата:</label>
 							<input type="date" name="ANY_NAME_80" class="" placeholder="01.01.2000">
 						</li>
 
@@ -125,8 +207,18 @@
 						</li>
 
 						<li>
-							<label>Номер банковской карты:</label>
+							<label>Номер карты (маска):</label>
 							<input type="text" name="ANY_NAME_40" class="js-mask-card" placeholder="0000 0000 0000 0000">
+						</li>
+
+						<li>
+							<label>Файл:</label>
+							<input type="file" name="ANY_NAME_100">
+						</li>
+
+						<li>
+							<label>Ещё файл:</label>
+							<input type="file" name="ANY_NAME_101">
 						</li>
 
 					</ul>

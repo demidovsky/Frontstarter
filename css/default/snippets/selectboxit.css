@@ -12,6 +12,14 @@ select.js-selectboxit,
   max-height: 200px;
 }
 
+/* Валидация */
+.js-selectboxit.error + .selectboxit-container > .selectboxit
+{
+  -webkit-box-shadow: 0 0 0 1px #f00;
+     -moz-box-shadow: 0 0 0 1px #f00;
+          box-shadow: 0 0 0 1px #f00;
+}
+
 /*
  * jquery.selectBoxIt.css 3.8.1
  * Author: @gregfranko

@@ -1,6 +1,4 @@
-a.action-button,
-input.action-button,
-button.action-button {
+.action-button {
   -webkit-appearance: none;
   display: inline-block;
   vertical-align: middle;
@@ -29,15 +27,11 @@ button.action-button {
   left: 0;
   top: 0;
 }
-a.action-button:hover,
-input.action-button:hover,
-button.action-button:hover {
+.action-button:hover {
   background: #586e85;
   color: white;
 }
-a.action-button:active,
-input.action-button:active,
-button.action-button:active {
+.action-button:active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;

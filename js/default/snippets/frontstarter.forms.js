@@ -1,3 +1,13 @@
+// 
+
+
+
+
+
+
+
+
+
 $(function()
 {
 	"use strict";
@@ -15,7 +25,7 @@ $(function()
 		date: "Введите корректную дату",
 		dateISO: "Введите корректную дату в формате ISO",
 		number: "Введите число",
-		digits: "Вводите только цифры",
+		digits: "Введите целое положительное число",
 		creditcard: "Введите правильный номер кредитной карты",
 		equalTo: "Введите такое же значение ещё раз",
 		accept: "Выберите файл с правильным расширением",
@@ -55,39 +65,84 @@ $(function()
 
 
 
-	// Русские буквы
-	$.validator.addMethod("ru_letters", function(value, element) {
-		return value.match(/^[а-яА-Я\s]+$/) || !value;
+	// Селект
+	$.validator.addMethod("select_required", function(value, element) {
+		var firstOption = $(element).children('option').first().text();
+		return value !== null && value != firstOption;
 	});
 	$.extend($.validator.messages, {
-		ru_letters: "Допускаются только русские буквы"
+		select_required: $.validator.messages.required
 	});
 
 
 
 
 
-	 /* Валидация */
-	(function ValidateById()
+	 /* Валидация всего-всего */
+	(function SphericalValidationInVacuum()
 	{
-		// составляем правила
 
-		var rules = {};    // { имя_инпута: правила, имя_инпута: правила, ... }
+		// начало цикла по ФОРМАМ
+		$('form.js-validate').each(function(index, element)
+		{
+			var $form = $(element);
+			var rules = {};    // { имя_инпута: правила, имя_инпута: правила, ... }
 
-		$('form.js-validate') // .each? неск. форм
-			.find('input, textarea')
-			.each(function(index,element)
+
+
+			// начало цикла по ПОЛЯМ
+			$form.find('input, textarea, select').each(function(index,element)
 			{
 				var $this = $(element);
-
 				var name = $this.attr("name");
 				var type = $this.attr("type");
 
+				// игнорируем поля без имени:
 				if (typeof(name) == "undefined") { console.warn("Не задан атрибут name", $this); return }
-				if (typeof(type) == "undefined") { console.warn("Не задан атрибут type", $this); return }
 
 				rules[name] = {};
 
+				// отдельно обрабатываем select и textarea
+				if (typeof(type) == "undefined")
+				{
+					if ($this.is('select'))
+					{
+						if (typeof($this.attr("required")) !== "undefined")
+						{
+							// проверяем, что значение селекта не равно первой опции
+							// (предполагается, что первая опция - это "выберите ...")
+							rules[name].select_required = true;
+						}
+						return;
+					}
+
+					if ($this.is('textarea'))
+					{
+						// атрибут required валидируется автоматически для input и textarea
+						return;
+					}
+
+					console.warn("Не задан атрибут type", $this);
+					return;
+				}
+
+
+				// произвольное правило:
+				if ($this.attr("pattern"))
+				{
+					var patternName = "pattern_" + name;
+					var regexp = new RegExp($this.attr("pattern"));
+					var message = {}; message[patternName] = $this.attr("data-pattern-message");
+					$.validator.addMethod(patternName, function(value, element) {
+						return value.match(regexp);
+					});
+					$.extend($.validator.messages, message);
+					rules[name][patternName] = true;
+					return;
+				}
+
+
+				// типовые правила:
 				switch(type)
 				{
 					case "button":			{ break; }
@@ -101,7 +156,8 @@ $(function()
 					case "hidden":			{ break; }
 					case "image":			{ break; }
 					case "month":			{ break; }
-					case "number":			{ rules[name].digits = true; break; }
+					case "number":			{ console.warn("Поле [type=number] несовместимо с валидацией; заменено на [type=text]");
+											  $this.attr("type", "text"); rules[name].digits = true; break; }
 					case "password":		{ break; }
 					case "radio":			{ break; }
 					case "range":			{ break; }
@@ -117,27 +173,29 @@ $(function()
 					default: { console.warn("Некорректный тип поля", type); return }
 				}
 
-				if ($this.hasClass('js-ru-letters')) rules[name].ru_letters = true;
+			}); // конец цикла по ПОЛЯМ
 
+
+			console.info("Правила валидации: ", rules);
+
+
+			// инициализируем
+			$form.validate(
+			{
+				rules: rules,
+				keyup: false,
+				ignore: '', // do not ignore hidden elements
+
+				// подавляет дефолтный сабмит формы
+				/*submitHandler: function(form)
+				{
+					console.log("submit");
+				}*/
 			});
 
 
+		}); // конец цикла по ФОРМАМ
 
-
-
-		// инициализируем
-
-		$('form.js-validate').validate(
-		{
-			rules: rules,
-			keyup: false,
-
-			// подавляет дефолтный сабмит формы
-			/*submitHandler: function(form)
-			{
-				console.log("submit");
-			}*/
-		});
 
 	})();
 
@@ -151,7 +209,6 @@ $(function()
 	/* Маски ввода */
 	(function MaskedInputs()
 	{
-
 		$('input.js-mask-tel').mask('+7 (999) 999-99-99', { placeholder: ' ' });
 
 		$('input.js-mask-card').mask('9999 9999 9999 9999', { placeholder: 'x' });
@@ -171,7 +228,7 @@ $(function()
 	(function FilteredInputs()
 	{
 
-		$('input.js-filter-digits').keyfilter(/[\d]/);
+		$('input.js-filter-digits').keyfilter(/[\-\d]/);
 
 		$('input.js-filter-ru').keyfilter(/[ а-яА-Я]/);
 
