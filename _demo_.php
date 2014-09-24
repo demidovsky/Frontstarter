@@ -14,6 +14,9 @@
 
 
 
+
+
+
 			<!-- Формы -->
 
 			<link rel="stylesheet" href="css/default/snippets/selectboxit.css">
@@ -37,7 +40,7 @@
 
 					<ul class="form-fields">
 						<li>
-							<label>Текст:</label>
+							<label data-tooltip="Это подсказка">Текст:</label>
 							<input type="text" name="ANY_NAME_10" class="" placeholder="введите текст" required>
 						</li>
 
@@ -477,6 +480,30 @@
 				<div data-tab-content="tab" data-tab="third">Контент 3</div>
 
 			</section>
+
+
+
+
+
+
+
+
+			<!-- Подсказки -->
+
+			<link rel="stylesheet" href="css/default/snippets/tooltip.css">
+
+			<section class="demo">
+
+				<h2>Подсказки</h2>
+
+				Lorem ipsum dolor sit amet, <span data-tooltip="Это короткая подсказка.">consectetur</span> adipisicing elit.
+				<br>Dicta consequatur neque quae soluta quisquam dolores dolorum aliquid itaque eum, <br>
+				aut eveniet hic <span data-tooltip="Это длинная подсказка Lorem ipsum dolor sit amet,
+				 consectetur adipisicing elit. Eaque quam omnis id, eligendi dolore alias, maxime.
+				 Animi quae quia tenetur modi?">inventore</span>, ducimus quia iure quam voluptates numquam. Accusantium.
+
+			</section>
+
 
 
 
