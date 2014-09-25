@@ -16,7 +16,6 @@
 
 
 
-
 			<!-- Формы -->
 
 			<link rel="stylesheet" href="css/default/snippets/selectboxit.css">
@@ -30,10 +29,11 @@
 			<script src="js/default/jquery.selectBoxIt.min.edit.js"></script>
 			<script src="js/default/jquery.nicefileinput.min.edit.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
+			<script src="js/default/snippets/frontstarter.equalizer.js"></script>
 
 
-			<section class="demo">
-				<h2>Форма А</h2>
+			<section class="demo line" data-equalizer>
+				<h2>Форма А <sup style="font-weight:normal"><small>(равной высоты с формой Б)</small></sup></h2>
 
 
 				<form name="" action="" method="POST" class="js-validate">
@@ -109,6 +109,21 @@
 							</label>
 							<label for="ANY_NAME_69" class="error" style="display:none"></label>
 						</li>
+
+						<li>
+							<label>Дата:</label>
+							<input type="date" name="ANY_NAME_80" class="" placeholder="01.01.2000">
+						</li>
+
+						<li>
+							<label>Дата (календарь):</label>
+							<input type="date" name="ANY_NAME_90" class="js-datepicker" placeholder="01.01.2000">
+						</li>
+
+						<li>
+							<label>Номер карты (маска):</label>
+							<input type="text" name="ANY_NAME_40" class="js-mask-card" placeholder="0000 0000 0000 0000">
+						</li>
 					</ul>
 
 					<input type="submit" value="Cохранить" class="action-button">
@@ -119,8 +134,8 @@
 
 
 
-			<section class="demo">
-				<h2>Форма Б</h2>
+			<section class="demo line" data-equalizer>
+				<h2>Форма Б <sup style="font-weight:normal"><small>(равной высоты с формой А)</small></sup></h2>
 
 
 				<form name="" action="" method="POST" class="js-validate">
@@ -200,21 +215,6 @@
 						</li>
 
 						<li>
-							<label>Дата:</label>
-							<input type="date" name="ANY_NAME_80" class="" placeholder="01.01.2000">
-						</li>
-
-						<li>
-							<label>Дата (календарь):</label>
-							<input type="date" name="ANY_NAME_90" class="js-datepicker" placeholder="01.01.2000">
-						</li>
-
-						<li>
-							<label>Номер карты (маска):</label>
-							<input type="text" name="ANY_NAME_40" class="js-mask-card" placeholder="0000 0000 0000 0000">
-						</li>
-
-						<li>
 							<label>Файл:</label>
 							<div style="display:inline-block">
 								<div><input type="file" name="ANY_NAME_100" required></div>
@@ -236,13 +236,11 @@
 
 				</form>
 
-
 			</section>
 
 
 
-
-
+			<div><!-- тссс, ты меня не видел --></div>
 
 
 

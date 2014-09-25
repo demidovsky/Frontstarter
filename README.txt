@@ -139,6 +139,9 @@ index.html содержит список всех страниц проекта.
     полноэкранные секции:
         frontstarter.fullscreen.js
 
+    элементы равной высоты:
+        frontstarter.equalizer.js
+
     параллакс:
         frontstarter.parallax.js
 
