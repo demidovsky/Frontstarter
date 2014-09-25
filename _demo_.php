@@ -40,7 +40,7 @@
 
 					<ul class="form-fields">
 						<li>
-							<label data-tooltip="Это подсказка">Текст:</label>
+							<label>Текст:</label>
 							<input type="text" name="ANY_NAME_10" class="" placeholder="введите текст" required>
 						</li>
 
