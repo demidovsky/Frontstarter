@@ -121,6 +121,7 @@ index.html содержит список всех страниц проекта.
         frontstarter.forms.js
 
     модальные окна:
+        jqModal.js
         [TODO]
 
     подсказки:

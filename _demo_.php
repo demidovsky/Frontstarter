@@ -15,7 +15,7 @@
 			<!-- Модальные окна -->
 
 			<link rel="stylesheet" href="css/default/snippets/jqModal.css">
-			<script src="js/default/jqModal.min.js"></script>
+			<script src="js/default/jqModal.min.edit.js"></script>
 
 			<section class="demo">
 				<h2>Модальные окна</h2>
