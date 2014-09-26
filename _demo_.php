@@ -12,7 +12,21 @@
 
 
 
+			<!-- Модальные окна -->
 
+			<link rel="stylesheet" href="css/default/snippets/jqModal.css">
+			<script src="js/default/jqModal.min.js"></script>
+
+			<section class="demo">
+				<h2>Модальные окна</h2>
+
+				<a href="#" class="jqModal">jqModal</a>
+
+				<div class="jqmWindow" id="dialog">
+					<a href="#" class="jqmClose">Закрыть</a>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas corporis asperiores quos alias, maxime molestiae quibusdam. Quo voluptates animi maiores nam voluptatum ipsa vero, consectetur amet magni voluptatibus quasi!
+				</div>
+			</section>
 
 
 
