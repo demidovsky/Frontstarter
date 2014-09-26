@@ -130,8 +130,8 @@ index.html содержит список всех страниц проекта.
         frontstarter.tabs.js
 
     лайтбоксы:
-        lightbox
-        litebox
+        lightbox.js
+        litebox.js
 
     прилипающий скролл:
         frontstarter.stickyscroll.js
