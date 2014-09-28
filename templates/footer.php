@@ -5,7 +5,7 @@
 </html>
 
 <?
-	if (isset($_GET['html']) || $saveHTML)
+	if (isset($_GET['html']) || SAVE_HTML)
 	{
 		$html = ob_get_contents();
 		ob_end_clean();

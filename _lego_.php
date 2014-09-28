@@ -1,6 +1,6 @@
 <?
-	$pageTitle = 'Страница-конструктор';
-	$pageId = 'lego';
+	define('PAGE_TITLE', 'Страница-конструктор');
+	define('PAGE_ID',  'lego');
 ?>
 
 <? require_once('templates/header.php'); ?>

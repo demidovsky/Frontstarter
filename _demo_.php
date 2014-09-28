@@ -1,6 +1,6 @@
 <?
-	$pageTitle = 'Демо-страница';
-	$pageId = 'demo';
+	define('PAGE_TITLE', 'Демо-страница');
+	define('PAGE_ID',  'demo');
 ?>
 
 <? require_once('templates/header.php'); ?>

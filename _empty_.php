@@ -1,6 +1,6 @@
 <?
-	$pageTitle = 'Пустая страница';
-	$pageId = 'empty';
+	define('PAGE_TITLE', 'Пустая страница');
+	define('PAGE_ID',  'empty');
 ?>
 
 <? require_once('templates/header.php'); ?>

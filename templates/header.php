@@ -1,13 +1,14 @@
 <?
-	$siteTitle = "Frontstarter";
-	$SITE_TEMPLATE_PATH = '';
-
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
+
+	define('SITE_TITLE', 'Frontstarter');
+	define('SITE_TEMPLATE_PATH', '');
+	define('SAVE_HTML', false);
+
 	date_default_timezone_set('Europe/Moscow');
 
-	$saveHTML = false;
-	if (isset($_GET['html']) || $saveHTML) ob_start();
+	if (isset($_GET['html']) || SAVE_HTML) ob_start();
 ?>
 
 <!doctype html>
@@ -16,7 +17,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?=$pageTitle;?> - <?=$siteTitle;?></title>
+	<title><?=PAGE_TITLE;?> - <?=SITE_TITLE;?></title>
 	<meta name="description" content="">
 <?
 	require_once 'Mobile_Detect.php';
@@ -52,13 +53,13 @@
 	antiCache('css/modules/common.css');
 
 	// CSS для конкретной страницы:
-	antiCache('css/pages/'.$pageId.'.css');
+	antiCache('css/pages/'.PAGE_ID.'.css');
 
 	// общий JS:
 	antiCache('js/modules/common.js');
 
 	// JS для конкретной страницы:
-	antiCache('js/pages/'.$pageId.'.js');
+	antiCache('js/pages/'.PAGE_ID.'.js');
 ?>
 
 	<!--[if lte IE 8]>
@@ -71,7 +72,7 @@
 
 
 
-<body class="page-<?=$pageId?>">
+<body class="page-<?=PAGE_ID?>">
 
 	<noscript><b>В вашем браузере выключен javascript!</b> Полная функциональность сайта может быть недоступна.</noscript>
 
