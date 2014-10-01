@@ -1,10 +1,10 @@
-﻿Frontstarter — это фреймворк для быстрой и экологичной вёрстки проекта с нуля.
+Frontstarter — это фреймворк для быстрой и экологичной вёрстки проекта с нуля.
 
 Основные принципы:
 
 1. От общего к частному
 Весь css- и js-код делится на 2 категории:
-общий для всего сайта, либо индивидуальный для одной страницы.
+общий для всего сайта, либо индивидуальный для одного раздела.
 Сначала пишутся общие части; затем из них, как из конструктора, собираются страницы.
 Индивидуальный код дописывается по мере необходимости.
 
@@ -51,7 +51,7 @@ index.html содержит список всех страниц проекта.
     /pages            — код индивидуальных фрагментов
 
 /modules — это то, что подключается на каждой странице
-/pages — это то, что подключается только на одной странице
+/pages — это то, что подключается только на страницах одного раздела
 
 Из /modules всегда используются файлы common.css/js. 
 Из /pages всегда используются файлы с именем равным $pageId страницы.
@@ -182,26 +182,20 @@ index.html содержит список всех страниц проекта.
 Решение: Для упрощения работы после интеграции рекомендуется отказаться от LESS и вносить правки напрямую в CSS. Использовать less.js не стоит из-за замедления загрузки страницы и неудобного кэширования. Компиляция же при помощи lessc или WinLess требует дополнительных действий, что на небольших правках сводит на нет ускорение в работе от LESS.
 
 
-Проблема: Необходимость задавать страницам индвидуальные классы для <body> и подключать индивидуальные стили и скрипты
-Решение:
+Проблема: Необходимость задавать разделам индвидуальные классы для <body> и подключать индивидуальные стили и скрипты.
+Решение для Битрикс:
 
-    для Битрикс - взять название из адреса страницы:
+    в .section.php:
+$arDirProperties = array(
+    'BODY_CLASS' => 'имястраницы'
+);
+
     в header.php:
-        $curPage = explode('/', $APPLICATION->GetCurPage(true));
-        $bodyClass = count($curPage) > 1 ? $curPage[1] : 'index';
-        $APPLICATION->setAdditionalCSS(SITE_TEMPLATE_PATH."/css/pages/{$bodyClass}.css");
-        $APPLICATION->addHeadScript(SITE_TEMPLATE_PATH."/js/pages/{$bodyClass}.js");
-        <body class="page-<? $APPLICATION->showProperty("bodyClass");?>">
-
-
-    для Битрикс - задать названия страницам вручную:
-    в коде страницы:
-        $APPLICATION->SetPageProperty("bodyClass", "имястраницы");
-    в header.php:
-        $bodyClass = $APPLICATION->getProperty("bodyClass");
-        $APPLICATION->setAdditionalCSS(SITE_TEMPLATE_PATH."/css/pages/{$bodyClass}.css");
-        $APPLICATION->addHeadScript(SITE_TEMPLATE_PATH."/js/pages/{$bodyClass}.js");
-        <body class="page-<? $APPLICATION->showProperty("bodyClass");?>">
+$bodyClass = $APPLICATION->getProperty('BODY_CLASS');
+$APPLICATION->setAdditionalCSS(SITE_TEMPLATE_PATH."/css/pages/{$bodyClass}.css");
+$APPLICATION->addHeadScript(SITE_TEMPLATE_PATH."/js/pages/{$bodyClass}.js");
+...
+<body class="page-<?=$bodyClass?>">
 
 
 
