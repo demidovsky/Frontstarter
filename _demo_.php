@@ -42,15 +42,16 @@
 			<script src="js/default/jquery-ui.all.min.js"></script>
 			<script src="js/default/jquery.selectBoxIt.min.edit.js"></script>
 			<script src="js/default/jquery.nicefileinput.min.edit.js"></script>
+			<script src="js/default/jquery.form.min.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
 			<script src="js/default/snippets/frontstarter.equalizer.js"></script>
 
 
 			<section class="demo line" data-equalizer>
-				<h2>Форма А <sup style="font-weight:normal"><small>(равной высоты с формой Б)</small></sup></h2>
+				<h2>Форма А <sup style="font-weight:normal"><small>(равной высоты с формой Б) (ajax)</small></sup></h2>
 
 
-				<form name="" action="" method="POST" class="js-validate">
+				<form name="" action="" method="POST" class="js-validate js-ajax-form">
 
 					<ul class="form-fields">
 						<li>
