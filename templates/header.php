@@ -20,7 +20,7 @@
 	<title><?=PAGE_TITLE;?> - <?=SITE_TITLE;?></title>
 	<meta name="description" content="">
 <?
-	require_once 'Mobile_Detect.php';
+	require_once '../classes/Mobile_Detect.php';
 	$detect = new Mobile_Detect;
 	$isMobile = $detect->isMobile();
 	$isTablet = $detect->isTablet();
