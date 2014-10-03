@@ -1,5 +1,5 @@
 
-<script>window.ROOT = "";</script>
+<script>window.ROOT = "<?=SITE_TEMPLATE_PATH;?>";</script>
 
 </body>
 </html>

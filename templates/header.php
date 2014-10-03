@@ -4,11 +4,16 @@
 
 	define('SITE_TITLE', 'Frontstarter');
 	define('SITE_TEMPLATE_PATH', '');
+
 	define('SAVE_HTML', false);
+	if (isset($_GET['html']) || SAVE_HTML) ob_start();
+
+	define('DEFAULT_BUILD', '1');
+	define('FRONTSTRAP', '2');
+	define('FOUNDSTARTER', '3');
+	$build = DEFAULT_BUILD;
 
 	date_default_timezone_set('Europe/Moscow');
-
-	if (isset($_GET['html']) || SAVE_HTML) ob_start();
 ?>
 
 <!doctype html>
@@ -26,19 +31,33 @@
 	$isTablet = $detect->isTablet();
 ?>
 <? if($isTablet){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
-<? if(!$isMobile){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
-
+<? if($isMobile){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
 
 	<!--development--><script src="js/default/jquery-1.10.2.min.js"></script>
 	<!--production--><!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
 
-	<?/* <link href="css/default/____.css" rel="stylesheet"> */?>
-	<?/* <script src="js/default/____.js"></script> */?>
-
+	<!-- default -->
 	<link href="css/default/reset.css" rel="stylesheet">
 	<link href="fonts/stylesheet.css" rel="stylesheet">
 	<link href="css/default/font-awesome.min.edit.css" rel="stylesheet">
 
+<? if ($build == FRONTSTRAP) { ?>
+	<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<? }
+   if ($build == FOUNDSTARTER) { ?>
+	<!-- Foundation -->
+	<link rel="stylesheet" href="foundation/css/foundation.min.css" />
+	<script src="foundation/js/modernizr.js"></script>
+	<script src="foundation/js/foundation.min.js"></script>
+	<script>$(function(){ $(document).foundation(); });</script>
+
+<? } ?>
+	<!-- custom -->
+<?/*	<link href="css/default/____.css" rel="stylesheet"> */?>
+<?/*	<script src="js/default/____.js"></script> */?>
 <?
 	function antiCache($path)
 	{
