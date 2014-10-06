@@ -62,10 +62,10 @@
 
 	}
 	window.onload = function() {
-		equalheight('[data-equalizer]');
+		equalheight('[data-equalheight]');
 	};
 	window.onresize = function(){
-		equalheight('[data-equalizer]');
+		equalheight('[data-equalheight]');
 	};
 
 })();

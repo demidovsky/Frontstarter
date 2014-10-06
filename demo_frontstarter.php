@@ -44,10 +44,10 @@
 			<script src="js/default/jquery.nicefileinput.min.edit.js"></script>
 			<script src="js/default/jquery.form.min.js"></script>
 			<script src="js/default/snippets/frontstarter.forms.js"></script>
-			<script src="js/default/snippets/frontstarter.equalizer.js"></script>
+			<script src="js/default/snippets/frontstarter.equalheight.js"></script>
 
 
-			<section class="demo line" data-equalizer>
+			<section class="demo line" data-equalheight>
 				<h2>Форма А <sup style="font-weight:normal"><small>(равной высоты с формой Б) (ajax)</small></sup></h2>
 
 
@@ -149,7 +149,7 @@
 
 
 
-			<section class="demo line" data-equalizer>
+			<section class="demo line" data-equalheight>
 				<h2>Форма Б <sup style="font-weight:normal"><small>(равной высоты с формой А)</small></sup></h2>
 
 
