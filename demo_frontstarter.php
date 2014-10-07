@@ -12,6 +12,34 @@
 
 
 
+
+
+			<!-- Адаптивная таблица -->
+
+			<link href="css/default/snippets/stacktable.css" rel="stylesheet" >
+			<script src="js/default/stacktable.min.edit.js"></script>
+
+			<section class="demo">
+
+				<h2>Адаптивная таблица</h2>
+
+				<table class="js-stacktable">
+					<thead>
+						<tr><th></th><th>Cleantech</th><th>IT</th><th>BioTechMed</th><th>Industrial</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>Сбор заявок:</td><td>9 апреля – 16 мая</td><td>9 апреля</td><td>9 апреля – 16 мая</td><td>9 апреля – 16 мая</td></tr>
+						<tr><td>Региональные встречи:</td><td>9 апреля – 16 мая</td><td>16 мая</td><td>9 апреля</td><td>9 апреля – 16 мая</td></tr>
+						<tr><td>Оценка и отбор проектов:</td><td>16 мая</td><td>9 апреля – 16 мая</td><td>9 апреля – 16 мая</td><td>9 апреля – 16 мая</td></tr>
+					</tbody>
+				</table>
+
+			</section>
+
+
+
+
+
 			<!-- Модальные окна -->
 
 			<link rel="stylesheet" href="css/default/snippets/jqModal.css">
@@ -516,6 +544,7 @@
 				 Animi quae quia tenetur modi?">inventore</span>, ducimus quia iure quam voluptates numquam. Accusantium.
 
 			</section>
+
 
 
 
