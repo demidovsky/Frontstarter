@@ -7,6 +7,6 @@
 $(function()
 {
 	$('select.js-selectboxit')
-		.selectBoxIt({ showFirstOption: false }) 				// когда первый option содержит текст "выберите..."
+		.selectBoxIt()
 		.on("change", function(){ $(this).trigger("blur"); }); 	// для валидации
 });

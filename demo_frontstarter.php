@@ -189,8 +189,7 @@
 							<label>Селекты стильные:</label>
 							<div style="display:inline-block">
 								<div>
-									<select name="ANY_NAME_71" class="js-selectboxit" required>
-										<option>&laquo;Макс. ширина селекта&raquo;</option>
+									<select name="ANY_NAME_71" class="js-selectboxit" data-text="Макс. ширина селекта" required>
 										<option>вариант 1</option>
 										<option>вариант 2 &laquo;чуть длиннее&raquo;</option>
 										<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
@@ -200,7 +199,6 @@
 								
 								<div>
 									<select name="ANY_NAME_72" class="js-selectboxit" required>
-										<option>&laquo;Мин. ширина селекта&raquo;</option>
 										<option>А</option>
 										<option>Б</option>
 										<option>В</option>
@@ -226,7 +224,6 @@
 							<div style="display:inline-block">
 								<div>
 									<select name="ANY_NAME_73" class="" required>
-										<option>&laquo;Макс. ширина селекта&raquo;</option>
 										<option>вариант 1</option>
 										<option>вариант 2 &laquo;чуть длиннее&raquo;</option>
 										<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
@@ -236,7 +233,6 @@
 								
 								<div>
 									<select name="ANY_NAME_74" class="" required>
-										<option>&laquo;Мин. ширина селекта&raquo;</option>
 										<option>А</option>
 										<option>Б</option>
 										<option>В</option>
