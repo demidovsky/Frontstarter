@@ -6,7 +6,11 @@
 /* инициализация */
 $(function()
 {
-	$('select.js-selectboxit')
-		.selectBoxIt()
-		.on("change", function(){ $(this).trigger("blur"); }); 	// для валидации
+	$('select.js-selectboxit').each(function(index, element)
+	{
+		var $this = $(element);
+		$this
+			.selectBoxIt({ showFirstOption: ($this.attr("required") ? false : true) })
+			.on("change", function(){ $this.trigger("blur"); }); 	// для валидации
+	});
 });

@@ -81,8 +81,8 @@ $(function()
 
 	// Селект
 	$.validator.addMethod("select_required", function(value, element) {
-		var firstOption = $(element).children('option').first().text();
-		return value !== null && value != firstOption;
+		var firstOption = $(element).children('option').first();
+		return value !== null && value != firstOption.text() && value != firstOption.attr("value");
 	});
 	$.extend($.validator.messages, {
 		select_required: $.validator.messages.required

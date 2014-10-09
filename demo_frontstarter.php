@@ -189,16 +189,29 @@
 							<label>Селекты стильные:</label>
 							<div style="display:inline-block">
 								<div>
-									<select name="ANY_NAME_71" class="js-selectboxit" data-text="Макс. ширина селекта" required>
+									<div>Обязательный (без значений):</div>
+									<select name="ANY_NAME_71" class="js-selectboxit" required>
+										<option>Выберите вариант</option>
 										<option>вариант 1</option>
 										<option>вариант 2 &laquo;чуть длиннее&raquo;</option>
 										<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
 									</select>
 									<label for="ANY_NAME_71" class="error" style="display:none"></label>
 								</div>
-								
 								<div>
-									<select name="ANY_NAME_72" class="js-selectboxit" required>
+									<div><br>Обязательный (со значениями):</div>
+									<select name="ANY_NAME_971" class="js-selectboxit" required>
+										<option value="0">Выберите вариант</option>
+										<option value="1">вариант 1</option>
+										<option value="2">вариант 2 &laquo;чуть длиннее&raquo;</option>
+										<option value="3">вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
+									</select>
+									<label for="ANY_NAME_971" class="error" style="display:none"></label>
+								</div>
+								<div>
+									<div><br>Необязательный с вводным текстом:</div>
+									<select name="ANY_NAME_72" class="js-selectboxit">
+										<option>Выберите вариант</option>
 										<option>А</option>
 										<option>Б</option>
 										<option>В</option>
@@ -216,6 +229,15 @@
 									</select>
 									<label for="ANY_NAME_72" class="error" style="display:none"></label>
 								</div>
+								<div>
+									<div><br>Необязательный без вводного текста:</div>
+									<select name="ANY_NAME_73" class="js-selectboxit">
+										<option>А</option>
+										<option>Б</option>
+										<option>В</option>
+									</select>
+									<label for="ANY_NAME_73" class="error" style="display:none"></label>
+								</div>
 							</div>
 						</li>
 
@@ -223,16 +245,29 @@
 							<label>Селекты нативные:</label>
 							<div style="display:inline-block">
 								<div>
-									<select name="ANY_NAME_73" class="" required>
+									<div>Обязательный (без значений):</div>
+									<select name="ANY_NAME_81" required>
+										<option>Выберите вариант</option>
 										<option>вариант 1</option>
 										<option>вариант 2 &laquo;чуть длиннее&raquo;</option>
 										<option>вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
 									</select>
-									<label for="ANY_NAME_73" class="error" style="display:none"></label>
+									<label for="ANY_NAME_81" class="error" style="display:none"></label>
 								</div>
-								
 								<div>
-									<select name="ANY_NAME_74" class="" required>
+									<div><br>Обязательный (со значениями):</div>
+									<select name="ANY_NAME_981" required>
+										<option value="0">Выберите вариант</option>
+										<option value="1">вариант 1</option>
+										<option value="2">вариант 2 &laquo;чуть длиннее&raquo;</option>
+										<option value="3">вариант 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam odit consequuntur, quasi, quisquam dignissimos quod, odio reiciendis explicabo aut consectetur officia minima deleniti velit nisi blanditiis. Itaque vitae, animi assumenda.</option>
+									</select>
+									<label for="ANY_NAME_981" class="error" style="display:none"></label>
+								</div>
+								<div>
+									<div><br>Необязательный с вводным текстом:</div>
+									<select name="ANY_NAME_82" data-text="Выберите вариант">
+										<option>Выберите вариант</option>
 										<option>А</option>
 										<option>Б</option>
 										<option>В</option>
@@ -248,7 +283,16 @@
 										<option>Л</option>
 										<option>М</option>
 									</select>
-									<label for="ANY_NAME_74" class="error" style="display:none"></label>
+									<label for="ANY_NAME_82" class="error" style="display:none"></label>
+								</div>
+								<div>
+									<div><br>Необязательный без вводного текста:</div>
+									<select name="ANY_NAME_83">
+										<option>А</option>
+										<option>Б</option>
+										<option>В</option>
+									</select>
+									<label for="ANY_NAME_83" class="error" style="display:none"></label>
 								</div>
 							</div>
 						</li>
