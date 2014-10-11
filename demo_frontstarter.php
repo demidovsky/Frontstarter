@@ -25,12 +25,12 @@
 
 				<table class="js-stacktable">
 					<thead>
-						<tr><th></th><th>Cleantech</th><th>IT</th><th>BioTechMed</th><th>Industrial</th></tr>
+						<tr><th></th>					<th>Красный</th>	<th>Желтый</th>		<th>Зеленый</th>	<th>Синий</th></tr>
 					</thead>
 					<tbody>
-						<tr><td>Сбор заявок:</td><td>9 апреля – 16 мая</td><td>9 апреля</td><td>9 апреля – 16 мая</td><td>9 апреля – 16 мая</td></tr>
-						<tr><td>Региональные встречи:</td><td>9 апреля – 16 мая</td><td>16 мая</td><td>9 апреля</td><td>9 апреля – 16 мая</td></tr>
-						<tr><td>Оценка и отбор проектов:</td><td>16 мая</td><td>9 апреля – 16 мая</td><td>9 апреля – 16 мая</td><td>9 апреля – 16 мая</td></tr>
+						<tr><td><b>Овощи</b></td>		<td>Помидор</td>	<td>Картофель</td>	<td>Огурец</td>		<td>Баклажан</td></tr>
+						<tr><td><b>Фрукты</b></td>		<td>Яблоко</td>		<td>Дыня</td>		<td>Фейхоа</td>		<td>Питахайа</td></tr>
+						<tr><td><b>Ягоды</b></td>		<td>Смородина</td>	<td>Облепиха</td>	<td>Крыжовник</td>	<td>Черника</td></tr>
 					</tbody>
 				</table>
 

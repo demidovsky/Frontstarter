@@ -340,4 +340,24 @@ $(function()
 
 
 
+
+$("input[type=radio]").each(function() {
+    var secondClick = true;
+    $(this).change(function() {
+        secondClick = false;
+    });
+    $(this).click(function() {
+        if (secondClick) {
+            $(this).prop("checked", false);
+        }
+        secondClick = true;
+    });
+});
+
+
+
+
+
+
+
 })
