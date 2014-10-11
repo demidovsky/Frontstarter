@@ -340,19 +340,47 @@ $(function()
 
 
 
+	(function DeselectableRadioButton()
+	{
+		var radio = document.querySelectorAll('[data-deselectable]');
+		var clicked = null;
 
-$("input[type=radio]").each(function() {
-    var secondClick = true;
-    $(this).change(function() {
-        secondClick = false;
-    });
-    $(this).click(function() {
-        if (secondClick) {
-            $(this).prop("checked", false);
-        }
-        secondClick = true;
-    });
-});
+		for (var i = 0; i < radio.length; i++)
+		{
+			radio[i].onclick = function()
+			{
+				if (this == clicked)
+				{
+					this.checked = false;
+					clicked = null;
+				}
+				else
+				{
+					clicked = this;
+				}
+			};
+		}
+	})();
+
+
+
+
+
+
+
+
+// $("input[type=radio]").each(function() {
+//     var secondClick = true;
+//     $(this).change(function() {
+//         secondClick = false;
+//     });
+//     $(this).click(function() {
+//         if (secondClick) {
+//             $(this).prop("checked", false);
+//         }
+//         secondClick = true;
+//     });
+// });
 
 
 

@@ -154,6 +154,23 @@
 						</li>
 
 						<li>
+							<label>Радио с отменой выбора:</label>
+							<label>
+								<input type="radio" name="ANY_NAME_70" class="" data-deselectable required>
+								Раз
+							</label>
+							<label>
+								<input type="radio" name="ANY_NAME_70" class="" data-deselectable required>
+								Два
+							</label>
+							<label>
+								<input type="radio" name="ANY_NAME_70" class="" data-deselectable required>
+								Три
+							</label>
+							<label for="ANY_NAME_69" class="error" style="display:none"></label>
+						</li>
+
+						<li>
 							<label>Дата:</label>
 							<input type="date" name="ANY_NAME_80" class="" placeholder="01.01.2000">
 						</li>
