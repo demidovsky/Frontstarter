@@ -22,12 +22,21 @@ $(function()
 					animation: { duration: 500, easing: "linear" }
 				})
 
+				// обработка ресайза
+				/*.on("jcarousel:create jcarousel:reload", function()
+				{
+					var $this = $(this);
+					var width = $this.innerWidth();
+					$this.jcarousel("items").css("width", width + "px");
+				})*/
+
 				// обработка текущего элемента
 				/*.on('jcarousel:visiblein', 'li', function(event, carousel)
 				{
 					console.log("current visible: ", $(carousel._target).attr("data-index"));
 				})
 
+				// или
 				.on('jcarousel:animate', function(event, carousel)
 				{
 					console.log("current animate: ", $(carousel._target).attr("data-index"));
