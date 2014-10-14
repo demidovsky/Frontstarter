@@ -69,7 +69,7 @@ $(function()
 
 
 	// http://www.owlcarousel.owlgraphic.com/
-	// $('.owl-carousel').trigger("to.owl.carousel", index, time]);
+	// $('.owl-carousel').trigger("to.owl.carousel", index, time);
 	(function owlCarousel()
 	{
 
