@@ -2,20 +2,19 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
 
-	define('SITE_TITLE', 'Frontstarter');
+	define('SITE_TITLE', 'Название сайта');
 	define('SITE_TEMPLATE_PATH', '');
-
+	define('USE_CDN', false);
 	define('SAVE_HTML', false);
-	if (isset($_GET['html']) || SAVE_HTML) ob_start();
+	define('MOBILE_DETECT', false);
 
 	define('DEFAULT_BUILD', '1');
 	define('FRONTSTRAP', '2');
 	define('FOUNDSTARTER', '3');
 	$build = DEFAULT_BUILD;
 
-	define('USE_CDN', false);
-
 	date_default_timezone_set('Europe/Moscow');
+	if (isset($_GET['html']) || SAVE_HTML) ob_start();
 
 ?><!doctype html>
 <!--[if IE 8]> <html class="ie8"> <![endif]-->
@@ -26,13 +25,16 @@
 	<title><?=PAGE_TITLE;?> - <?=SITE_TITLE;?></title>
 	<meta name="description" content="">
 <?
-	require_once 'classes/Mobile_Detect.php';
-	$detect = new Mobile_Detect;
-	$isMobile = $detect->isMobile();
-	$isTablet = $detect->isTablet();
+	if (MOBILE_DETECT)
+	{
+		require_once 'classes/Mobile_Detect.php';
+		$detect = new Mobile_Detect;
+		$isMobile = $detect->isMobile();
+		$isTablet = $detect->isTablet();
 ?>
 <? if($isTablet){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
 <? if($isMobile){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"><? } ?>
+<?	} ?>
 
 	<!-- default -->
 <? if (USE_CDN) { ?>	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><? }
