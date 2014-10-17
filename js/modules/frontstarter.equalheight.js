@@ -1,4 +1,5 @@
-(function()
+/* требует, чтобы у элементов был общий родитель */
+(function EqualHeightSiblings()
 {
 
 	// Equal height columns
@@ -68,4 +69,21 @@
 		equalheight('[data-equalheight]');
 	};
 
+})();
+
+
+
+
+
+
+
+
+
+/* не требует, чтобы у элементов был общий родитель */
+(function EqualHeightAny()
+{
+	var M = [];
+	$('.owl-item-image')
+		.each(function(index, el){ M.push($(el).height()) })
+		.height(Math.max.apply(Math,M))
 })();
