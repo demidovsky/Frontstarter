@@ -1,22 +1,21 @@
-// название_модуля
-
 "use strict";
+
+
 
 $(function()
 {
-
 	var $window = $(window);
 	var $body = $('body');
 
 
+	/* независимые фрагменты кода - в раздельных самовызывающихся функциях. */
 
 
-	// 
-	(function Main()
+	// описание
+	(function YourTextHere()
 	{
-
+		
 	})();
-
 
 
 

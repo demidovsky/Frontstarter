@@ -3,7 +3,7 @@
 	ini_set('display_errors', '1');
 
 	define('SITE_TITLE', 'Название сайта');
-	define('SITE_TEMPLATE_PATH', '');
+	define('SITE_TEMPLATE_PATH', '/home/');
 	define('USE_CDN', false);
 	define('SAVE_HTML', false);
 	define('MOBILE_DETECT', false);
@@ -38,19 +38,18 @@
 
 	<!-- default -->
 <? if (USE_CDN) { ?>	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><? }
-           else { ?>	<script src="js/default/jquery-1.10.2.min.js"></script><? } ?>
-
-<? if (USE_CDN) { ?>	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><? }
-           else { ?>	<link href="css/default/font-awesome.min.edit.css" rel="stylesheet"><? } ?>
+           else { ?>	<script src="js/libs/jquery-1.10.2.min.js"></script><? } ?>
+<?/* if (USE_CDN) { ?>	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><? }
+           else { ?>	<link href="css/fonts/font-awesome.min.css" rel="stylesheet"><? } */?>
 
 	<link href="css/default/reset.css" rel="stylesheet">
 	<link href="fonts/stylesheet.css" rel="stylesheet">
-
 <?
 if ($build == FRONTSTRAP)
 {
 ?>
-	<!-- Bootstrap -->
+
+	<!-- bootstrap -->
 <?
 	if (USE_CDN) { ?>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +63,8 @@ if ($build == FRONTSTRAP)
 if ($build == FOUNDSTARTER)
 {
 ?>
-	<!-- Foundation -->
+
+	<!-- foundation -->
 <?
 	if (USE_CDN) { ?>
 	<link href="http://cdn.foundation5.zurb.com/foundation.css" rel="stylesheet" >
@@ -80,8 +80,9 @@ if ($build == FOUNDSTARTER)
 }?>
 
 	<!-- custom -->
-<?/*	<link href="css/default/____.css" rel="stylesheet"> */?>
-<?/*	<script src="js/default/____.js"></script> */?>
+<?/*
+	<link href="css/default/____.css" rel="stylesheet">
+	<script src="js/libs/____.js"></script>*/?>
 <?
 	function antiCache($path)
 	{
@@ -93,13 +94,13 @@ if ($build == FOUNDSTARTER)
 	}
 
 	// общий CSS:
-	antiCache('css/modules/common.css');
+	antiCache('css/common.css');
 
 	// CSS для конкретной страницы:
 	antiCache('css/pages/'.PAGE_ID.'.css');
 
 	// общий JS:
-	antiCache('js/modules/common.js');
+	antiCache('js/script.js');
 
 	// JS для конкретной страницы:
 	antiCache('js/pages/'.PAGE_ID.'.js');
