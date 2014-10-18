@@ -39,8 +39,6 @@
 	<!-- default -->
 <? if (USE_CDN) { ?>	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><? }
            else { ?>	<script src="js/libs/jquery-1.10.2.min.js"></script><? } ?>
-<?/* if (USE_CDN) { ?>	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><? }
-           else { ?>	<link href="css/fonts/font-awesome.min.css" rel="stylesheet"><? } */?>
 
 	<link href="css/default/reset.css" rel="stylesheet">
 	<link href="fonts/stylesheet.css" rel="stylesheet">
