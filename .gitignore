@@ -1,7 +1,3 @@
-/css/default/normalize.css
-/css/default/reset.css
-/css/default/mixins.css
-/css/pages/_empty_.css
-/css/modules/_empty_.css
 /export*
 /_TODO
+/_blank_/css/default/mixins.css
