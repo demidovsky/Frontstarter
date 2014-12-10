@@ -1,17 +1,28 @@
 @import "default/mixins.less";
 
 
-
 /* общие стили (начало) */
 
-//@import "имя_модуля.less";
+//@import "modules/имя_модуля.less";
+//@import "pages/имя_страницы.less";
 
 
+._hidden      { display: none; }
+._clearfix    { .clearfix();   }
+._float-right { float: right;  }
+._float-left  { float: left;   }
 
-/*-------------------------------------- 320 --------------------------------------*/
 
-a
-{
+html { font: 10px sans-serif; }
+body { }
+
+h1,.h1 { }
+
+h2,.h2 { }
+
+h3,.h3 { }
+
+a {
 	@color: blue;
 	color: @color;
 	text-decoration: underline;
@@ -21,9 +32,12 @@ a
 	&:active { color: lighten(@color, 30%) }
 }
 
-body
-{
-}
+.b-content {}
+
+
+/*-------------------------------------- 320 --------------------------------------*/
+
+
 
 
 

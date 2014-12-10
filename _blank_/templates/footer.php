@@ -2,8 +2,6 @@
 
 
 
-	<script>window.SITE_TEMPLATE_PATH = "<?=SITE_TEMPLATE_PATH;?>";</script>
-
 </body>
 </html>
 
