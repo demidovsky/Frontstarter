@@ -7,20 +7,25 @@
 //@import "pages/имя_страницы.less";
 
 
-._hidden      { display: none; }
-._clearfix    { .clearfix();   }
-._float-right { float: right;  }
-._float-left  { float: left;   }
 
+html {
+	font-size: 10px;
 
-html { font: 10px sans-serif; }
-body { }
+	@media screen and (min-width: 1024px) { & {
+			font-size: 10px;
+		}
+	}
+}
 
-h1,.h1 { }
+body {
+	font-family: sans-serif;
+}
 
-h2,.h2 { }
+h1,.h1 {}
 
-h3,.h3 { }
+h2,.h2 {}
+
+h3,.h3 {}
 
 a {
 	@color: blue;
@@ -32,7 +37,21 @@ a {
 	&:active { color: lighten(@color, 30%) }
 }
 
+/* Модификаторы */
+
+
+._hidden          { display: none; }
+._clearfix        { .clearfix();   }
+._float-right     { float: right;  }
+._float-left      { float: left;   }
+._vertical-center { .centering-the-unknown(); }
+
+
+/* Контент */
+
 .b-content {}
+
+
 
 
 /*-------------------------------------- 320 --------------------------------------*/

@@ -8,7 +8,6 @@
 
 
 
-
 // ----------------------------------------------- Сглаживания ---------------------------------------------
 
 @sine-out: cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -386,6 +385,25 @@
 
 
 
+// Доп. картинка под ретину
+.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}
+
+
+
+
 // Выравнивание по вертикали блока неизвестной высоты http://css-tricks.com/centering-in-the-unknown/
 .centering-the-unknown()
 {
@@ -408,6 +426,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		font-size: medium;
+		max-width: 100%;
 	}
 }
 
