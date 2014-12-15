@@ -1,4 +1,4 @@
-// обработка события с отсечкой по таймауту
+// обработка событий с отсечкой по таймауту
 $.fn.onTimeout = function(eventType, callback, timeout)
 {
 	var timer = null;
@@ -9,3 +9,7 @@ $.fn.onTimeout = function(eventType, callback, timeout)
 	};
 	return $(this).on(eventType, start);
 };
+
+
+// мин. версия:
+$.fn.onTimeout=function(e,t,n){var r=null,i=function(){if(r)clearTimeout(r);r=setTimeout(t,n)};return $(this).on(e,i)}
