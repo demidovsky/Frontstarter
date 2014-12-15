@@ -2,7 +2,11 @@
 
 	<script src="js/libs/jquery-1.10.2.min.js"></script>
 
-	<? antiCache('js/script.js'); ?>
+	<?
+		antiCache('js/script.js');
+		antiCache('js/modules/resize.js');
+	?>
+
 
 
 </body>
