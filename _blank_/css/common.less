@@ -1,56 +1,75 @@
 @import "default/mixins.less";
 
 
-/* общие стили (начало) */
-
-//@import "modules/имя_модуля.less";
-//@import "pages/имя_страницы.less";
 
 
+
+/*
+----------------------- Универсальные модификаторы (начало) -----------------*/
+
+._hidden          { display: none; }
+._clearfix        { .clearfix();   }
+._float-right     { float: right;  }
+._float-left      { float: left;   }
+._underline       { text-decoration: underline; }
+._uppercase       { text-transform: uppercase; }
+
+/*--------------------- Универсальные модификаторы (конец) --------------------
+*/
+
+
+
+
+
+/*
+----------------------------- Общие стили (начало) --------------------------*/
 
 html {
 	font-size: 10px;
-
-	@media screen and (min-width: 1024px) { & {
-			font-size: 10px;
-		}
-	}
+	//@media screen and (min-width: 1024px) { & { font-size: 10px; } }
 }
 
 body {
 	font-family: sans-serif;
 }
 
-h1,.h1 {}
+h1,.h1 {
+	font-size: 48px;
+}
 
-h2,.h2 {}
+h2,.h2 {
+	font-size: 32px;
+}
 
-h3,.h3 {}
+h3,.h3 {
+	font-size: 16px;
+}
 
 a {
 	@color: blue;
 	color: @color;
 	text-decoration: underline;
-
-	&:visited { color: @color }
 	&:hover { color: lighten(@color, 15%) }
 	&:active { color: lighten(@color, 30%) }
 }
 
-/* Модификаторы */
 
-
-._hidden          { display: none; }
-._clearfix        { .clearfix();   }
-._float-right     { float: right;  }
-._float-left      { float: left;   }
-._vertical-center { .centering-the-unknown(); }
-
-
-/* Контент */
 
 .b-content {}
 
+
+
+.b-section {
+	padding: 0;
+
+	&._no-padding-top {
+		padding-top: 0;
+	}
+
+	&._no-padding-bottom {
+		padding-bottom: 0;
+	}
+}
 
 
 
@@ -67,8 +86,7 @@ a {
 
 
 /*-------------------------------------- 480 --------------------------------------*/
-@media screen and (min-width: 480px)
-{
+@media screen and (min-width: 480px) {
 	
 }
 
@@ -79,8 +97,7 @@ a {
 
 
 /*-------------------------------------- 768 --------------------------------------*/
-@media screen and (min-width: 768px) 
-{
+@media screen and (min-width: 768px) {
 	
 }
 
@@ -91,11 +108,33 @@ a {
 
 
 /*-------------------------------------- 1024 -------------------------------------*/
-@media screen and (min-width: 1024px)
-{
+@media screen and (min-width: 1024px) {
 	
 }
 
+/*----------------------------- Общие стили (конец) ---------------------------
+*/
 
 
-/* общие стили (конец) */
+
+
+
+/*
+----------------------- Стили структурных блоков (начало) -------------------*/
+// @import "modules/имя_модуля.less";
+// @import "modules/имя_модуля.less";
+// @import "modules/имя_модуля.less";
+/*--------------------- Стили структурных блоков (конец) ----------------------
+*/
+
+
+
+
+
+/*
+----------------------- Индивидуальные стили страниц (начало) ---------------*/
+// @import "modules/имя_страницы.less";
+// @import "modules/имя_страницы.less";
+// @import "modules/имя_страницы.less";
+/*--------------------- Индивидуальные стили страниц (конец) ----------------
+*/

@@ -3,6 +3,9 @@
 /* ресет отступов */
 body, ul, ol, li, h1, h2, h3, h4, h5, p, dl, dt, dd { padding: 0; margin: 0; }
 
+/* сбрасываем жир */
+h1, h2, h3, h4, h5 { font-weight: normal; }
+
 /* занять всю высоту */
 html, body { height: 100%; }
 
