@@ -1,4 +1,4 @@
-*.psd
+/psd/*
 /html_*
 /css/default/mixins.css
 /css/modules/_blank_.css
