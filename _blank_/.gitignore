@@ -1,3 +1,5 @@
+*.psd
 /html_*
-/_TODO
-/_blank_/css/default/mixins.css
+/css/default/mixins.css
+/css/modules/_blank_.css
+/css/pages/_blank_.css
