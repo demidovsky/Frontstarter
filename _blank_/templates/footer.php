@@ -13,6 +13,7 @@
 </html>
 
 <?
+	// для сохранения html-файла
 	if (isset($_GET['html']) || SAVE_HTML)
 	{
 		$html = ob_get_contents();

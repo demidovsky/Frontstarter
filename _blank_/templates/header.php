@@ -5,6 +5,7 @@
 
 	define('SITE_TITLE', 'Название сайта');
 
+	// для сохранения html-файла
 	define('SAVE_HTML', false);
 	if (isset($_GET['html']) || SAVE_HTML) ob_start();
 
