@@ -18,6 +18,7 @@ xcopy css %exportfolder%\css\ /H /E
 xcopy *.html %exportfolder%
 
 del %exportfolder%\css\default\mixins.less
+del %exportfolder%\css\default\mixins.css
 del %exportfolder%\css\common.less
 
 rmdir /S /Q %exportfolder%\css\modules
