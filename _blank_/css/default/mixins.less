@@ -353,8 +353,20 @@
 
 
 
+// растянуть элемент по всему родителю
+.layer()
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
 // накрыть элемент картинкой
-.image-overlay(@url, @bgcolor:transparent)
+.image-layer(@url, @bgcolor:transparent)
 {
 	position: relative;
 
