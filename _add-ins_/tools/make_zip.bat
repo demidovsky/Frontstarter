@@ -15,6 +15,9 @@ mkdir %exportfolder%
 
 xcopy js %exportfolder%\js\ /H /E
 xcopy css %exportfolder%\css\ /H /E
+xcopy img %exportfolder%\img\ /H /E
+xcopy fonts %exportfolder%\fonts\ /H /E
+xcopy bootstrap %exportfolder%\bootstrap\ /H /E
 xcopy *.html %exportfolder%
 
 del %exportfolder%\css\default\mixins.less
