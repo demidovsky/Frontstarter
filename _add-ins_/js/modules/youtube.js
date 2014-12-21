@@ -15,5 +15,6 @@
 		function pause()
 		{
 			$('target').find('iframe')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			// А для vimeo так: .contentWindow.postMessage('{"method":"pause"}', '*');
 		}
 	})();
