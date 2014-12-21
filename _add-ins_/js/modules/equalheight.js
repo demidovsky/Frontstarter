@@ -65,9 +65,19 @@
 	window.onload = function() {
 		equalheight('[data-equalheight]');
 	};
-	window.onresize = function(){
-		equalheight('[data-equalheight]');
-	};
+
+	var timer = null,
+		callback = function()
+		{
+			equalheight('[data-equalheight]');
+		},
+		start = function()
+		{
+			if (timer) clearTimeout(timer);
+			timer = setTimeout(callback, 100);
+		};
+
+	window.onresize = start;
 
 })();
 
@@ -80,10 +90,12 @@
 
 
 /* не требует, чтобы у элементов был общий родитель */
-(function EqualHeightAny()
+function EqualHeightAny(selector)
 {
+	if (typeof $ == "undefined") return;
+
 	var M = [];
-	$('.owl-item-image')
+	$(selector)
 		.each(function(index, el){ M.push($(el).height()) })
 		.height(Math.max.apply(Math,M))
-})();
+};
