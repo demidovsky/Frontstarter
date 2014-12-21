@@ -8,7 +8,8 @@ $(function()
 	var FADE_IN_TIME = 100,
 		FADE_OUT_TIME = 500,
 		$window = $(window),
-		$overlay = $('.md-overlay').attr("title","Закрыть"),
+		$document = $(document),
+		$overlay = $('.md-overlay'),
 		$modal = $('.md-modal'),
 		$other = $('.md-other');
 
@@ -35,12 +36,17 @@ $(function()
 
 	window.showModal = function(selector)
 	{
+
 		var $selector = $(selector),
-			top = $window.scrollTop() + Math.abs(($window.height() - $selector.height()) / 2);
+			h = null,
+			top = null;
 
 		window.hideModal();
-		$overlay.stop().show();
+		$overlay.stop().height($document.height()).show();
 		$other.addClass('md-hide-other');
+		h = $selector.outerHeight();
+		top = $window.scrollTop() + Math.abs(($window.height() - h) / 2);
+		if (top + h > $document.height()) top = $document.height() - h;
 		$selector
 			.css("top", top + "px")
 			.fadeIn(FADE_IN_TIME, function(){ $selector.addClass('md-show'); });
@@ -50,6 +56,7 @@ $(function()
 
 	window.hideModal = function(selector) // можно вызвать без параметра - тогда закроются все попапы
 	{
+		if (!$overlay.is(':visible')) return;
 		$overlay.fadeOut(FADE_OUT_TIME);
 		$other.removeClass('md-hide-other');
 		if (typeof(selector) == "undefined") selector = '.md-modal';
@@ -60,6 +67,7 @@ $(function()
 
 	$modal.on("click", function(event) { event.stopPropagation(); });
 	$overlay.on("click", function(event) { window.hideModal(); });
+	$(document).keyup(function(e) { if (e.keyCode == 27) { window.hideModal(); } });
 
 
 
