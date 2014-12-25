@@ -74,7 +74,7 @@
 		start = function()
 		{
 			if (timer) clearTimeout(timer);
-			timer = setTimeout(callback, 100);
+			timer = setTimeout(callback, 50);
 		};
 
 	window.onresize = start;
@@ -89,13 +89,31 @@
 
 
 
-/* не требует, чтобы у элементов был общий родитель */
-function EqualHeightAny(selector)
-{
-	if (typeof $ == "undefined") return;
 
-	var M = [];
-	$(selector)
-		.each(function(index, el){ M.push($(el).height()) })
-		.height(Math.max.apply(Math,M))
-};
+
+/* не требует, чтобы у элементов был общий родитель */
+if (typeof $ != "undefined")
+$(function()
+{
+	"use strict";
+
+	(function EqualHeightAny()
+	{
+		var resize = function()
+		{
+			var M = [];
+
+			$('[data-equalheight-any]')
+				.filter(':visible')
+				.css("min-height", "0")
+				.each(function(index, element){ M.push($(element).outerHeight()); })
+				.css("min-height", Math.max.apply(null,M) + "px");
+		};
+
+		$window.onTimeout("resize", resize, 50);
+
+		resize();
+
+	})();
+
+});
