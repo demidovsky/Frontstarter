@@ -20,6 +20,8 @@ xcopy fonts %exportfolder%\fonts\ /H /E
 xcopy bootstrap %exportfolder%\bootstrap\ /H /E
 xcopy *.html %exportfolder%
 
+del %exportfolder%\index.html
+
 del %exportfolder%\css\default\mixins.less
 del %exportfolder%\css\default\mixins.css
 del %exportfolder%\css\common.less
