@@ -18,7 +18,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?=PAGE_TITLE;?> | <?=SITE_TITLE;?></title>
 
-	<link href="css/default/reset.css" rel="stylesheet">
 	<link href="fonts/stylesheet.css" rel="stylesheet">
 
 	<? antiCache('css/common.css'); ?>
