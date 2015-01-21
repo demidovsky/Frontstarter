@@ -8,11 +8,19 @@
 ----------------------- Универсальные модификаторы (начало) -----------------*/
 
 ._hidden          { display: none; }
-._clearfix        { .clearfix();   }
 ._float-right     { float: right;  }
 ._float-left      { float: left;   }
 ._underline       { text-decoration: underline; }
 ._uppercase       { text-transform: uppercase; }
+._mb-xxs          { margin-bottom: 5px }
+._mb-xs           { margin-bottom: 10px }
+._mb-s            { margin-bottom: 20px }
+._mb-m            { margin-bottom: 30px }
+._mb-l            { margin-bottom: 40px }
+._mb-xl           { margin-bottom: 50px }
+._mb-xxl          { margin-bottom: 60px }
+._vertical-center { .centering-the-unknown(); }
+._clearfix        { .clearfix();   }
 
 /*--------------------- Универсальные модификаторы (конец) --------------------
 */
@@ -124,6 +132,8 @@ a {
 
 /*
 ----------------------- Стили структурных блоков (начало) -------------------*/
+@import "modules/b-header.less";
+@import "modules/b-footer.less";
 // @import "modules/имя_модуля.less";
 // @import "modules/имя_модуля.less";
 // @import "modules/имя_модуля.less";
@@ -136,8 +146,8 @@ a {
 
 /*
 ----------------------- Индивидуальные стили страниц (начало) ---------------*/
-// @import "modules/имя_страницы.less";
-// @import "modules/имя_страницы.less";
-// @import "modules/имя_страницы.less";
+// @import "pages/имя_страницы.less";
+// @import "pages/имя_страницы.less";
+// @import "pages/имя_страницы.less";
 /*--------------------- Индивидуальные стили страниц (конец) ----------------
 */
