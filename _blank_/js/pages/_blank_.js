@@ -10,7 +10,7 @@ $(function()
 
 
 	// описание
-	(function YourTextHere()
+	;(function YourTextHere()
 	{
 		
 	})();
