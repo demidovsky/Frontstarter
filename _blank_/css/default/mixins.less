@@ -86,6 +86,26 @@
 
 
 
+.break-inside-avoid()
+{
+	-webkit-column-break-inside:avoid;
+	   -moz-column-break-inside:avoid;
+	     -o-column-break-inside:avoid;
+	    -ms-column-break-inside:avoid;
+	        column-break-inside:avoid;
+}
+
+
+
+.break-after-always()
+{
+	-webkit-column-break-after: always;
+	   -moz-column-break-after: always;
+	               break-after: always;
+}
+
+
+
 .text-shadow(@args) {
 	-webkit-text-shadow: @args;
 	   -moz-text-shadow: @args;
@@ -354,7 +374,7 @@
 
 
 // растянуть элемент по всему родителю
-.layer()
+.overlay()
 {
 	position: absolute;
 	left: 0;
@@ -366,7 +386,7 @@
 
 
 // накрыть элемент картинкой
-.image-layer(@url, @bgcolor:transparent)
+.image-overlay(@url, @bgcolor:transparent)
 {
 	position: relative;
 
@@ -512,4 +532,26 @@
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
 	filter: none;
 	-webkit-filter: grayscale(0%); 
+}
+
+
+
+// Кнопки различной ширины
+.fluid-button(@h, @pad)
+{
+	display: inline-block;
+	vertical-align: middle;
+	height: @h;
+	line-height: round(@h*0.9);
+	padding: 0 @pad;
+	text-decoration: none;
+}
+
+
+
+// Альтернатива margin:auto, не сбивающая верхний и нижний марджины
+.margin-auto()
+{
+	margin-left: auto;
+	margin-right: auto;
 }
