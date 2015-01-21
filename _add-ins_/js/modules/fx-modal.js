@@ -21,29 +21,29 @@ $(function()
 	$('[data-modal-open]').on("click", function(event)
 	{
 		event.preventDefault();
-		window.showModal($(this).attr("data-modal-open"));
+		window.openModal($(this).attr("data-modal-open"));
 	});
 
 
 
-	// для закрытия попапа нужно задать кнопке data-modal-hide либо data-modal-hide="#айди_попапа"
-	$('[data-modal-hide]').on("click", function(event)
+	// для закрытия попапа нужно задать кнопке data-modal-close либо data-modal-close="#айди_попапа"
+	$('[data-modal-close]').on("click", function(event)
 	{
 		event.preventDefault();
-		if ($(this).attr("data-modal-hide") != "") window.hideModal($(this).attr("data-modal-hide"));
-		else window.hideModal();
+		if ($(this).attr("data-modal-close") != "") window.closeModal($(this).attr("data-modal-close"));
+		else window.closeModal();
 	});
 
 
 
-	window.showModal = function(selector)
+	window.openModal = function(selector)
 	{
 
 		var $selector = $(selector),
 			h = null,
 			top = null;
 
-		window.hideModal();
+		window.closeModal();
 		$overlay.stop().height($document.height()).show();
 		$other.addClass('md-hide-other');
 		h = $selector.outerHeight();
@@ -52,11 +52,12 @@ $(function()
 		$selector
 			.css("top", top + "px")
 			.fadeIn(FADE_IN_TIME, function(){ $selector.addClass('md-show'); });
+		$modal.not($selector).hide();
 	}
 
 
 
-	window.hideModal = function(selector) // можно вызвать без параметра - тогда закроются все попапы
+	window.closeModal = function(selector) // можно вызвать без параметра - тогда закроются все попапы
 	{
 		if (!$overlay.is(':visible')) return;
 		$overlay.fadeOut(FADE_OUT_TIME);
@@ -68,8 +69,8 @@ $(function()
 
 
 	$modal.on("click", function(event) { event.stopPropagation(); });
-	$overlay.on("click", function(event) { window.hideModal(); });
-	$(document).keyup(function(e) { if (e.keyCode == 27) { window.hideModal(); } });
+	$overlay.on("click", function(event) { window.closeModal(); });
+	$(document).keyup(function(e) { if (e.keyCode == 27) { window.closeModal(); } });
 
 
 
