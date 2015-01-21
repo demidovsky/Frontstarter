@@ -389,19 +389,48 @@ $(function()
 
 
 
+	(function SimpleValidation()
+	{
+		$.extend($.validator.messages,
+		{
+			required: "Это поле является обязательным"
+		});
 
-// $("input[type=radio]").each(function() {
-//     var secondClick = true;
-//     $(this).change(function() {
-//         secondClick = false;
-//     });
-//     $(this).click(function() {
-//         if (secondClick) {
-//             $(this).prop("checked", false);
-//         }
-//         secondClick = true;
-//     });
-// });
+
+		$('#form').validate(
+		{
+			rules:
+			{
+				first: { required: true },
+				drunk: { required: true },
+				banners: { required: true },
+				happy: { required: true },
+				next: { required: true }
+			},
+
+			invalidHandler: function(form, validator)
+			{
+				$('#error').toggle(validator.numberOfInvalids());
+			},
+
+			showErrors: function(){}
+
+		});
+
+	})();
+
+
+
+
+
+
+	(function()
+	{
+		$('input[type=file]').on("change", function()
+		{
+			$(this).parent().find('._fake').html("Прикреплён файл: " + $(this).val())
+		});
+	})();
 
 
 
