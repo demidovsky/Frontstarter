@@ -6,9 +6,9 @@
 define('TO',      'name@example.ru');
 define('FROM',    'name@example.ru');
 define('REPLY',   'name@example.ru');
-define('SUBJECT', 'Тестовое письмо');
+define('SUBJECT', 'Обратная связь');
 
-if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['phone']))
+if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['email']))
 {
     $emailHeaders = 'From: '.FROM."\r\n".
                     'Reply-To: '.REPLY."\r\n".
@@ -18,15 +18,15 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['phone']))
     $form = array
     (
         'username' => htmlentities($_POST['username'], false, 'UTF-8'),
-        'phone'    => htmlentities($_POST['phone'], false, 'UTF-8'),
-        'message'  => empty($_POST['message']) ? htmlentities($_POST['message'], false, 'UTF-8') : ''
+        'email'    => htmlentities($_POST['email'], false, 'UTF-8'),
+        'message'  => htmlentities($_POST['message'], false, 'UTF-8'),
     );
 
     //$emailText = file_get_contents('email.html');
-    $emailText = "<h1>Данные заказа:</h1>
-                  <h2>${form['username']}</h2>
-                  <h2>${form['phone']}</h2>
-                  <br>${form['message']}";
+    $emailText = "<h2>Данные обратной связи:</h2>
+                  <p><b>Имя</b>: ${form['username']}</p>
+                  <p><b>E-mail</b>: ${form['email']}</p>
+                  <p><b>Сообщение</b>: ${form['message']}</p>";
 
     $emailResult = @mail(TO, SUBJECT, $emailText, $emailHeaders);
 
