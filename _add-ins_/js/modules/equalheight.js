@@ -110,7 +110,7 @@ $(function()
 				.css("min-height", Math.max.apply(null,M) + "px");
 		};
 
-		$window.onTimeout("resize", resize, 50);
+		$(window).onTimeout("resize", resize, 50);
 
 		resize();
 
