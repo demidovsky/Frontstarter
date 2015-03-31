@@ -11,6 +11,8 @@ $(function()
 	// проверить положение скролла и доскроллить, если нужно
 	function snapToScreen($this, event, from)
 	{
+		if (isWheelBlocked) return;
+
 		var wy = Math.round($window.scrollTop()); // Window Y
 		var wh = Math.round($window.height());    // Window Height
 		var sy = Math.round($this.offset().top);  // Section Y
@@ -64,8 +66,10 @@ $(function()
 
 		$window.on("mousewheel", function(event)
 		{
-			if (isWheelBlocked) return;
-			$stickyscroll.each(function(index, element) { snapToScreen($(element), event, 'window'); })
+			$stickyscroll.each(function(index, element)
+			{
+				snapToScreen($(element), event, 'window');
+			})
 		});
 
 	})();
