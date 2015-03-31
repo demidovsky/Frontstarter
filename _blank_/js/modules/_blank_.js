@@ -4,8 +4,8 @@
 
 $(function()
 {
-	var $window = $(window);
-	var $body = $('body');
+	var $window = $(window),
+		$body = $('body');
 
 
 
