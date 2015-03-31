@@ -71,7 +71,7 @@
 	.litebox-overlay .litebox-close {
 		width: 40px;
 		height: 40px;
-		background: url('../../../img/icons/litebox/litebox-close.png') no-repeat center;
+		background: url('../../img/icon/litebox/litebox-close.png') no-repeat center;
 		opacity: .7;
 		position: absolute;
 		top: 20px;
@@ -110,12 +110,12 @@
 	}
 
 	.litebox-overlay .litebox-prev {
-		background: url('../../../img/icons/litebox/litebox-prev.png') no-repeat center;
+		background: url('../../img/icon/litebox/litebox-prev.png') no-repeat center;
 		left: 20px;
 	}
 
 	.litebox-overlay .litebox-next {
-		background: url('../../../img/icons/litebox/litebox-next.png') no-repeat center;
+		background: url('../../img/icon/litebox/litebox-next.png') no-repeat center;
 		right: 20px;
 	}
 
