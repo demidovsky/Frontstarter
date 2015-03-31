@@ -1,3 +1,2 @@
 main
-inner
-lego
+_lego_

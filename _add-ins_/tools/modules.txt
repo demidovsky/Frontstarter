@@ -1,3 +1,6 @@
-b-header
-b-footer
-b-content
+b-logo
+b-nav
+b-submenu
+b-slider
+b-preview
+b-promo
