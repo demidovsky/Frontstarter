@@ -1,15 +1,15 @@
-// обработка событий с отсечкой по таймауту
-$.fn.onTimeout = function(eventType, callback, timeout)
-{
-	var timer = null;
-	var start = function()
+	// обработка событий с отсечкой по таймауту
+	$.fn.onTimeout = function(eventType, callback, timeout)
 	{
-		if (timer) clearTimeout(timer);
-		timer = setTimeout(callback, timeout);
+		var timer = null;
+		var start = function()
+		{
+			if (timer) clearTimeout(timer);
+			timer = setTimeout(callback, timeout);
+		};
+		return $(this).on(eventType, start);
 	};
-	return $(this).on(eventType, start);
-};
 
 
-// мин. версия:
-$.fn.onTimeout=function(e,t,n){var r=null,i=function(){if(r)clearTimeout(r);r=setTimeout(t,n)};return $(this).on(e,i)}
+	// обработка событий с отсечкой по таймауту
+	$.fn.onTimeout=function(e,t,n){var r=null,i=function(){if(r)clearTimeout(r);r=setTimeout(t,n)};return $(this).on(e,i)}
