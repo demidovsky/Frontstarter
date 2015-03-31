@@ -7,7 +7,7 @@
 /* сообщение об отключенном JS */ noscript { position:absolute; left:0; top:0; width:100%; line-height:32px; z-index:9999; text-align:center; background:#cc0000; color:white; }
 /* убираем крестик в IE10 */ input::-ms-clear { width: 0; height: 0; }
 /* убираем подсветку полей, чтобы не пересекалась с кастомной */ input, textarea { box-shadow: none; outline: none; }
-/* убираем маркировку списков */ li { list-style-type: none; }
+/* убираем маркировку списков */ /* li { list-style-type: none; } */
 /* адаптация для всех изображений */ /*img { max-width: 100%; }*/
 /* убираем плэйсхолдеры, когда курсор в поле */
 :focus:-moz-placeholder            { color: transparent; }
@@ -25,15 +25,31 @@
 ._float-left      { float: left;   }
 ._underline       { text-decoration: underline; }
 ._uppercase       { text-transform: uppercase; }
-._mb-xxs          { margin-bottom: 5px }
-._mb-xs           { margin-bottom: 10px }
-._mb-s            { margin-bottom: 20px }
-._mb-m            { margin-bottom: 30px }
-._mb-l            { margin-bottom: 40px }
-._mb-xl           { margin-bottom: 50px }
-._mb-xxl          { margin-bottom: 60px }
 ._vertical-center { .centering-the-unknown(); }
 ._clearfix        { .clearfix();   }
+
+/* отступы */
+._mb0   { margin-bottom: 0px; }
+._mb5   { margin-bottom: 5px; }
+._mb10  { margin-bottom: 10px; }
+._mb15  { margin-bottom: 15px; }
+._mb20  { margin-bottom: 20px; }
+._mb25  { margin-bottom: 25px; }
+._mb30  { margin-bottom: 30px; }
+._mb35  { margin-bottom: 35px; }
+._mb40  { margin-bottom: 40px; }
+._mb45  { margin-bottom: 45px; }
+._mb50  { margin-bottom: 50px; }
+._mb55  { margin-bottom: 55px; }
+._mb60  { margin-bottom: 60px; }
+._mb65  { margin-bottom: 65px; }
+._mb70  { margin-bottom: 70px; }
+._mb75  { margin-bottom: 75px; }
+._mb80  { margin-bottom: 80px; }
+._mb85  { margin-bottom: 85px; }
+._mb90  { margin-bottom: 90px; }
+._mb95  { margin-bottom: 95px; }
+._mb100 { margin-bottom: 100px; }
 
 /*--------------------- Универсальные модификаторы (конец) --------------------
 */
@@ -46,12 +62,13 @@
 ----------------------------- Общие стили (начало) --------------------------*/
 
 html {
-	font-size: 10px;
+	font-size: 14px;
 	//@media screen and (min-width: 1024px) { & { font-size: 10px; } }
 }
 
 body {
 	font-family: sans-serif;
+	min-width: 320px;
 }
 
 h1,.h1 {
@@ -72,16 +89,21 @@ h3,.h3 {
 a {
 	@color: blue;
 	color: @color;
-	text-decoration: underline;
-	&:hover { color: lighten(@color, 15%) }
-	&:active { color: lighten(@color, 30%) }
+	text-decoration: none;
+	&:hover  { color: lighten(@color, 15%); text-decoration: none; }
+	&:active { color: lighten(@color, 30%); text-decoration: none;  }
+	&:focus  { color: lighten(@color, 30%); text-decoration: none;  }
 }
 
 
+.b-header-and-content {
+	.box-sizing(border-box);
+	min-height: 100%;
+}
 
-.b-content {}
-
-
+.b-content {
+	
+}
 
 .b-section {
 	padding: 0;
@@ -97,6 +119,11 @@ a {
 
 
 
+
+
+
+
+
 /*-------------------------------------- 320 --------------------------------------*/
 
 
@@ -109,7 +136,7 @@ a {
 
 
 
-/*-------------------------------------- 480 --------------------------------------*/
+/*---------------------------------- от 480 ------------------------------------*/
 @media screen and (min-width: 480px) {
 	
 }
@@ -120,7 +147,7 @@ a {
 
 
 
-/*-------------------------------------- 768 --------------------------------------*/
+/*---------------------------------- от 768 ------------------------------------*/
 @media screen and (min-width: 768px) {
 	
 }
@@ -131,13 +158,42 @@ a {
 
 
 
-/*-------------------------------------- 1024 -------------------------------------*/
+/*---------------------------------- от 1024 -----------------------------------*/
 @media screen and (min-width: 1024px) {
 	
 }
 
-/*----------------------------- Общие стили (конец) ---------------------------
-*/
+
+
+
+
+
+/*---------------------------------- до 1024 --------------------------------*/
+@media screen and (max-width: 1023px) {
+	
+}
+
+
+
+
+
+
+
+/*---------------------------------- до 768 ---------------------------------*/
+@media screen and (max-width: 767px) {
+	
+}
+
+
+
+
+
+
+
+/*---------------------------------- до 480 ---------------------------------*/
+@media screen and (max-width: 479px) {
+	
+}
 
 
 
