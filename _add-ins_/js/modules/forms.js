@@ -285,7 +285,7 @@ $(function()
 
 		$('input.js-mask-card').mask('9999 9999 9999 9999', { placeholder: 'x' });
 
-		$('input.js-date').mask('99.99.9999', { placeholder: 'x' });
+		$('input.js-mask-date').mask('99.99.9999', { placeholder: 'x' });
 
 	})();
 
@@ -361,7 +361,7 @@ $(function()
 
 
 
-	(function DeselectableRadioButton()
+	/*(function DeselectableRadioButton()
 	{
 		var radio = document.querySelectorAll('[data-deselectable]');
 		var clicked = null;
@@ -381,7 +381,49 @@ $(function()
 				}
 			};
 		}
-	})();
+	})();*/
+
+
+
+
+
+
+	(function DeselectableRadioButton()
+	{
+		$('[data-deselectable]')
+			.on("click", function(event)
+			{
+				var $this = $(this);
+
+				console.log('click')
+
+				if ($this.data("clicked"))
+				{
+					console.log("deselect");
+					$this.data("clicked", false);
+					$this[0].checked = false;
+					$this
+						.attr('data-deselectable', false);
+				}
+				else
+				{
+					console.log("select");
+					$('input[name=' + $this[0].name + ']')
+						.data("clicked", false)
+						.attr('data-deselectable', false);
+
+					$this
+						.data("clicked", true)
+						.attr('data-deselectable', true);
+				}
+
+			});
+
+		})();
+
+
+
+
 
 
 
@@ -424,14 +466,17 @@ $(function()
 
 
 
-	(function()
+	(function FileInput()
 	{
-		$('input[type=file]').on("change", function()
+		$('input[type=file]').each(function(index, element)
 		{
-			$(this).parent().find('._fake').html("Прикреплён файл: " + $(this).val())
+			var $this = $(element),
+				update = function(){ $this.parent().find('._fake').html($this.val()); }
+
+			$this.on("change", update);
+			if ($this.val()) update();
 		});
 	})();
-
 
 
 
