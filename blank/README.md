@@ -6,16 +6,16 @@
 ## 1.1. Для интеграции
 
 
- | *что* | *где* |
- | --- | --- |
- | содержимое страниц | *.php |
- | шапка | templates/header.php |
- | футер | templates/footer.php |
- | стили | css/styles.min.css  |
- | плагины и прочие готовые решения | js/libs.min.js  |
- | самописные скрипты | js/custom.js |
- | иконки и шрифты | fonts/ |
- | определение устройств | classes/Mobile_Detect.php |
+*что* | *где*
+--- | ---
+содержимое страниц | *.php
+шапка | templates/header.php
+футер | templates/footer.php
+стили | css/styles.min.css 
+плагины и прочие готовые решения | js/libs.min.js 
+самописные скрипты | js/custom.js
+иконки и шрифты | fonts/
+определение устройств | classes/Mobile_Detect.php
 
 В **index.html** находится список страниц проекта.
 
