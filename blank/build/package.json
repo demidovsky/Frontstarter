@@ -1,10 +1,12 @@
 {
-  "name": "SvayznoyTravelHotels",
+  "name": "Frontstarter",
+  "description": "front-end development framework",
+  "readme": "front-end development framework",
   "version": "1.0.0",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://bitbucket.org:demidovsky/svyaznoytravelhotels.git"
+    "url": "git://github.com:demidovsky/Frontstarter.git"
   },
   "dependencies": {
     "gulp": "*",

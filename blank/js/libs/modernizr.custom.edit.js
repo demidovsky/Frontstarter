@@ -21,8 +21,8 @@
 	for (var feature in required) if (!Modernizr[required[feature]]) unsupported.push(required[feature]);
 	if (unsupported.length)
 	{
-		document.getElementById('oldbrowser_unsupported').innerHTML = unsupported.join(", ");
-		document.getElementById('oldbrowser').style.display = "block";
-		document.getElementById('oldbrowser').onclick = function(){ this.style.display = "none" };
+		document.getElementById('old_browser_bugs').innerHTML = unsupported.join(", ");
+		document.getElementById('old_browser').style.display = "block";
+		document.getElementById('old_browser').onclick = function(){ this.style.display = "none" };
 	}
 })();

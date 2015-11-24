@@ -24,14 +24,12 @@
 
 ## 1.2. Без интеграции
 
+1. В templates/**header.php**: `define('IS_PRODUCTION', true);`
+2. Переименовать **main**.php в **index**.php.
+3. Удалить **index.html**, 
+4. Разместить на сервере с версией PHP не ниже 5.3.
 
-В **templates/header.php**: 
 
-```
-define('IS_PRODUCTION', true);
-```
-
-и разместить на сервере с PHP не ниже 5.3.
 
 
 # 2. Начало (или продолжение) работы с вёрсткой

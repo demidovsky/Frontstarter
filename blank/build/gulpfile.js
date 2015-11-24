@@ -23,7 +23,7 @@ gulp.task('css', function()
 
 	gulp.src([	'../css/libs/normalize.css', 
 				'../css/libs/*.css',
-				'../css/modules/common.css',
+				'../css/modules/common.less',
 				'../css/modules/*'
 			])
 		.pipe(lessFilter)
@@ -93,7 +93,7 @@ gulp.task('js', function ()
 gulp.task('default', ['css', 'js']);
 gulp.task('watch', ['css', 'js'], function()
 {
-	gulp.watch('../js/**/*.js', { interval: 1000 }, ['js']);
-	gulp.watch('../css/**/*.*', { interval: 1000 }, ['css']);
+	gulp.watch(['../js/libs/*.js', '../js/modules/*.js'], { interval: 1000 }, ['js']);
+	gulp.watch(['../css/libs/*', '../css/modules/*'], { interval: 1000 }, ['css']);
 });
 
