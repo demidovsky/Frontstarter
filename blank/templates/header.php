@@ -1,39 +1,5 @@
 <?
-	define('IS_PRODUCTION', false);			// true для боевого окружения
-	define('SAVE_HTML', false);				// true для выгрузки html-страниц на диск
-
-	date_default_timezone_set('Europe/Moscow');
-
-	if (!IS_PRODUCTION)
-	{
-		error_reporting(E_ALL);
-		ini_set('display_errors', '1');
-	}
-
-	// сброс кэша, если стили или скрипты изменились:
-	function antiCache($path)
-	{
-		if (!file_exists($path)) { echo "<!-- ${path} not found -->"; return; }
-		$ver = date('d.m.y-H:i', filemtime($path));
-		$anticache = $path.'?'.$ver;
-		if (preg_match('/.css$/', $path)) echo '<link href="'.$anticache.'" rel="stylesheet">'."\n";
-		if (preg_match('/.js$/', $path)) echo "\t".'<script src="'.$anticache.'"></script>'."\n";
-	}
-
-	// определение устройства:
-	require_once 'classes/Mobile_Detect.php';
-	$detect = new Mobile_Detect;
-
-	$isMobile = $detect->isMobile();
-	$isTablet = $detect->isTablet();
-	$isDesktop = !$isMobile && !$isTablet;
-
-	$isiOS = $detect->isiOS();
-	$isAndroid = $detect->isAndroid();
-	$isWinPhone = $detect->isWindowsMobileOS() || $detect->isWindowsPhoneOS();
-
-
-
+	require_once('classes/Frontstarter.php');
 ?>
 <!doctype html>
 <html class="<?=$isiOS?'_ios ':'';?><?=$isAndroid?'_android ':'';?><?=$isWinPhone?'_winphone ':'';?><?=$isDesktop?'_desktop ':'';?><?=$isMobile?'_mobile ':'';?>">

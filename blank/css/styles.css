@@ -1744,242 +1744,7 @@ hr {
 	}
 }
 
-/*! jQuery UI - v1.11.4 - 2015-07-07
-* http://jqueryui.com
-* Includes: core.css, datepicker.css, slider.css
-* Copyright 2015 jQuery Foundation and other contributors; Licensed MIT */
-
-.ui-helper-hidden {
-	display: none;
-}.ui-helper-hidden-accessible {
-	position: absolute;
-	overflow: hidden;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-
-	clip: rect(0 0 0 0);
-}.ui-helper-reset {
-	line-height: 1.3;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	text-decoration: none;
-
-	list-style: none;
-}.ui-helper-clearfix:before,
-.ui-helper-clearfix:after {
-	display: table;
-	content: "";
-	border-collapse: collapse;
-}.ui-helper-clearfix:after {
-	clear: both;
-}.ui-helper-clearfix {
-	min-height: 0;
-}.ui-helper-zfix {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	filter: Alpha(Opacity=0);
-}.ui-front {
-	z-index: 100;
-}.ui-state-disabled {
-	cursor: default!important;
-}.ui-icon {
-	display: block;
-	overflow: hidden;
-	background-repeat: no-repeat;
-
-	text-indent: -99999px;
-}.ui-widget-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}.ui-datepicker {
-	display: none;
-	width: 17em;
-	padding: 0.2em 0.2em 0;
-}.ui-datepicker .ui-datepicker-header {
-	position: relative;
-	padding: 0.2em 0;
-}.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-	position: absolute;
-	top: 2px;
-	width: 1.8em;
-	height: 1.8em;
-}.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
-	top: 1px;
-}.ui-datepicker .ui-datepicker-prev {
-	left: 2px;
-}.ui-datepicker .ui-datepicker-next {
-	right: 2px;
-}.ui-datepicker .ui-datepicker-prev-hover {
-	left: 1px;
-}.ui-datepicker .ui-datepicker-next-hover {
-	right: 1px;
-}.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -8px;
-	margin-left: -8px;
-}.ui-datepicker .ui-datepicker-title {
-	line-height: 1.8em;
-	margin: 0 2.3em;
-	text-align: center;
-}.ui-datepicker .ui-datepicker-title select {
-	margin: 1px 0;
-	font-size: 1em;
-}.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year {
-	width: 45%;
-}.ui-datepicker table {
-	width: 100%;
-	margin: 0 0 0.4em;
-	border-collapse: collapse;
-	font-size: 0.9em;
-}.ui-datepicker th {
-	padding: 0.7em 0.3em;
-	border: 0;
-	font-weight: bold;
-	text-align: center;
-}.ui-datepicker td {
-	padding: 1px;
-	border: 0;
-}.ui-datepicker td span,
-.ui-datepicker td a {
-	display: block;
-	padding: 0.2em;
-	text-decoration: none;
-	text-align: right;
-}.ui-datepicker .ui-datepicker-buttonpane {
-	margin: 0.7em 0 0 0;
-	padding: 0 0.2em;
-	border-right: 0;
-	border-bottom: 0;
-	border-left: 0;
-	background-image: none;
-}.ui-datepicker .ui-datepicker-buttonpane button {
-	float: right;
-	overflow: visible;
-	width: auto;
-	margin: 0.5em 0.2em 0.4em;
-	padding: 0.2em 0.6em 0.3em 0.6em;
-	cursor: pointer;
-}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
-	float: left;
-}.ui-datepicker.ui-datepicker-multi {
-	width: auto;
-}.ui-datepicker-multi .ui-datepicker-group {
-	float: left;
-}.ui-datepicker-multi .ui-datepicker-group table {
-	width: 95%;
-	margin: 0 auto 0.4em;
-}.ui-datepicker-multi-2 .ui-datepicker-group {
-	width: 50%;
-}.ui-datepicker-multi-3 .ui-datepicker-group {
-	width: 33.3%;
-}.ui-datepicker-multi-4 .ui-datepicker-group {
-	width: 25%;
-}.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
-.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
-	border-left-width: 0;
-}.ui-datepicker-multi .ui-datepicker-buttonpane {
-	clear: left;
-}.ui-datepicker-row-break {
-	clear: both;
-	width: 100%;
-	font-size: 0;
-}.ui-datepicker-rtl {
-	direction: rtl;
-}.ui-datepicker-rtl .ui-datepicker-prev {
-	right: 2px;
-	left: auto;
-}.ui-datepicker-rtl .ui-datepicker-next {
-	right: auto;
-	left: 2px;
-}.ui-datepicker-rtl .ui-datepicker-prev:hover {
-	right: 1px;
-	left: auto;
-}.ui-datepicker-rtl .ui-datepicker-next:hover {
-	right: auto;
-	left: 1px;
-}.ui-datepicker-rtl .ui-datepicker-buttonpane {
-	clear: right;
-}.ui-datepicker-rtl .ui-datepicker-buttonpane button {
-	float: left;
-}.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
-.ui-datepicker-rtl .ui-datepicker-group {
-	float: right;
-}.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
-.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
-	border-right-width: 0;
-	border-left-width: 1px;
-}.ui-slider {
-	position: relative;
-	text-align: left;
-}.ui-slider .ui-slider-handle {
-	position: absolute;
-	z-index: 2;
-	width: 1.2em;
-	height: 1.2em;
-	cursor: default;
-
-	-ms-touch-action: none;
-	    touch-action: none;
-}.ui-slider .ui-slider-range {
-	display: block;
-	position: absolute;
-	z-index: 1;
-	border: 0;
-	background-position: 0 0;
-	font-size: 0.7em;
-}.ui-slider.ui-state-disabled .ui-slider-handle,
-.ui-slider.ui-state-disabled .ui-slider-range {
-	        filter: inherit;
-
-	-webkit-filter: inherit;
-}.ui-slider-horizontal {
-	height: 0.8em;
-}.ui-slider-horizontal .ui-slider-handle {
-	top: -0.3em;
-	margin-left: -0.6em;
-}.ui-slider-horizontal .ui-slider-range {
-	top: 0;
-	height: 100%;
-}.ui-slider-horizontal .ui-slider-range-min {
-	left: 0;
-}.ui-slider-horizontal .ui-slider-range-max {
-	right: 0;
-}.ui-slider-vertical {
-	width: 0.8em;
-	height: 100px;
-}.ui-slider-vertical .ui-slider-handle {
-	left: -0.3em;
-	margin-bottom: -0.6em;
-	margin-left: 0;
-}.ui-slider-vertical .ui-slider-range {
-	left: 0;
-	width: 100%;
-}.ui-slider-vertical .ui-slider-range-min {
-	bottom: 0;
-}.ui-slider-vertical .ui-slider-range-max {
-	top: 0;
-}
-/* ----------------------- Дополнительный ресет -----------------*/
+/* ----------------------- Ресеты -----------------*/
 /* ресет отступов */
 body,
 ul,
@@ -2039,7 +1804,8 @@ input::-ms-clear {
 [type=number],
 [type=email],
 [type=date],
-[type=submit] textarea {
+[type=submit],
+textarea {
 	-webkit-appearance: none;
 }
 /* убираем плэйсхолдеры, когда курсор в поле */
@@ -2055,86 +1821,7 @@ input::-ms-clear {
 :focus::-webkit-input-placeholder {
 	color: transparent;
 }
-/* масштабирование контента + панели */
-@media screen and (min-width: 0) {
-	html {
-		font-size: 8px;
-	}
-}
-@media screen and (min-width: 360px) {
-	html {
-		font-size: 9px;
-	}
-}
-@media screen and (min-width: 480px) {
-	html {
-		font-size: 9px;
-	}
-}
-@media screen and (min-width: 600px) {
-	html {
-		font-size: 10px;
-	}
-}
-@media screen and (min-width: 720px) {
-	html {
-		font-size: 10px;
-	}
-}
-@media screen and (min-width: 768px) {
-	html {
-		font-size: 10px;
-	}
-}
-@media screen and (min-width: 1024px) {
-	html {
-		font-size: 10px;
-	}
-}
-@media screen and (min-width: 1280px) {
-	html {
-		font-size: 10px;
-	}
-}
-@media screen and (min-width: 1400px) {
-	html {
-		font-size: 10px;
-	}
-}
-@media screen and (min-width: 1680px) {
-	html {
-		font-size: 10px;
-	}
-}
-/* электронный каталог */
-/* масштабирование только панели */
-@media only screen and (min-width: 320px) {
-	#left-panel {
-		font-size: 150%;
-	}
-}
-@media only screen and (min-width: 768px) {
-	#left-panel {
-		font-size: 120%;
-	}
-}
-@media only screen and (min-width: 1024px) {
-	#left-panel {
-		font-size: 110%;
-	}
-}
-@media only screen and (min-width: 1280px) {
-	#left-panel {
-		font-size: 120%;
-	}
-}
-@media only screen and (min-width: 1680px) {
-	#left-panel {
-		font-size: 120%;
-	}
-}
-/* электронный каталог */
-/* ----------------------- Универсальные модификаторы -----------------*/
+/* ----------------------- Модификаторы -----------------*/
 ._hidden {
 	display: none;
 }
@@ -2153,38 +1840,9 @@ input::-ms-clear {
 ._lowercase {
 	text-transform: uppercase;
 }
-._nowrap {
-	white-space: nowrap;
-}
-._vertical-center {
-	width: 100%;
-	height: 100%;
-	font-size: 0;
-	text-align: center;
-}
-._vertical-center:before {
-	display: inline-block;
-	vertical-align: middle;
-	content: "";
-	width: 0;
-	height: 100%;
-}
-._vertical-center > * {
-	display: inline-block;
-	vertical-align: middle;
-	max-width: 100%;
-	font-size: medium;
-}
-._clearfix:after {
-	display: block;
-	content: "";
-	clear: both;
-	width: 100%;
-}
 ._relative {
 	position: relative;
 }
-.text-center,
 ._text-center {
 	text-align: center;
 }
@@ -2195,167 +1853,36 @@ input::-ms-clear {
 	font-size: 1rem;
 	text-transform: uppercase;
 }
-._bg-fx {
-	background-color: #111;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 120%;
-
-	-webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-	        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-}
-._bg-fx:hover {
-	background-size: 115%;
-}
-._scale-fx {
-	-webkit-transition: 0.2s -webkit-transform;
-	        transition: 0.2s transform;
-}
-._scale-fx:hover {
-	-webkit-transform: scale(1.05);
-	    -ms-transform: scale(1.05);
-	        transform: scale(1.05);
-}
-/* паддинги */
-._pad-lr {
-	padding-right: 1.9rem;
-	padding-left: 1.9rem;
-}
-._pad-t {
-	padding-top: 1.9rem;
-}
-._pad-b {
-	padding-bottom: 1.9rem;
-}
-/* скомпенсировать горизонтальные отступы */
-._unshift {
-	margin-right: -1.9rem;
-	margin-left: -1.9rem;
-}
-/* выстроить блоки горизонтально по ширине */
-._block-justify {
-	/*text-align-last: justify;*/
-	line-height: 0;
-	text-align: justify;
-}
-._block-justify > * {
-	display: inline-block;
-	/*vertical-align: top;*/
-	vertical-align: middle;
-	line-height: normal;
-}
-._block-justify:after {
-	display: inline-block;
-	vertical-align: middle;
-	content: "";
-	width: 100%;
-}
-/* выстроить блоки горизонтально вплотную */
-._block-nowrap {
-	font-size: 0;
+._nowrap {
 	white-space: nowrap;
 }
-._block-nowrap > * {
-	display: inline-block;
-	vertical-align: top;
-	font-size: initial;
-	white-space: normal;
+._clearfix:after {
+	display: table;
+	content: "";
+	clear: both;
 }
-/* цвет */
-._text-white {
-	color: #fff;
+/* отступы внутрениие: */
+._pad-l {
+	padding-left: 1.5rem;
 }
-._text-black {
-	color: #1b3138;
+._pad-r {
+	padding-right: 1.5rem;
 }
-._text-red {
-	color: #dc5562;
+._pad-t {
+	padding-top: 1.5rem;
 }
-._text-cyan {
-	color: #11a8ab;
+._pad-b {
+	padding-bottom: 1.5rem;
 }
-._text-blue {
-	color: #398de3;
+._pad-lr {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
 }
-._text-violet {
-	color: #8e5cd4;
+._pad-lr-undo {
+	margin-right: -1.5rem;
+	margin-left: -1.5rem;
 }
-._text-orange {
-	color: #faa33a;
-}
-._text-darkviolet {
-	color: #4a4f70;
-}
-._text-gray {
-	color: #888;
-}
-._text-lightblue {
-	color: #58d0f3;
-}
-._text-badass {
-	color: #b2d81f;
-}
-._bg-white {
-	background: #fff;
-}
-._bg-black {
-	background: #1b3138;
-}
-._bg-red {
-	background: #dc5562;
-}
-._bg-cyan {
-	background: #11a8ab;
-}
-._bg-blue {
-	background: #398de3;
-}
-._bg-violet {
-	background: #8e5cd4;
-}
-._bg-orange {
-	background: #faa33a;
-}
-._bg-darkviolet {
-	background: #4a4f70;
-}
-._bg-lightblue {
-	background: #58d0f3;
-}
-._bg-badass {
-	background: #b2d81f;
-}
-._bg-gray {
-	background: #555;
-}
-._hover-white:hover {
-	color: #fff;
-}
-._hover-black:hover {
-	color: #1b3138;
-}
-._hover-red:hover {
-	color: #dc5562;
-}
-._hover-cyan:hover {
-	color: #11a8ab;
-}
-._hover-blue:hover {
-	color: #398de3;
-}
-._hover-violet:hover {
-	color: #8e5cd4;
-}
-._hover-orange:hover {
-	color: #faa33a;
-}
-._hover-lightblue:hover {
-	color: #58d0f3;
-}
-._hover-badass:hover {
-	color: #b2d81f;
-}
-/* отступы */
+/* отступы внешние: */
 ._mb0 {
 	margin-bottom: 0;
 }
@@ -2419,8 +1946,102 @@ input::-ms-clear {
 ._mb100 {
 	margin-bottom: 10rem;
 }
-/* ----------------------------- Общие стили --------------------------*/
-/* сообщение об отключенном JS или старом браузере */
+/* цвета */
+._text-white {
+	color: #fff;
+}
+._text-black {
+	color: #111;
+}
+._bg-white {
+	background: #fff;
+}
+._bg-black {
+	background: #111;
+}
+._hover-white:hover {
+	color: #fff;
+}
+._hover-black:hover {
+	color: #111;
+}
+/* Разместить дочерний блок по центру: */
+._vertical-center {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	text-align: center;
+}
+._vertical-center:before {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	width: 0;
+	height: 100%;
+}
+._vertical-center > * {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	font-size: medium;
+}
+/* Разместить дочерние блоки вплотную: */
+/* Разместить дочерние блоки по ширине: */
+/* ----------------------------- Общее (теги) --------------------------*/
+/* масштабирование для rem-единиц */
+html {
+	font-size: 10px;
+}
+@media screen and (min-width: 0) {
+	html {
+		font-size: 8px;
+	}
+}
+@media screen and (min-width: 360px) {
+	html {
+		font-size: 9px;
+	}
+}
+@media screen and (min-width: 480px) {
+	html {
+		font-size: 9px;
+	}
+}
+@media screen and (min-width: 600px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 720px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 1400px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 1680px) {
+	html {
+		font-size: 10px;
+	}
+}
 noscript,
 #old_browser {
 	position: absolute;
@@ -2446,33 +2067,33 @@ noscript,
 a {
 	outline: none !important;
 	text-decoration: none;
-	color: #000;
+	color: inherit;
 }
 a:hover {
 	text-decoration: none;
-	color: #606480;
+	color: inherit;
 }
 a:focus {
 	text-decoration: none;
-	color: #606480;
+	color: inherit;
+}
+h1,
+.h1 {
+	line-height: 3.2rem;
+	font-size: 3.2rem;
+	font-weight: normal;
 }
 h2,
 .h2 {
 	line-height: 2.8rem;
-	/*color: #2e303c;*/
 	font-size: 2.8rem;
-	font-weight: 400;
-}
-h2 a,
-.h2 a {
-	color: inherit;
+	font-weight: normal;
 }
 h3,
 .h3 {
 	line-height: 2.4rem;
-	/*color: #2e303c;*/
 	font-size: 2.0rem;
-	font-weight: 600;
+	font-weight: normal;
 }
 b,
 strong {
@@ -2480,178 +2101,18 @@ strong {
 	/* Medium */
 }
 p {
-	margin-bottom: 1.7rem;
+	margin-bottom: 1.5rem;
 }
 small {
 	font-size: 75%;
 }
-mark {
-	background: none;
-}
-/* ----------------------------- Структура --------------------------*/
-/*
-	body
-		viewport				вся видимая часть
-			nav					боковая панель
-			content				основная панель
-				header			шапка
-				main			содержимое вьюхи
-
-*/
 body {
 	min-width: 320px;
-	background: #272936;
+	background: #fff;
 	font-family: "Open Sans", "Trebuchet MS", sans-serif;
-	color: #1b3138;
+	color: #000;
 }
-body._iframe {
-	background: none;
-}
-.b-header {
-	background: #4a4f70;
-	color: #fff;
-}
-.b-title._videoheader {
-	position: relative;
-	background: none;
-}
-.b-title__videoheader {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-}
-.b-viewport {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	min-width: 320px;
-}
-/* перехватчик кликов при открытом сайдбаре (см. modules/photo.js) */
-.b-viewport._nav-open #content:before {
-	display: none;
-	content: "";
-	position: absolute;
-	z-index: 101;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: transparent;
-}
-.b-viewport._nav-open #photo_popup:before {
-	display: none;
-	content: "";
-	position: absolute;
-	z-index: 101;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: transparent;
-}
-.b-nav {
-	position: absolute;
-	left: -78%;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	width: 78%;
-	height: 100%;
-	background: #303349;
-	background: rgba(48, 51, 73, 0.9);
-	color: #fff;
-
-	-webkit-transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-	        transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-@media screen and (max-width: 1023px) {
-	.b-nav {
-		z-index: 102;
-	}
-	.b-viewport._nav-open #content:before,
-	.b-viewport._nav-open #photo_popup:before {
-		display: block;
-	}
-}
-.b-content {
-	position: relative;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-
-	-webkit-transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-	        transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-#main-content {
-	min-height: 100%;
-	padding-top: 5.5rem;
-	padding-bottom: 20rem;
-}
-@media screen and (max-width: 767px) {
-	#main-content {
-		padding-top: 0;
-	}
-}
-main {
-	position: relative;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
-	font-size: 1.4rem;
-}
-.b-nav-button {
-	display: block;
-	position: absolute;
-	z-index: 102;
-	right: 0;
-	width: 5.5rem;
-	height: 5.5rem;
-	line-height: 5.5rem;
-	font-size: 3rem;
-	text-align: center;
-	cursor: pointer;
-
-	text-shadow: 1px 1px 1px #111;
-}
-.b-nav-button i.fa {
-	color: #fff !important;
-}
-/* Когда открыта боковая панель */
-.b-viewport._nav-open .b-nav {
-	left: 0;
-}
-.b-viewport._nav-open .b-content {
-	left: 78%;
-}
-/* когда боковая панель должна быть постоянно открыта */
-@media screen and (min-width: 1024px) {
-	.b-nav {
-		left: 0;
-		width: 22%;
-		box-shadow: -0.11rem 0 0.5rem rgba(0, 0, 0, 0.1) inset;
-	}
-	.b-content {
-		left: 22% !important;
-		width: 78%;
-		box-shadow: none;
-	}
-	.b-nav-button {
-		display: none !important;
-	}
-}
-.container-fluid {
-	max-width: 1200px;
-}
+/* ----------------------------- Общее (классы) --------------------------*/
 /* затемняющая шторка */
 .b-overlay {
 	position: absolute;
@@ -2664,6 +2125,6 @@ main {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.8);
 }
-i.fa.fa-small {
-	font-size: 1rem !important;
+.container-fluid {
+	max-width: 960px;
 }

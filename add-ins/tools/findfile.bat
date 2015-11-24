@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >> \NUL
 set /p search="Search for: "
 echo.
 echo - HTML -

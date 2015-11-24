@@ -17,14 +17,17 @@
 иконки и шрифты | fonts/
 определение устройств | classes/Mobile_Detect.php
 
+Инициализация Mobile_Detect находится в **classes/Frontstarter.php**.
+
 В **index.html** находится список страниц проекта.
+
 
 
 
 
 ## 1.2. Без интеграции
 
-1. В templates/**header.php**: `define('IS_PRODUCTION', true);`
+1. В **classes/Frontstarter.php**: `define('IS_PRODUCTION', true);`
 2. Переименовать **main**.php в **index**.php.
 3. Удалить **index.html**, 
 4. Разместить на сервере с версией PHP не ниже 5.3.

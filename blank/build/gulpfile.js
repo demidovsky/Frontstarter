@@ -28,6 +28,7 @@ gulp.task('css', function()
 			])
 		.pipe(lessFilter)
 		.pipe(less())
+		.on('error', function(error){ console.log('LESS error: ' + error.message); })
 		.pipe(lessFilter.restore)
 		.pipe(concat('styles.css'))
 		/*.pipe(base64({
