@@ -1744,6 +1744,7 @@ hr {
 	}
 }
 
+/* Общие стили для разных проектов */
 /* ----------------------- Ресеты -----------------*/
 /* ресет отступов */
 body,
@@ -1946,25 +1947,6 @@ textarea {
 ._mb100 {
 	margin-bottom: 10rem;
 }
-/* цвета */
-._text-white {
-	color: #fff;
-}
-._text-black {
-	color: #111;
-}
-._bg-white {
-	background: #fff;
-}
-._bg-black {
-	background: #111;
-}
-._hover-white:hover {
-	color: #fff;
-}
-._hover-black:hover {
-	color: #111;
-}
 /* Разместить дочерний блок по центру: */
 ._vertical-center {
 	width: 100%;
@@ -2077,40 +2059,9 @@ a:focus {
 	text-decoration: none;
 	color: inherit;
 }
-h1,
-.h1 {
-	line-height: 3.2rem;
-	font-size: 3.2rem;
-	font-weight: normal;
-}
-h2,
-.h2 {
-	line-height: 2.8rem;
-	font-size: 2.8rem;
-	font-weight: normal;
-}
-h3,
-.h3 {
-	line-height: 2.4rem;
-	font-size: 2.0rem;
-	font-weight: normal;
-}
-b,
-strong {
-	font-weight: 500;
-	/* Medium */
-}
-p {
-	margin-bottom: 1.5rem;
-}
-small {
-	font-size: 75%;
-}
 body {
 	min-width: 320px;
-	background: #fff;
 	font-family: "Open Sans", "Trebuchet MS", sans-serif;
-	color: #000;
 }
 /* ----------------------------- Общее (классы) --------------------------*/
 /* затемняющая шторка */
@@ -2125,6 +2076,27 @@ body {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.8);
 }
-.container-fluid {
-	max-width: 960px;
+/* цвета */
+._text-white {
+	color: #fff;
+}
+._hover-white:hover {
+	color: #fff;
+}
+._bg-white {
+	background-color: #fff;
+}
+._text-black {
+	color: #000;
+}
+._hover-black:hover {
+	color: #000;
+}
+._bg-black {
+	background-color: #000;
+}
+
+body {
+	background: #fff;
+	color: #000;
 }

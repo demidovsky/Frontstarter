@@ -54,9 +54,11 @@ js/ie/             | костыли для IE
 build/             | сборщик
 classes/           | mobile detect (+ php-библиотеки)
 fonts/             | fontawesome (+ прочие шрифты)
+
 а также
+
 *img/* | *изображения:*
-:- | :-
+--- | ---
 img/bg/            | фоновые
 img/content/       | контентные
 img/icon/          | мелочёвка
