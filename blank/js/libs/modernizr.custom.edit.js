@@ -19,10 +19,10 @@
 		"mediaqueries"];
 
 	for (var feature in required) if (!Modernizr[required[feature]]) unsupported.push(required[feature]);
-	if (unsupported.length)
+	if (unsupported.length && !document.cookie.match(/old_browser=true/))
 	{
 		document.getElementById('old_browser_bugs').innerHTML = unsupported.join(", ");
 		document.getElementById('old_browser').style.display = "block";
-		document.getElementById('old_browser').onclick = function(){ this.style.display = "none" };
+		document.getElementById('old_browser').onclick = function(){ this.style.display = "none"; document.cookie = "old_browser=true" };
 	}
 })();
