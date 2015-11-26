@@ -12,7 +12,7 @@
 
 	<?
 		// подключение стилей:
-		if (IS_PRODUCTION) echo '<link href="build/styles.min.css" rel="stylesheet">';
+		if (IS_PRODUCTION) { ?><link href="build/styles.min.css" rel="stylesheet"><? }
 		else antiCache('css/styles.css');
 	?>
 
