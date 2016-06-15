@@ -78,10 +78,10 @@ gulp.task('js', function ()
 	gulp.src([	'../js/modules/script.js',
 				'../js/modules/*.js'
 		])
-		.pipe(concat('custom.js'))
+		.pipe(concat('script.js'))
 		.pipe(gulp.dest('../js/'))
 		.pipe(uglify().on('error', function(error){ gutil.log(error.message + ' at line ' + error.lineNumber) }))
-		.pipe(rename('custom.min.js'))
+		.pipe(rename('script.min.js'))
 		.pipe(gulp.dest('../js/'));
 
 });
