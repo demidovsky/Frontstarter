@@ -1,0 +1,4 @@
+/_docs/*
+/html_*
+/build/node_modules/*
+*.bat

@@ -1,0 +1,305 @@
+/* Общие стили для разных проектов */
+
+/* ----------------------- Ресеты -----------------*/
+
+/* ресет отступов */ body, ul, ol, li, h1, h2, h3, h4, h5, p, dl, dt, dd { padding: 0; margin: 0; }
+/* сбрасываем жир */ h1, h2, h3, h4, h5 { font-weight: normal; }
+/* занять всю высоту */ html, body { height: 100%; }
+/* ресет списков */ li { list-style-position:inside; /*list-style-type:none;*/ }
+/* оптимальный размер мелкого текста */ small { font-size: 75% }
+/* минимальная ширина */ body { min-width: 320px; }
+/* адаптация для всех изображений */ /*img { max-width: 100%; }*/
+/* убираем подсветку при клике */ /** { -webkit-tap-highlight-color:rgba(0,0,0,0); }*/
+
+/* ресет полей ввода */
+input, textarea { box-shadow: none; outline: none; padding: 0; border-radius: 0; -ms-touch-action: manipulation; touch-action: manipulation; }
+input::-ms-clear { width: 0; height: 0; }
+[type=text], [type=tel], [type=number], [type=email], [type=date], [type=submit], textarea { -webkit-appearance: none; }
+
+/* убираем плэйсхолдеры, когда курсор в поле */
+:focus:-moz-placeholder            { color: transparent; }
+:focus::-moz-placeholder           { color: transparent; }
+:focus:-ms-input-placeholder       { color: transparent; }
+:focus::-webkit-input-placeholder  { color: transparent; }
+
+/* наследуем цвет ссылок */
+a 		{ color: inherit; text-decoration: none; outline: none !important; }
+a:hover { color: inherit; text-decoration: none; }
+a:focus { color: inherit; text-decoration: none; }
+
+/* масштабирование для rem-единиц */
+html { font-size: 10px; }
+@media screen and (min-width: 0px)    { html { font-size: 8px;  } }
+@media screen and (min-width: 360px)  { html { font-size: 9px; } }
+@media screen and (min-width: 480px)  { html { font-size: 9px; } }
+@media screen and (min-width: 600px)  { html { font-size: 10px; } }
+// @media screen and (min-width: 720px)  { html { font-size: 10px; } }
+// @media screen and (min-width: 768px)  { html { font-size: 10px; } }
+// @media screen and (min-width: 1024px) { html { font-size: 10px; } }
+// @media screen and (min-width: 1280px) { html { font-size: 10px; } }
+// @media screen and (min-width: 1400px) { html { font-size: 10px; } }
+// @media screen and (min-width: 1680px) { html { font-size: 10px; } }
+
+
+
+/* ----------------------- Модификаторы -----------------*/
+
+
+/* текст */
+._underline       { text-decoration: underline; }
+._dashed          { border-bottom: 0.1rem dashed; }
+._uppercase       { text-transform: uppercase; }
+._lowercase       { text-transform: lowercase; }
+._text-center     { text-align: center; }
+._text-right      { text-align: right; }
+._nowrap          { white-space: nowrap; }
+
+
+
+/* цвет */
+.create-color(@name, @hex) {
+	._text-@{name}   {color: @hex; }
+	._hover-@{name}  { &:hover { color: @hex; } }
+	._bg-@{name}     { background-color: @hex; }
+}
+.create-color(white, #fff);
+.create-color(black, #272729);
+.create-color(orange, #faa947);
+.create-color(darkorange, #fd6c29);
+.create-color(blue, #57b9e7);
+.create-color(gray, #9d9d9d);
+
+
+
+/* отступы внутренние: */
+@pad: 1.5rem;
+._pad-l  { padding-left:   @pad }
+._pad-r  { padding-right:  @pad }
+._pad-t  { padding-top:    @pad }
+._pad-b  { padding-bottom: @pad }
+._pad-lr      { padding-left: @pad; padding-right: @pad }
+._pad-lr-undo { margin-left: -@pad; margin-right: -@pad }
+
+
+
+/* отступы внешние: */
+._mb0  { margin-bottom: 0 }
+._mb5  { margin-bottom: 0.5rem }
+._mb10 { margin-bottom: 1.0rem }
+._mb15 { margin-bottom: 1.5rem }
+._mb20 { margin-bottom: 2.0rem }
+._mb25 { margin-bottom: 2.5rem }
+._mb30 { margin-bottom: 3.0rem }
+._mb35 { margin-bottom: 3.5rem }
+._mb40 { margin-bottom: 4.0rem }
+._mb45 { margin-bottom: 4.5rem }
+._mb50 { margin-bottom: 5.0rem }
+._mb55 { margin-bottom: 5.5rem }
+._mb60 { margin-bottom: 6.0rem }
+._mb65 { margin-bottom: 6.5rem }
+._mb70 { margin-bottom: 7.0rem }
+._mb75 { margin-bottom: 7.5rem }
+._mb80 { margin-bottom: 8.0rem }
+._mb85 { margin-bottom: 8.5rem }
+._mb90 { margin-bottom: 9.0rem }
+._mb95 { margin-bottom: 9.5rem }
+._mb100 { margin-bottom: 10rem }
+
+
+
+/* позиционирование */
+._hidden          { display: none; }
+._relative        { position: relative; }
+._clearfix:after  { content: ""; display: table; clear: both; }
+._float-right     { float: right; }
+._float-left      { float: left; }
+
+._vertical-center // Разместить дочерний блок по центру
+{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 0;
+
+	&:before
+	{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	& > *
+	{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: medium;
+		max-width: 100%;
+	}
+}
+
+._block-nowrap // Разместить дочерние блоки вплотную
+{
+	white-space: nowrap;
+	font-size: 0;
+
+	& > *
+	{
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+		font-size: initial;
+		white-space: normal;
+	}
+
+	&._top    > * { vertical-align: top; }
+	&._bottom > * { vertical-align: bottom; }
+}
+
+._block-justify // Разместить дочерние блоки по ширине
+{
+	text-align: justify;
+	// text-align-last: justify;
+	line-height: 0;
+
+	& > *
+	{
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+		line-height: normal;
+	}
+
+	&:after
+	{
+		content: "";
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+	}
+
+	&._top    > * { vertical-align: top; }
+	&._bottom > * { vertical-align: bottom; }
+}
+
+
+
+/* хватательный курсор */
+._grab
+{
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+
+	&:active
+	{
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+	}
+}
+
+
+
+
+/* ----------------------------- Универсальные элементы --------------------------*/
+
+/* сообщения для старых браузеров */
+noscript,
+#old_browser { font-size: 14px; position:absolute; left:0; top:0; width:100%; z-index:9999; text-align:center; background:#cc0000; color:white; }
+#old_browser { display: none; }
+#old_browser b { float:right; padding: 0 10px; cursor: pointer; font-size: 32px; font-weight: normal; }
+
+
+
+/* затемнение */
+.b-overlay {
+	position: absolute;
+	z-index: 101; // 100 = .ui-front
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+/* кнопка */
+.b-button,
+a.b-button,
+input.b-button,
+button.b-button {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	left: 0;
+	top: 0;
+	width: auto;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 30px;
+	color: white;
+	background: #888;
+	border: 0;
+	font-size: 16px;
+	font-weight: normal;
+	white-space: nowrap;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	transition: all 0.3s;
+
+	&:hover	{ opacity: 0.9; }
+	&:active { top: 1px; }
+}
+
+
+
+
+/* ----------------------------- Константы --------------------------*/
+
+// сглаживания
+@sine-out: cubic-bezier(0.39, 0.575, 0.565, 1);
+@quad-out:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+@cubic-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@quart-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+@quint-out: cubic-bezier(0.23, 1, 0.32, 1);
+@expo-out:  cubic-bezier(0.19, 1, 0.22, 1);
+@back-out:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+@sine-in: cubic-bezier(0.47, 0, 0.745, 0.715);
+@quad-in: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+@cubic-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@quart-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+@quint-in: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@expo-in: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+@back-in: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+@sine-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+@quad-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+@cubic-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@quart-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+@quint-in-out: cubic-bezier(0.86, 0, 0.07, 1);
+@expo-in-out: cubic-bezier(1, 0, 0, 1);
+@back-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+// цвета соцсетей 
+@facebook-color:      #3b5998;
+@vkontakte-color:     #4c75a3;
+@googleplus-color:    #c63d2d;
+@twitter-color:       #0084b4;
+@instagram-color:     #517fa6;
+@youtube-color:       #e22a22;
+@vimeo-color:         #aad450;
+@foursquare-color:    #fa4778;
+@lastfm-color:        #d21309;
+@github-color:        #62e3ff;
+@slideshare-color:    #f7941e;
+@stackoverflow-color: #f67a00;
+@soundcloud-color:    #f84a0e;
+@linkedin-color:      #0177b5;
