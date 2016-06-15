@@ -2,7 +2,7 @@
 	require_once('classes/Frontstarter.php');
 ?>
 <!doctype html>
-<html class="<?=$isiOS?'_ios ':'';?><?=$isAndroid?'_android ':'';?><?=$isWinPhone?'_winphone ':'';?><?=$isDesktop?'_desktop ':'';?><?=$isMobile?'_mobile ':'';?>">
+<html class="<? foreach (Frontstarter::detectMobile() as $key => $value) if ($value === TRUE) echo $key.' '; ?>">
 <head>
 	<title><?=PAGE_TITLE?></title>
 	<meta charset="utf-8">
@@ -12,8 +12,10 @@
 
 	<?
 		// подключение стилей:
-		if (IS_PRODUCTION) { ?><link href="build/styles.min.css" rel="stylesheet"><? }
-		else antiCache('css/styles.css');
+		if (Frontstarter::IS_PRODUCTION) 
+			Frontstarter::antiCache('css/styles.min.css');
+		else 
+			Frontstarter::antiCache('css/styles.css');
 	?>
 
 	<!--[if lte IE 8]>

@@ -9,12 +9,15 @@
 
 <?
 	// подключение скриптов:
-	if (IS_PRODUCTION) { ?>
-	<script src="js/libs.min.js"></script>
-	<script src="js/custom.min.js"></script>
-	<? } else {
-	antiCache('js/libs.js');
-	antiCache('js/custom.js');
+	if (Frontstarter::IS_PRODUCTION)
+	{
+		Frontstarter::antiCache('js/libs.min.js');
+		Frontstarter::antiCache('js/script.min.js');
+	}
+	else
+	{
+		Frontstarter::antiCache('js/libs.js');
+		Frontstarter::antiCache('js/script.js');
 	}
 ?>
 
@@ -23,5 +26,5 @@
 
 <?
 	// для сохранения html-файла
-	if (isset($_GET['html']) || SAVE_HTML) saveHTML();
+	Frontstarter::saveHTMLend();
 ?>
