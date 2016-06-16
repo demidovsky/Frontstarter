@@ -1,0 +1,46 @@
+{
+	"id1":
+	{
+		"lat": "55.7571459",
+		"lng": "37.6531822",
+		"img_url": "img/content/popup.jpg",
+		"post_title": "Название статьи",
+		"post_url": "http://ссылка_на_статью",
+		"author_name": "имя_блоггера",
+		"author_url": "http://ссылка_на_блоггера",
+		"author_icon": "_dr",
+		"time": "3 сентября 2015, 15:00",
+		"type": "1"
+	},
+
+	"id_blablabla":
+	{
+		"lat": "55.7271459",
+		"lng": "37.6131822",
+		"img_url": "img/content/popup.jpg",
+		"post_title": "Название статьи",
+		"post_url": "http://ссылка_на_статью",
+		"author_name": "имя_блоггера",
+		"author_url": "http://ссылка_на_блоггера",
+		"author_icon": "_um",
+		"time": "3 сентября 2015, 15:00",
+		"type": "2"
+	},
+
+	"любой идентификатор":
+	{
+		"lat": "55.7171459",
+		"lng": "37.7131822",
+		"img_url": "img/content/popup.jpg",
+		"post_title": "Название статьи очень длинное Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi delectus obcaecati perspiciatis nihil deleniti velit tempora ea odio assumenda! Cupiditate ducimus, officiis aperiam velit, pariatur accusamus odio inventore illo aliquid.",
+		"post_url": "http://ссылка_на_статью",
+		"author_name": "имя_блоггера",
+		"author_url": "http://ссылка_на_блоггера",
+		"author_icon": "_an",
+		"time": "3 сентября 2015, 15:00",
+		"type": "3"
+	}
+}
+
+
+
