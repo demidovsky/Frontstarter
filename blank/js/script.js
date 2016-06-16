@@ -1,53 +1,112 @@
 "use strict";
 
+$(function()
+{
+
+	// (здесь описание, что делает данный фрагмент кода)
+	;(function YourTextHere()
+	{
+		
+	})();
+
+
+});
+	// Отключаем автозум на полях ввода
+	;(function iOSZoomFix()
+	{
+		var $meta = $('meta[name="viewport"]');
+		$('input, select, textarea').bind('focus blur', function(event)
+		{
+			$meta.attr('content', 'width=device-width, initial-scale=1, maximum-scale=' + (event.type == 'blur' ? 2 : 1));
+		});
+	})();
+/*! A fix for the iOS orientationchange zoom bug.
+ Script by @scottjehl, rebound by @wilto.
+ MIT / GPLv2 License.
+*/
+(function(w){
+	
+	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
+	var ua = navigator.userAgent;
+	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
+		return;
+	}
+
+    var doc = w.document;
+
+    if( !doc.querySelector ){ return; }
+
+    var meta = doc.querySelector( "meta[name=viewport]" ),
+        initialContent = meta && meta.getAttribute( "content" ),
+        disabledZoom = initialContent + ",maximum-scale=1",
+        enabledZoom = initialContent + ",maximum-scale=10",
+        enabled = true,
+		x, y, z, aig;
+
+    if( !meta ){ return; }
+
+    function restoreZoom(){
+        meta.setAttribute( "content", enabledZoom );
+        enabled = true;
+    }
+
+    function disableZoom(){
+        meta.setAttribute( "content", disabledZoom );
+        enabled = false;
+    }
+	
+    function checkTilt( e ){
+		aig = e.accelerationIncludingGravity;
+		x = Math.abs( aig.x );
+		y = Math.abs( aig.y );
+		z = Math.abs( aig.z );
+				
+		// If portrait orientation and in one of the danger zones
+        if( (!w.orientation || w.orientation === 180) && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+			if( enabled ){
+				disableZoom();
+			}        	
+        }
+		else if( !enabled ){
+			restoreZoom();
+        }
+    }
+	
+	w.addEventListener( "orientationchange", restoreZoom, false );
+	w.addEventListener( "devicemotion", checkTilt, false );
+
+})( this );
+"use strict";
 
 
 $(function()
 {
-	var $window = $(window),
-		$body = $('body'),
-		$headerAndContent = $('.b-header-and-content'),
-		$footer = $('footer');
+	
+});
+"use strict";
+
+
+$(function()
+{
+	var $window = $(window);
 
 	// Обработка событий с отсечкой по таймауту:
-	;$.fn.onTimeout=function(e,t,n){var r=null,i=function(){if(r)clearTimeout(r);r=setTimeout(t,n)};return $(this).on(e,i)};
+	$.fn.onTimeout=function(e,t,n){var r=null,i=function(){if(r)clearTimeout(r);r=setTimeout(t,n)};return $(this).on(e,i)};
 
-	// Выравнивание высоты смежных элементов
-	;(function(){function t(e,t){var n=e.offsetHeight;if(t){var r=e.currentStyle||getComputedStyle(e);n+=parseInt(r.marginTop)+parseInt(r.marginBottom)}return n}function n(e,t){var n=document.querySelectorAll(e);for(var r=0;r<n.length;r++)t(n[r],r)};var equalheight=function(e){var r=0,i=0,s=new Array,o,u=0;n(e,function(e,n){e.style.height="auto";u=e.offsetTop;if(i!=u){for(var currentDiv=0;currentDiv<s.length;currentDiv++){s[currentDiv].style.height=r+"px"}s.length=0;i=u;r=t(e,false);s.push(e)}else{s.push(e);r=r<t(e,false)?t(e,false):r}for(currentDiv=0;currentDiv<s.length;currentDiv++){s[currentDiv].style.height=r+"px"}})};window.onload=function(){equalheight("[data-equalheight]")};var r=null,i=function(){equalheight("[data-equalheight]")},s=function(){if(r)clearTimeout(r);r=setTimeout(i,50)};window.onresize=s})();
-
-
-
-
-	function resize()
+	// Отрисовка элементов, зависящих от JS:
+	function draw()
 	{
-		// Подогнать по высоте экрана
-		;(function(){var min=320;$(".js-fullscreen").css({margin:0,padding:0,height:"auto"}).height(Math.max($window.height(),min))})();
 
-		// Прилепить футер к низу
-		;(function(){var max=180,o=Math.min($footer.outerHeight(),max);$footer.removeAttr("style").css("margin-top",-o+"px"),$headerAndContent.css("padding-bottom",o+"px")})();
 
-		// Весь прочий код, "завязанный" на размеры экрана:
 
 
 
 	}
 
-
-
-
-
-
 	// Начальная отрисовка:
-	resize();
+	draw();
 
 	// Отрисовка по окончании ресайза:
-	$window.onTimeout("resize", resize, 100);
-
-
-
-
-
-
-
+	$window.onTimeout("resize", draw, 50);
 
 });

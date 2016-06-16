@@ -434,11 +434,11 @@ th {
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=51f71448f4c7d6e7aa58)
- * Config saved to config.json and https://gist.github.com/51f71448f4c7d6e7aa58
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=102311d7ae832e7b063e)
+ * Config saved to config.json and https://gist.github.com/102311d7ae832e7b063e
  */
 /*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -730,17 +730,17 @@ hr {
 	padding-right: 15px;
 	padding-left: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 	.container {
 		width: 768px;
 	}
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 	.container {
 		width: 960px;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.container {
 		width: 1280px;
 	}
@@ -975,7 +975,7 @@ hr {
 .col-xs-offset-0 {
 	margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 	.col-sm-1,
 	.col-sm-2,
 	.col-sm-3,
@@ -1144,7 +1144,7 @@ hr {
 		margin-left: 0;
 	}
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 	.col-md-1,
 	.col-md-2,
 	.col-md-3,
@@ -1313,7 +1313,7 @@ hr {
 		margin-left: 0;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.col-lg-1,
 	.col-lg-2,
 	.col-lg-3,
@@ -1556,7 +1556,7 @@ hr {
 .visible-lg-inline-block {
 	display: none !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
 	.visible-xs {
 		display: block !important;
 	}
@@ -1571,22 +1571,22 @@ hr {
 		display: table-cell !important;
 	}
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
 	.visible-xs-block {
 		display: block !important;
 	}
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
 	.visible-xs-inline {
 		display: inline !important;
 	}
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
 	.visible-xs-inline-block {
 		display: inline-block !important;
 	}
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 767px) {
 	.visible-sm {
 		display: block !important;
 	}
@@ -1601,22 +1601,22 @@ hr {
 		display: table-cell !important;
 	}
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 767px) {
 	.visible-sm-block {
 		display: block !important;
 	}
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 767px) {
 	.visible-sm-inline {
 		display: inline !important;
 	}
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 767px) {
 	.visible-sm-inline-block {
 		display: inline-block !important;
 	}
 }
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.visible-md {
 		display: block !important;
 	}
@@ -1631,22 +1631,22 @@ hr {
 		display: table-cell !important;
 	}
 }
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.visible-md-block {
 		display: block !important;
 	}
 }
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.visible-md-inline {
 		display: inline !important;
 	}
 }
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.visible-md-inline-block {
 		display: inline-block !important;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.visible-lg {
 		display: block !important;
 	}
@@ -1661,37 +1661,37 @@ hr {
 		display: table-cell !important;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.visible-lg-block {
 		display: block !important;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.visible-lg-inline {
 		display: inline !important;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.visible-lg-inline-block {
 		display: inline-block !important;
 	}
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
 	.hidden-xs {
 		display: none !important;
 	}
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 767px) {
 	.hidden-sm {
 		display: none !important;
 	}
 }
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.hidden-md {
 		display: none !important;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 	.hidden-lg {
 		display: none !important;
 	}
@@ -1744,6 +1744,7 @@ hr {
 	}
 }
 
+
 /* Общие стили для разных проектов */
 /* ----------------------- Ресеты -----------------*/
 /* ресет отступов */
@@ -1780,6 +1781,14 @@ body {
 li {
 	list-style-position: inside;
 	/*list-style-type:none;*/
+}
+/* оптимальный размер мелкого текста */
+small {
+	font-size: 75%;
+}
+/* минимальная ширина */
+body {
+	min-width: 320px;
 }
 /* адаптация для всех изображений */
 /*img { max-width: 100%; }*/
@@ -1822,27 +1831,57 @@ textarea {
 :focus::-webkit-input-placeholder {
 	color: transparent;
 }
+/* наследуем цвет ссылок */
+a {
+	outline: none !important;
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus {
+	text-decoration: none;
+	color: inherit;
+}
+/* масштабирование для rem-единиц */
+html {
+	font-size: 10px;
+}
+@media screen and (min-width: 0) {
+	html {
+		font-size: 8px;
+	}
+}
+@media screen and (min-width: 360px) {
+	html {
+		font-size: 9px;
+	}
+}
+@media screen and (min-width: 480px) {
+	html {
+		font-size: 9px;
+	}
+}
+@media screen and (min-width: 600px) {
+	html {
+		font-size: 10px;
+	}
+}
 /* ----------------------- Модификаторы -----------------*/
-._hidden {
-	display: none;
-}
-._float-right {
-	float: right;
-}
-._float-left {
-	float: left;
-}
+/* текст */
 ._underline {
 	text-decoration: underline;
+}
+._dashed {
+	border-bottom: 0.11rem dashed;
 }
 ._uppercase {
 	text-transform: uppercase;
 }
 ._lowercase {
-	text-transform: uppercase;
-}
-._relative {
-	position: relative;
+	text-transform: lowercase;
 }
 ._text-center {
 	text-align: center;
@@ -1850,19 +1889,65 @@ textarea {
 ._text-right {
 	text-align: right;
 }
-._small-caps {
-	font-size: 1rem;
-	text-transform: uppercase;
-}
 ._nowrap {
 	white-space: nowrap;
 }
-._clearfix:after {
-	display: table;
-	content: "";
-	clear: both;
+/* цвет */
+._text-white {
+	color: #fff;
 }
-/* отступы внутрениие: */
+._hover-white:hover {
+	color: #fff;
+}
+._bg-white {
+	background-color: #fff;
+}
+._text-black {
+	color: #272729;
+}
+._hover-black:hover {
+	color: #272729;
+}
+._bg-black {
+	background-color: #272729;
+}
+._text-orange {
+	color: #faa947;
+}
+._hover-orange:hover {
+	color: #faa947;
+}
+._bg-orange {
+	background-color: #faa947;
+}
+._text-darkorange {
+	color: #fd6c29;
+}
+._hover-darkorange:hover {
+	color: #fd6c29;
+}
+._bg-darkorange {
+	background-color: #fd6c29;
+}
+._text-blue {
+	color: #57b9e7;
+}
+._hover-blue:hover {
+	color: #57b9e7;
+}
+._bg-blue {
+	background-color: #57b9e7;
+}
+._text-gray {
+	color: #9d9d9d;
+}
+._hover-gray:hover {
+	color: #9d9d9d;
+}
+._bg-gray {
+	background-color: #9d9d9d;
+}
+/* отступы внутренние: */
 ._pad-l {
 	padding-left: 1.5rem;
 }
@@ -1947,7 +2032,24 @@ textarea {
 ._mb100 {
 	margin-bottom: 10rem;
 }
-/* Разместить дочерний блок по центру: */
+/* позиционирование */
+._hidden {
+	display: none;
+}
+._relative {
+	position: relative;
+}
+._clearfix:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+._float-right {
+	float: right;
+}
+._float-left {
+	float: left;
+}
 ._vertical-center {
 	width: 100%;
 	height: 100%;
@@ -1967,63 +2069,56 @@ textarea {
 	max-width: 100%;
 	font-size: medium;
 }
-/* Разместить дочерние блоки вплотную: */
-/* Разместить дочерние блоки по ширине: */
-/* ----------------------------- Общее (теги) --------------------------*/
-/* масштабирование для rem-единиц */
-html {
-	font-size: 10px;
+._block-nowrap {
+	font-size: 0;
+	white-space: nowrap;
 }
-@media screen and (min-width: 0) {
-	html {
-		font-size: 8px;
-	}
+._block-nowrap > * {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	font-size: initial;
+	white-space: normal;
 }
-@media screen and (min-width: 360px) {
-	html {
-		font-size: 9px;
-	}
+._block-nowrap._top > * {
+	vertical-align: top;
 }
-@media screen and (min-width: 480px) {
-	html {
-		font-size: 9px;
-	}
+._block-nowrap._bottom > * {
+	vertical-align: bottom;
 }
-@media screen and (min-width: 600px) {
-	html {
-		font-size: 10px;
-	}
+._block-justify {
+	line-height: 0;
+	text-align: justify;
 }
-@media screen and (min-width: 720px) {
-	html {
-		font-size: 10px;
-	}
+._block-justify > * {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	line-height: normal;
 }
-@media screen and (min-width: 768px) {
-	html {
-		font-size: 10px;
-	}
+._block-justify:after {
+	display: inline-block;
+	vertical-align: top;
+	content: "";
+	width: 100%;
 }
-@media screen and (min-width: 1024px) {
-	html {
-		font-size: 10px;
-	}
+._block-justify._top > * {
+	vertical-align: top;
 }
-@media screen and (min-width: 1280px) {
-	html {
-		font-size: 10px;
-	}
+._block-justify._bottom > * {
+	vertical-align: bottom;
 }
-@media screen and (min-width: 1400px) {
-	html {
-		font-size: 10px;
-	}
+/* хватательный курсор */
+._grab {
+	cursor:         grab;
+	cursor: -webkit-grab;
 }
-@media screen and (min-width: 1680px) {
-	html {
-		font-size: 10px;
-	}
+._grab:active {
+	cursor:         grabbing;
+	cursor: -webkit-grabbing;
 }
+/* ----------------------------- Универсальные элементы --------------------------*/
+/* сообщения для старых браузеров */
 noscript,
 #old_browser {
 	position: absolute;
@@ -2046,25 +2141,7 @@ noscript,
 	font-weight: normal;
 	cursor: pointer;
 }
-a {
-	outline: none !important;
-	text-decoration: none;
-	color: inherit;
-}
-a:hover {
-	text-decoration: none;
-	color: inherit;
-}
-a:focus {
-	text-decoration: none;
-	color: inherit;
-}
-body {
-	min-width: 320px;
-	font-family: "Open Sans", "Trebuchet MS", sans-serif;
-}
-/* ----------------------------- Общее (классы) --------------------------*/
-/* затемняющая шторка */
+/* затемнение */
 .b-overlay {
 	position: absolute;
 	z-index: 101;
@@ -2076,27 +2153,4 @@ body {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.8);
 }
-/* цвета */
-._text-white {
-	color: #fff;
-}
-._hover-white:hover {
-	color: #fff;
-}
-._bg-white {
-	background-color: #fff;
-}
-._text-black {
-	color: #000;
-}
-._hover-black:hover {
-	color: #000;
-}
-._bg-black {
-	background-color: #000;
-}
-
-body {
-	background: #fff;
-	color: #000;
-}
+/* ----------------------------- Константы --------------------------*/
