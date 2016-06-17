@@ -1,4 +1,4 @@
-/* кнопка */
+/* универсальная кнопка */
 .b-button,
 a.b-button,
 input.b-button,
@@ -15,6 +15,7 @@ button.b-button {
 	color: white;
 	background: #888;
 	border: 0;
+	font-family: sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	white-space: nowrap;
@@ -23,6 +24,6 @@ button.b-button {
 	-webkit-appearance: none;
 	transition: all 0.3s;
 
-	&:hover	{ opacity: 0.9; }
-	&:active { top: 1px; }
+	/* &:hover	{ opacity: 0.9; }
+	&:active { top: 1px; } */
 }
