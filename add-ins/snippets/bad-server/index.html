@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bad-server</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+	<button>Потыкать веточкой</button>
+	<span id="answer"></span>
+	<div>см. консоль</div>
+	<script>
+		$(function()
+		{
+			$('button').click(function()
+			{
+				$.ajax(
+				{
+					url: "bad_server.php",
+					success: function() { $('#answer').html('сервер ок!') },
+					error: function() { $('#answer').html('сервер не отвечает.') }
+				})
+			})
+		})
+	</script>
+</body>
+</html>
