@@ -1,126 +1,56 @@
 /*
 	Добавляет поддержку атрибутов для выравнивания высоты
-
-	[data-equalheight]     - native JS, для смежных элементов (работает быстрее)
-	[data-equalheight-any] - jQuery-based, для любых элементов
 */
 
-
-/* требует, чтобы у элементов был общий родитель */
-(function EqualHeightSiblings()
+(function EqualHeightSiblings(glob)
 {
-
-	// Equal height columns
-	// A fork of Micah Godbolt's original pen:
-	// http://codepen.io/micahgodbolt/pen/FgqLc
-
-	// Adapted by Matt Hill to not use jQuery
-	// For IE8+ - older browsers will get ragged columns
-
-	// If we need any small jQuery functionality replicated, we
-	// can use some vanilla JS, in IE8 and above
-	// http://youmightnotneedjquery.com/ 
-
-	// Replicate jQuery .height method
-	function outerHeight(el, includeMargin){
-		var height = el.offsetHeight;
-
-		if(includeMargin){
-			var style = el.currentStyle || getComputedStyle(el);
-			height += parseInt(style.marginTop) + parseInt(style.marginBottom);
-		} 
-		return height;
-	}
-	// Replicate jQuery .each method
-	function forEachElement(selector, fn) {
+	// Replicate jQuery .each method (http://youmightnotneedjquery.com/)
+	function forEachElement(selector, fn) 
+	{
 		var elements = document.querySelectorAll(selector);
-		for (var i = 0; i < elements.length; i++)
-			fn(elements[i], i);
+		for (var i = 0; i < elements.length; i++) fn(elements[i], i);
 	}
 
 
-	equalheight = function(container){
 
-		var currentTallest = 0,
-		currentRowStart = 0,
-		rowDivs = new Array(),
-		el,	topPosition = 0;
+	// основная функция
+	glob.equalheight = function(targets)
+	{
+		var heights = {};
 
-		// Loop for each container element to match their heights
-		forEachElement(container, function(el, i){
-
-			el.style.height = 'auto';
-			topPosition = el.offsetTop;
-
-			if (currentRowStart != topPosition) {
-				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-			 		rowDivs[currentDiv].style.height = currentTallest + "px";
-				}
-				rowDivs.length = 0; // empty the array
-				currentRowStart = topPosition;
-				currentTallest = outerHeight(el, false);
-				rowDivs.push(el);
-			} else {
-				rowDivs.push(el);
-				currentTallest = (currentTallest < outerHeight(el, false)) ? (outerHeight(el, false)) : (currentTallest);
-			}
-			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-				rowDivs[currentDiv].style.height = currentTallest + "px";
-			}
+		forEachElement(targets, function(element, i)
+		{
+			element.style.height = 'auto';
+			var group = element.getAttribute('data-equal-height');
+			if (typeof heights[group] == "undefined") heights[group] = [];
+			heights[group].push(element.offsetHeight);
+			console.log(heights);
 		});
 
+		forEachElement(targets, function(element, i)
+		{
+			var group = element.getAttribute('data-equal-height');
+			element.style.height = Math.max.apply(null, heights[group]) + "px";
+		});
 	}
-	window.onload = function() {
-		equalheight('[data-equalheight]');
+
+
+
+	// перерисовка после ресайза
+	var timer = null;
+	function doit() { equalheight('[data-equal-height]') };
+	function wait()
+	{
+		if (timer) clearTimeout(timer);
+		timer = setTimeout(doit, 50);
+	};
+	glob.onresize = wait;
+
+
+
+	// начальная отрисовка
+	glob.onload = function() {
+		equalheight('[data-equal-height]');
 	};
 
-	var timer = null,
-		callback = function()
-		{
-			equalheight('[data-equalheight]');
-		},
-		start = function()
-		{
-			if (timer) clearTimeout(timer);
-			timer = setTimeout(callback, 50);
-		};
-
-	window.onresize = start;
-
-})();
-
-
-
-
-
-
-
-
-
-
-
-/* не требует, чтобы у элементов был общий родитель */
-if (typeof $ != "undefined")
-$(function()
-{
-	"use strict";
-
-	(function EqualHeightAny()
-	{
-		var resize = function()
-		{
-			var M = [];
-
-			$('[data-equalheight-any]')
-				.filter(':visible')
-				.css("min-height", "0")
-				.each(function(index, element){ M.push($(element).outerHeight()); })
-				.css("min-height", Math.max.apply(null,M) + "px");
-		};
-
-		$(window).onTimeout("resize", resize, 50);
-
-		resize();
-
-	})();
-});
+})(window);
