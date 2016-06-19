@@ -20,17 +20,17 @@
 
 		forEachElement(targets, function(element, i)
 		{
-			element.style.height = 'auto';
+			element.style.minHeight = 'auto';
 			var group = element.getAttribute('data-equal-height');
 			if (typeof heights[group] == "undefined") heights[group] = [];
 			heights[group].push(element.offsetHeight);
-			console.log(heights);
+			// console.log(heights);
 		});
 
 		forEachElement(targets, function(element, i)
 		{
 			var group = element.getAttribute('data-equal-height');
-			element.style.height = Math.max.apply(null, heights[group]) + "px";
+			element.style.minHeight = Math.max.apply(null, heights[group]) + "px";
 		});
 	}
 
