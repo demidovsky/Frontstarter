@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sticky-panel</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="sticky-panel.js"></script>
+	<style>
+		body { margin:0 }
+		header { height:100px; background:#555; color:#fff; }
+		footer { height:800px; background:#555; color:#fff; }
+		aside { display:block; width:240px; float:right; background:#888; color:#fff; }
+		aside._fixed { position:fixed; right:0; top:0; }
+
+		/* large font */
+		div,header,footer { font-family:monospace; word-wrap:break-word; font-weight:bold; font-size:75px; text-align:center;}
+ 		section > div { width:50px; font-size:100px; line-height:200px; }
+ 		aside > div   { width:50px; font-size:75px; line-height:100px; }
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<aside><div>panel</div></aside>
+	<section><div>some content</div></section>
+	<footer>footer</footer>
+
+	<script>
+		$(function()
+		{
+			$('aside').stickyPanel(
+			{
+				topEdge: $('aside').offset().top,
+				bottomEdge: $('footer').offset().top
+			});
+
+			// P.S. чтобы поменять опции на лету, можно просто вызывать .stickyPanel заново с новыми значениями
+		});
+	</script>
+</body>
+</html>
