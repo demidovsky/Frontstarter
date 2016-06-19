@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>radio-deselect</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="radio-deselect.js"></script>
+	<style>label{-moz-user-select:none;user-select:none}</style>
+</head>
+<body>
+	Второй клик по радиоселекту отменяет выбор.
+
+	<h2>Группа 1</h2>
+	<label><input type="radio" name="test" data-deselectable> подберёзовики</label>
+	<label><input type="radio" name="test" data-deselectable> подосиновики</label>
+	<label><input type="radio" name="test" data-deselectable> поддубники</label>
+
+	<h2>Группа 2</h2>
+	<label><input type="radio" name="test" data-deselectable> надберёзовики</label>
+	<label><input type="radio" name="test" data-deselectable> надосиновики</label>
+	<label><input type="radio" name="test" data-deselectable> наддубники</label>
+
+</body>
+</html>

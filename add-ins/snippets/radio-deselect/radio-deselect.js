@@ -1,3 +1,7 @@
+$(function()
+{
+
+
 $('[data-deselectable]').on("click", function(event)
 {
 	var $this = $(this);
@@ -25,3 +29,5 @@ $('[data-deselectable]').on("click", function(event)
 	}
 
 });
+
+})
