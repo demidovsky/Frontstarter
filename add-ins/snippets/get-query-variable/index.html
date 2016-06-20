@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>get-query-variable</title>
+	<script src="get-query-variable.js"></script>
+</head>
+<body>
+	Проверить get-параметр:
+	<form onsubmit="alert(getQueryVariable(document.getElementById('param').value) || 'Переменная не найдена.'); return false;">
+		<input id="param" type="text">
+		<input type="submit" value="Ok">
+	</form>
+</body>
+</html>
