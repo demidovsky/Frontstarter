@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>assert</title>
+	<script src="assert.js"></script>
+</head>
+<body>
+<pre><script style="display:block">function fraction(value)
+{
+	// проверки
+	assert(value != undefined, "параметр не задан");
+	assert(value != 0, "параметр не должен быть отрицательным");
+
+	// основная часть функции
+	return 1/value;
+}
+
+try { fraction();  } catch(e){ console.warn(e) };
+try { fraction(0); } catch(e){ console.warn(e) };
+try { fraction(4); } catch(e){ console.warn(e) };
+
+// далее см. консоль
+</script>
+</pre>
+</body>
+</html>
