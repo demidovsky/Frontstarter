@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>type</title>
+	<script src="type.js"></script>
+</head>
+<body>
+
+	<h2><pre><table><script>
+
+		var tests = 
+		[
+			{ a:'type(1)', 				b:'typeof(1)' },
+			{ a:'type(0.2)', 			b:'typeof(0.2)' },
+			{ a:'type(NaN)', 			b:'typeof(NaN)' },
+			{ a:'type(Infinity)', 		b:'typeof(Infinity)' },
+			{ a:'type("test")', 		b:'typeof("test")' },
+			{ a:'type([])', 			b:'typeof([])' },
+			{ a:'type([1,2,3])', 		b:'typeof([1,2,3])' },
+			{ a:'type({})', 			b:'typeof({})' },
+			{ a:'type({a:1})', 			b:'typeof({a:1})' },
+			{ a:'type(true)', 			b:'typeof(true)' },
+			{ a:'type(null)', 			b:'typeof(null)' },
+			{ a:'type(undefined)', 		b:'typeof(undefined)' },
+			{ a:'type(new Date())', 	b:'typeof(new Date())' },
+			{ a:'type(function(){})', 	b:'typeof(function(){})' },
+			{ a:'type(document.body)', 	b:'typeof(document.body)' },
+		];
+
+		for (var i=0; i<tests.length; i++)
+		{
+			document.write('<td></td>')
+			document.write('<td align="right" style="font-weight:normal">' + tests[i].a + '</td><td> = "' + eval(tests[i].a) + '"</td>');
+			document.write('<td></td>');
+			document.write('<td align="right" style="font-weight:normal">' + tests[i].b + '</td><td> = "' + eval(tests[i].b) + '"</td>');
+			document.write('</tr>');
+		}
+
+	</script></table></pre></h2>
+</body>
+</html>
