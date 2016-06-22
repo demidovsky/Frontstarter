@@ -1,31 +1,39 @@
-// Добавляет поддержку атрибута data-timed-hover, который вешает класс _hover с указанной задержкой
-
-;(function TimedHover()
+$(function()
 {
-	var $hover = $('[data-timed-hover]');
 
-	if ($hover.length)
+
+
+	// Добавляет поддержку атрибута data-timed-hover, который вешает класс _hover с указанной задержкой
+	;(function TimedHover()
 	{
-		$hover.each(function(index, element)
+		var $hover = $('[data-timed-hover]');
+
+		if ($hover.length)
 		{
-			var $this = $(element),
-				timer = null,
-				duration = $this.attr("data-timed-hover");
+			$hover.each(function(index, element)
+			{
+				var $this = $(element),
+					timer = null,
+					duration = $this.attr("data-timed-hover");
 
-			$this
-				.on("mouseenter", function()
-				{
-					timer = setTimeout(function()
+				$this
+					.on("mouseenter", function()
 					{
-						$this.addClass('_hover');
-					}, duration);
+						timer = setTimeout(function()
+						{
+							$this.addClass('_hover');
+						}, duration);
 
-				})
-				.on("mouseleave", function()
-				{
-					clearTimeout(timer);
-					$this.removeClass('_hover');
-				});
-		});
-	}
-})();
+					})
+					.on("mouseleave", function()
+					{
+						clearTimeout(timer);
+						$this.removeClass('_hover');
+					});
+			});
+		}
+	})();
+
+
+
+});
