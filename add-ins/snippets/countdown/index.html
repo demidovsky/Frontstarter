@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>countdown</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="jquery.countdown.min.js"></script>
+	<script src="countdown.js"></script>
+	<style>
+		._tick{-webkit-animation:1s tick infinite; animation:1s tick infinite ease-out}
+		@-webkit-keyframes tick {0%,100%{opacity:1}50%{opacity:0}}
+		@keyframes tick{0%,100%{opacity:1}50%{opacity:0}}
+	</style>
+</head>
+<body>
+	<div style="font-size: 2em">
+		<span id="countdown_day"></span> д :
+		<span id="countdown_hour"></span> ч :
+		<span id="countdown_min"></span> м
+		<span id="countdown_tick">:</span>
+		<span id="countdown_sec"></span> с
+	</div>
+</body>
+</html>
