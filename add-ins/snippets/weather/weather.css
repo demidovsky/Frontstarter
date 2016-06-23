@@ -1,0 +1,118 @@
+/* Погода */
+@font-face {
+  font-family: 'weathericons';
+  src: url('font/weathericons-regular-webfont.eot');
+  src: url('font/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('font/weathericons-regular-webfont.woff2') format('woff2'), url('font/weathericons-regular-webfont.woff') format('woff'), url('font/weathericons-regular-webfont.ttf') format('truetype'), url('font/weathericons-regular-webfont.svg#weather_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.b-weather {
+  float: right;
+  box-sizing: border-box;
+  /*background: #faf8f8;*/
+  /*color: #323232;*/
+  /*background: rgba(255,255,255,0.6);*/
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+  width: 300px;
+  min-height: 315px;
+  padding: 30px;
+  border-radius: 10px;
+  margin-left: 50px;
+  text-align: center;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+.b-weather i {
+  font-family: 'weathericons';
+  font-style: normal;
+}
+.b-weather h2 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.b-weather h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.b-weather__today {
+  font-size: 50px;
+  /*line-height: 60px;*/
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.b-weather__tomorrow {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.b-weather__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+.b-weather__table i {
+  font-size: 16px;
+}
+.b-weather__bar {
+  display: block;
+  width: 80%;
+  /*background: #fff;*/
+  border: 1px solid;
+}
+.b-weather__hot { vertical-align: bottom; }
+.b-weather__cold { vertical-align: top; }
+
+#weather_now, #weather_forecast { display: none; }
+
+.wi-yahoo-0:before { content: "\f056"; }
+.wi-yahoo-1:before { content: "\f00e"; }
+.wi-yahoo-2:before { content: "\f073"; }
+.wi-yahoo-3:before { content: "\f01e"; }
+.wi-yahoo-4:before { content: "\f01e"; }
+.wi-yahoo-5:before { content: "\f017"; }
+.wi-yahoo-6:before { content: "\f017"; }
+.wi-yahoo-7:before { content: "\f017"; }
+.wi-yahoo-8:before { content: "\f015"; }
+.wi-yahoo-9:before { content: "\f01a"; }
+.wi-yahoo-10:before { content: "\f015"; }
+.wi-yahoo-11:before { content: "\f01a"; }
+.wi-yahoo-12:before { content: "\f01a"; }
+.wi-yahoo-13:before { content: "\f01b"; }
+.wi-yahoo-14:before { content: "\f00a"; }
+.wi-yahoo-15:before { content: "\f064"; }
+.wi-yahoo-16:before { content: "\f01b"; }
+.wi-yahoo-17:before { content: "\f015"; }
+.wi-yahoo-18:before { content: "\f017"; }
+.wi-yahoo-19:before { content: "\f063"; }
+.wi-yahoo-20:before { content: "\f014"; }
+.wi-yahoo-21:before { content: "\f021"; }
+.wi-yahoo-22:before { content: "\f062"; }
+.wi-yahoo-23:before { content: "\f050"; }
+.wi-yahoo-24:before { content: "\f050"; }
+.wi-yahoo-25:before { content: "\f076"; }
+.wi-yahoo-26:before { content: "\f013"; }
+.wi-yahoo-27:before { content: "\f031"; }
+.wi-yahoo-28:before { content: "\f002"; }
+.wi-yahoo-29:before { content: "\f031"; }
+.wi-yahoo-30:before { content: "\f002"; }
+.wi-yahoo-31:before { content: "\f02e"; }
+.wi-yahoo-32:before { content: "\f00d"; }
+.wi-yahoo-33:before { content: "\f083"; }
+.wi-yahoo-34:before { content: "\f00c"; }
+.wi-yahoo-35:before { content: "\f017"; }
+.wi-yahoo-36:before { content: "\f072"; }
+.wi-yahoo-37:before { content: "\f00e"; }
+.wi-yahoo-38:before { content: "\f00e"; }
+.wi-yahoo-39:before { content: "\f00e"; }
+.wi-yahoo-40:before { content: "\f01a"; }
+.wi-yahoo-41:before { content: "\f064"; }
+.wi-yahoo-42:before { content: "\f01b"; }
+.wi-yahoo-43:before { content: "\f064"; }
+.wi-yahoo-44:before { content: "\f00c"; }
+.wi-yahoo-45:before { content: "\f00e"; }
+.wi-yahoo-46:before { content: "\f01b"; }
+.wi-yahoo-47:before { content: "\f00e"; }
+.wi-yahoo-3200:before { content: "\f077"; }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>weather</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	<link href="weather.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="b-weather" id="weather" data-place="Сочи">
+		<h2>Погода в&nbsp;Сочи:</h2>
+		<div id="weather_now"></div>
+		<script type="text/template" id="weather_now_template">
+			<div class="b-weather__today">
+				<i class="wi-yahoo-{{=data.today.code}}"></i>
+				{{? data.today.high > 0 }}+{{?}}{{=data.today.high}}&deg;
+			</div>
+			<div class="b-weather__tomorrow">
+				завтра: <i class="wi-yahoo-{{=data.tomorrow.code}}"></i>
+				{{? data.tomorrow.low > 0 }}+{{?}}{{=data.tomorrow.low}}&deg;
+				{{? data.tomorrow.high > 0 }}+{{?}}{{=data.tomorrow.high}}&deg;
+			</div>
+		</script>
+		<h3>Прогноз погоды в&nbsp;Сочи:</h3>
+		<div id="weather_forecast"></div>
+		<script type="text/template" id="weather_forecast_template">
+			<table class="b-weather__table">
+				<tr>{{~data.fore.weekDays     :value}}<td {{? value=='сб' || value=='вс'}}style="color:red"{{?}}>{{=value}}</td>{{~}}</tr>
+				<tr>{{~data.fore.weatherCodes :value}}<td><i class="wi-yahoo-{{=value}}"></i></td>{{~}}</tr>
+				<tr>{{~data.fore.temp         :value}}<td>{{=value}}&deg;</td>{{~}}</tr>
+			</table>
+		</script>
+	</div>
+
+
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="jquery.simpleWeather.min.js"></script>
+	<script src="doT.min.js"></script>
+	<script src="weather.js"></script>
+
+</body>
+</html>
