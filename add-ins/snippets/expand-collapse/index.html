@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>expand-collapse</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="expand-collapse.js"></script>
+	<style>
+		/* Функциональность */
+		._expand { display: inline-block; }
+		._collapse { display: none; }
+		[data-content] { display: none; }
+		._open ._expand { display: none; }
+		._open ._collapse { display: inline-block; }
+		._open [data-content] { display: block; }
+
+		/* Оформление */
+		body { font-family: sans-serif; padding: 51px; }
+		section { max-width: 300px; margin: 0 0 20px; }
+		[data-toggle] { border-bottom: 1px dashed; cursor: pointer; }
+		[data-toggle]:hover { color: #888; }
+		[data-toggle] i { font-size: 0.75em; transition: transform 0.5s; display: inline-block; vertical-align: middle; }
+		._open [data-toggle] i { transform: rotate(180deg); }
+	</style>
+</head>
+<body>
+	<section>
+		<span data-toggle>
+			<b class="_expand">Развернуть</b>
+			<b class="_collapse">Свернуть</b>
+			<i>▼</i>
+		</span>
+		<div data-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ab magnam recusandae, provident perspiciatis quibusdam nesciunt sunt? Repellat quibusdam, voluptas necessitatibus tempore aut hic recusandae provident eum aspernatur, iste, ullam.</div>
+	</section>
+
+	<br>
+
+	<section>
+		<span data-toggle>
+			<b class="_expand">Развернуть</b>
+			<b class="_collapse">Свернуть</b>
+			<i>▼</i>
+		</span>
+		<div data-content> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perspiciatis nam similique repellendus et, cum quasi architecto voluptatum culpa odio sequi sapiente sunt enim quis, aliquid, veritatis ducimus temporibus laborum.</div>
+	</section>
+
+	<br>
+
+	<section class="_open">
+		<span data-toggle>
+			<b class="_expand">Развернуть</b>
+			<b class="_collapse">Свернуть</b>
+			<i>▼</i>
+		</span>
+		<div data-content style="display:block"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perspiciatis nam similique repellendus et, cum quasi architecto voluptatum culpa odio sequi sapiente sunt enim quis, aliquid, veritatis ducimus temporibus laborum.</div>
+	</section>
+</body>
+</html>

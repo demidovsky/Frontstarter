@@ -1,6 +1,8 @@
-// Расхлоп
-;(function Collapse()
+$(function()
 {
+
+
+
 	$('[data-toggle]').on("click", function(event)
 	{
 		event.preventDefault();
@@ -15,9 +17,11 @@
 		$this
 			.siblings('[data-content]')
 			.stop(true,false)
-			.slideToggle(100)
+			.slideToggle(500)
 			.parent()
 			.toggleClass('_open');
 	});
 
-})();
+
+
+});
