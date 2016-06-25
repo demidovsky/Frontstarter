@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>over</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="only.js"></script>
+	<script src="over.js"></script>
+	<style>
+		body {padding:2vw; margin:0; font-family:sans-serif; font-size:2vw; -moz-user-select:none; user-select:none; }
+		div { width:400px; padding:2vw; }
+		#over { background:honeydew; }
+		#only { background:lemonchiffon; }
+	</style>
+</head>
+<body>
+	<div>Try to click fast. <br> Really fast.</div>
+
+	<div id="only">
+		This div catches the first click <b>only</b>.<br>
+	</div>
+	<br>
+	<div id="over">
+		This div catches the last click <b>over</b> time.<br>
+	</div>
+
+	<script>
+		$(function()
+		{
+			$('#over').over("click", function(){ $(this).html($(this).html() + ' Click.'); }, 500);
+			$('#only').only("click", function(){ $(this).html($(this).html() + ' Click.'); }, 500);
+		})
+	</script>
+</body>
+</html>
