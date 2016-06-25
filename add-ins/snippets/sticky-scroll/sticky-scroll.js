@@ -2,55 +2,50 @@ $(function()
 {
 	"use strict";
 
-	var $window = $(window);
-	var $htmlbody = $('html,body');
-	var isWheelBlocked = false;
-	var DURATION = 300;
-	var EASING = typeof($.easing.easeOutQuad) != "undefined" ? "easeOutQuad" : "swing";
+	var $window = $(window),
+		$htmlbody = $('html,body'),
+		isKineticBlocked = false,
+		unblockTimer = null,
 
-	// проверить положение скролла и доскроллить, если нужно
+		DURATION = 500, //ms
+		TRESHOLD = 200, //px
+		EASING = typeof($.easing.easeOutQuad) != "undefined" ? "easeOutQuad" : "swing",
+		KINETIC_PASS = true;
+
+
+	// checks scroll position and manually continues it to element top // TODO: to element EDGE (top/bottom)
 	function snapToScreen($this, event, from)
 	{
-		if (isWheelBlocked) return;
-
-		var wy = Math.round($window.scrollTop()); // Window Y
-		var wh = Math.round($window.height());    // Window Height
-		var sy = Math.round($this.offset().top);  // Section Y
-		var sh = Math.round($this.height());      // Section Height
-
-
-		if (event.deltaY > 0)
+		// console.log(isKineticBlocked);
+		if (isKineticBlocked)
 		{
-			// console.log("прокрутка вверх", sy+sh, wy);
-			if (sy + sh + 200 > wy && sy < wy)
+			event.preventDefault();
+			if (!KINETIC_PASS)
 			{
-				console.log("докрутка вверх");
-				$htmlbody.stop(true, false).animate({scrollTop:sy}, DURATION, EASING);
-				isWheelBlocked = true;
-				setTimeout(function() { isWheelBlocked = false }, DURATION);
-				event.preventDefault();
-				return true;
+				clearTimeout(unblockTimer);
+				unblockTimer = setTimeout(function(){/*console.log('unblocked!');*/ isKineticBlocked = false }, DURATION);
 			}
+			return false;
 		}
-
-
 		else
 		{
-			// console.log("прокрутка вниз", sy, wy+wh);
+			var wy = Math.round($window.scrollTop()); // Window Y
+			var wh = Math.round($window.height());    // Window Height
+			var sy = Math.round($this.offset().top);  // Section Y
+			var sh = Math.round($this.height());      // Section Height
 
-			if (sy < wy + wh + 200 && sy > wy)
+			if ((event.deltaY > 0) && (sy + sh + TRESHOLD > wy) && (sy < wy)
+				||
+				(event.deltaY < 0) && (sy < wy + wh + TRESHOLD) && (sy > wy))
 			{
-				console.log("докрутка вниз");
-				$htmlbody.stop(true, false).animate({scrollTop:sy}, DURATION, EASING);
-				isWheelBlocked = true;
-				setTimeout(function() { isWheelBlocked = false }, DURATION);
 				event.preventDefault();
+				$htmlbody.stop(true, false).animate({scrollTop:sy}, DURATION, EASING);
+				isKineticBlocked = true;
+				if (KINETIC_PASS) setTimeout(function(){ /*console.log('unblocked!');*/ isKineticBlocked = false }, DURATION);
 				return true;
 			}
+			return false;
 		}
-
-
-		return false;
 	}
 
 
@@ -62,7 +57,7 @@ $(function()
 	// проверять после каждого движения колеса
 	(function initSnapToScreen()
 	{
-		var $stickyscroll = $('.js-stickyscroll');
+		var $stickyscroll = $('[data-sticky-scroll]');
 
 		$window.on("mousewheel", function(event)
 		{

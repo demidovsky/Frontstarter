@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sticky-scroll</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="jquery.easing.1.3.js"></script>
+	<script src="jquery.mousewheel.js"></script>
+	<script src="../only-and-over/only.js"></script>
+	<script src="sticky-scroll.js"></script>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+			font-size: 4vw;
+			font-weight: bold;
+		}
+
+		section { padding: 2vw }
+
+		.step1 { height:300px;  background:salmon }
+		.step2 { height:600px;  background:peachpuff }
+		.step3 { height:2000px; background:plum }
+		.step3 > div { height: 1000px; }
+		.step4 { height:400px;  background:papayawhip }
+		.step5 { height:1000px;  background:olivedrab }
+
+	</style>
+</head>
+<body>
+	<section data-sticky-scroll class="step1">Scroll down and up!</section>
+	<section data-sticky-scroll class="step2">Scroll sticks to sections.</section>
+	<section data-sticky-scroll class="step3">
+		<div>
+			When section is longer than window height...
+		</div>
+		<div>
+			...it is not sticky &mdash; so you can read what's inside.
+		</div>
+	</section>
+	<section data-sticky-scroll class="step4">But as the next section became visible, scroll sticks to it again.</section>
+	<section data-sticky-scroll class="step5">And again.</section>
+</body>
+</html>
