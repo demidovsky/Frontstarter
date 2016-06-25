@@ -3,7 +3,7 @@ $(function()
 
 
 
-	$('[data-toggle]').on("click", function(event)
+	$('[data-expand]').on("click", function(event)
 	{
 		event.preventDefault();
 
@@ -15,7 +15,7 @@ $(function()
 		}
 		
 		$this
-			.siblings('[data-content]')
+			.siblings('[data-expand-content]')
 			.stop(true,false)
 			.slideToggle(500)
 			.parent()
