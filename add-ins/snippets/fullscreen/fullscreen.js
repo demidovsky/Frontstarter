@@ -1,4 +1,4 @@
-// Добавляет поддержку класса .js-fullscreen для растягивания элементов по высоте экрана
+// Добавляет поддержку атрибута data-fullscreen для растягивания элементов по высоте экрана
 
 $(function()
 {
@@ -13,11 +13,11 @@ $(function()
 	(function FullScreen()
 	{
 		var minHeight = 0, // px
-			$full = $('.js-fullscreen').css({"margin":0, "padding":0}),
+			$screens = $('[data-fullscreen]').css({"margin":0, "padding":0}),
 			onResize = function()
 			{
-				console.log("onResize");
-				$full.height($window.height() > minHeight ? $window.height() : minHeight);
+				// console.log("onResize");
+				$screens.height($window.height() > minHeight ? $window.height() : minHeight);
 			};
 
 		onResize();
