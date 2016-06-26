@@ -34,12 +34,14 @@ $(function()
 			var sy = Math.round($this.offset().top);  // Section Y
 			var sh = Math.round($this.height());      // Section Height
 
-			if ((event.deltaY > 0) && (sy + sh + TRESHOLD > wy) && (sy < wy)
+			if ((event.deltaY > 0) && (sy + sh + TRESHOLD > wy) && (sy < wy)  // up
 				||
-				(event.deltaY < 0) && (sy < wy + wh + TRESHOLD) && (sy > wy))
+				(event.deltaY < 0) && (sy < wy + wh + TRESHOLD) && (sy > wy)) // down
 			{
 				event.preventDefault();
-				$htmlbody.stop(true, false).animate({scrollTop:sy}, DURATION, EASING);
+				var y = sy; // stick to top
+				if (event.deltaY > 0 && (sy+sh < wy+wh)) y = sy + sh - wh; // stick to bottom (scroll up through long section)
+				$htmlbody.stop(true, false).animate({scrollTop:y}, DURATION, EASING);
 				isKineticBlocked = true;
 				if (KINETIC_PASS) setTimeout(function(){ /*console.log('unblocked!');*/ isKineticBlocked = false }, DURATION);
 				return true;
@@ -54,7 +56,6 @@ $(function()
 
 
 
-	// проверять после каждого движения колеса
 	(function initSnapToScreen()
 	{
 		var $stickyscroll = $('[data-sticky-scroll]');

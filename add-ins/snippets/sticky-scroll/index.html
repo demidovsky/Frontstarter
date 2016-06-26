@@ -8,28 +8,23 @@
 	<script src="jquery.mousewheel.js"></script>
 	<script src="../only-and-over/only.js"></script>
 	<script src="sticky-scroll.js"></script>
+	<!-- <script src="../fullscreen/fullscreen.js"></script> -->
 	<style>
-		body {
-			padding: 0;
-			margin: 0;
-			font-family: sans-serif;
-			font-size: 4vw;
-			font-weight: bold;
-		}
-
-		.step1 { height:300px;  background:salmon }
-		.step2 { height:600px;  background:peachpuff }
-		.step3 { height:2000px; background:plum }
+		body { padding:0; margin:0; font-family:sans-serif; font-size:3vw; font-weight:bold; }
+		section { background-image:url(bg.jpg); background-size:auto 100%; background-position:center; background-repeat:no-repeat; }
+		.step1 { height:1300px;  background-color:salmon }
+		.step2 { height:600px;  background:lightgray }
+		.step3 { height:2000px; background-color:plum }
 		.step3 > div { height: 1000px; }
-		.step4 { height:400px;  background:papayawhip }
-		.step5 { height:1000px;  background:olivedrab }
+		.step4 { height:1400px;  background-color:papayawhip }
+		.step5 { height:500px;  background:darkgray }
 
 	</style>
 </head>
 <body>
-	<section data-sticky-scroll class="step1">Scroll down and up!</section>
-	<section data-sticky-scroll class="step2">Scroll sticks to sections.</section>
-	<section data-sticky-scroll class="step3">
+	<section data-fullscreen data-sticky-scroll class="step1">Scroll down and up!</section>
+	<section data-fullscreen data-sticky-scroll class="step2">Scroll sticks to sections.</section>
+	<section data-fullscreen data-sticky-scroll class="step3">
 		<div>
 			When section is longer than window height...
 		</div>
@@ -37,7 +32,7 @@
 			...it is not sticky &mdash; so you can read what's inside.
 		</div>
 	</section>
-	<section data-sticky-scroll class="step4">But as the next section became visible, scroll sticks to it again.</section>
-	<section data-sticky-scroll class="step5">And again.</section>
+	<section data-fullscreen data-sticky-scroll class="step4">But as the next section became visible, scroll sticks to it again.</section>
+	<section data-fullscreen data-sticky-scroll class="step5">Now try to scroll back. Scroll sticks to the bottom as well.</section>
 </body>
 </html>
