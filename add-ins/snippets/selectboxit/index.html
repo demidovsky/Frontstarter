@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>selectboxit</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="jquery-ui.core.min.js"></script>
+	<script src="jquery.selectBoxIt.min.js"></script>
+	<link href="selectboxit.css" rel="stylesheet">
+	<style> body {line-height:30px } section { margin-bottom:120px } select { height:30px } button { float: right; }</style>
+</head>
+<body>
+	<button onclick="$('.selectboxit-options').hide()">Hide all</button>
+	<button onclick="$('.selectboxit-options').show()">Show all</button>
+
+	<section>
+		<select>
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+		</select>
+		&nbsp;Basic
+	</section>
+
+	<section>
+		<select  data-selectboxit>
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+		</select>
+		&nbsp;Fixed
+	</section>
+
+	<section>
+		<select data-selectboxit class="selectboxit-autowidth">
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+		</select>
+		&nbsp;Fluid
+	</section>
+
+	<section>
+		<select data-selectboxit class="selectboxit-autowidth">
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+			<option value="3">long time ago in a galaxy lorem ipsum dolor sit amet, consectetur adipisicing elit.</option>
+		</select>
+		&nbsp;Overflow test
+	</section>
+
+	<section>
+		Dashed
+		<select data-selectboxit class="selectboxit-autowidth selectboxit-dashed">
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+		</select>, useful for inline dropdowns.
+	</section>
+
+	<script>
+		$(function()
+		{
+			$('select[data-selectboxit]').each(function(index, element)
+			{
+				var $this = $(element);
+				$this
+					.selectBoxIt({ showFirstOption: true, autoWidth: true })
+					.on("change", function(){ $this.trigger("blur"); }); 	// для валидации
+			});
+		});
+	</script>
+</body>
+</html>

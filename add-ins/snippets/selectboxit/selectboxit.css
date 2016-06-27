@@ -1,24 +1,45 @@
+/* ЧАСТЬ 1: тюнинг размеров */
 
-/* Макс. и мин. ширина: */
-select.js-selectboxit,
+select[data-selectboxit],
 .selectboxit,
 .selectboxit-container .selectboxit-options {
-  min-width: 100px;
-  max-width: 300px;
+  min-width: 40px;
+  max-width: 400px; 
 }
 
-/* Макс. высота: */
+.selectboxit-autowidth .selectboxit-text  {
+  max-width: 400px !important;
+}
+
+.selectboxit-autowidth {
+  /*max-width: none;*/
+  /*min-width: 0;*/
+  width: auto !important;
+  padding-right: 30px !important;
+}
+
+
 .selectboxit-container .selectboxit-options {
   max-height: 200px;
+  min-width: 100% !important;
 }
 
-/* Валидация */
-.js-selectboxit.error + .selectboxit-container > .selectboxit
-{
-  -webkit-box-shadow: 0 0 0 1px #f00;
-     -moz-box-shadow: 0 0 0 1px #f00;
-          box-shadow: 0 0 0 1px #f00;
+.selectboxit-option-icon-container {
+  display: none !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ЧАСТЬ 2: обязательные стили */
 
 /*
  * jquery.selectBoxIt.css 3.8.1
@@ -103,8 +124,8 @@ select.js-selectboxit,
 
 /* Options List */
 .selectboxit-container .selectboxit-options {
-/*   -moz-box-sizing: border-box;
-box-sizing: border-box; */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   min-width: 100%;  /* Minimum Width of the dropdown list box options */
   *width: 100%;
   margin: 0;
@@ -115,7 +136,7 @@ box-sizing: border-box; */
   overflow-y: auto;
   cursor: pointer;
   display: none;
-  z-index: 9999999999999;
+  z-index: 1;
   text-align: left;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -232,6 +253,17 @@ box-sizing: border-box; */
   background-position: -64px -16px;
 }
 
+
+
+
+
+
+
+
+
+
+/* ЧАСТЬ 3: необязательные стили (вариант оформления) */
+
 /*
   Default Theme
   -------------
@@ -300,3 +332,29 @@ box-sizing: border-box; */
 .selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
   color: #999999;
 }
+
+
+
+/* Валидация */
+[data-selectboxit].error + .selectboxit-container > .selectboxit
+{
+  -webkit-box-shadow: 0 0 0 1px #f00;
+     -moz-box-shadow: 0 0 0 1px #f00;
+          box-shadow: 0 0 0 1px #f00;
+}
+
+
+
+/* Подчеркнутый пунктиром */
+.selectboxit-dashed {
+  border: 0;
+  border-bottom: 1px dashed;
+  background: none !important;
+  height: 25px !important;
+  padding-right: 15px !important;
+}
+.selectboxit-dashed:hover { color: steelblue !important; }
+.selectboxit-dashed:hover .selectboxit-default-arrow { border-top-color: steelblue !important; }
+.selectboxit-dashed .selectboxit-text { border-bottom: 1px dashed; }
+.selectboxit-dashed .selectboxit-option-icon-container { margin-left: 0; }
+.selectboxit-dashed .selectboxit-arrow-container { width: 15px; }
