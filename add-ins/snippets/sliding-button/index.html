@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sliding-button</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<style>
+	.b-sliding-button {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.b-sliding-button__title {
+	  height: 36px;
+	  padding-left: 17px;
+	  font-size: 18px;
+	}
+	.b-sliding-button__list {
+	  position: relative;
+	  font-size: 0;
+	  white-space: nowrap;
+	  background: #f1f1f1;
+	  border: 1px solid #d9d9d8;
+	  border-radius: 14px;
+	}
+	.b-sliding-button__item {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: middle;
+	  width: 145px;
+	  height: 27px;
+	  line-height: 26px;
+	  border-radius: 14px;
+	  text-align: center;
+	  font-size: 14px;
+	  transition: color 0.5s;
+	  cursor: pointer;
+	  -moz-user-select: none;
+	  user-select: none;
+	}
+	.b-sliding-button__item._selected {
+	  color: #fff;
+	  cursor: default;
+	}
+	.b-sliding-button__selector {
+	  position: absolute;
+	  left: 0;
+	  width: 145px;
+	  height: 25px;
+	  border-radius: 14px;
+	  background: #919191 url(bg.png) left center repeat-x;
+	  border-top: 1px solid #a9afb7;
+	  border-bottom: 1px solid #94969b;
+	  transition: left 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	}
+	</style>
+</head>
+<body>
+	
+	<div class="b-sliding-button">
+		<div class="b-sliding-button__list">
+			<div class="b-sliding-button__selector"></div>
+			<div class="b-sliding-button__item _selected">Type A</div>
+			<div class="b-sliding-button__item">Type B</div>
+			<div class="b-sliding-button__item">Type C</div>
+		</div>
+	</div>
+
+
+	<script>
+		$(function()
+		{
+			var $selector = $('.b-sliding-button__selector'),
+				$items = $('.b-sliding-button__item');
+
+			$items.on("click", function()
+			{
+				var $this= $(this);
+				if ($this.hasClass('_selected')) return;
+				$selector.css("left", $(this).position().left);
+				$items.removeClass('_selected');
+				$(this).addClass('_selected');
+			});
+		});
+	</script>
+
+</body>
+</html>
