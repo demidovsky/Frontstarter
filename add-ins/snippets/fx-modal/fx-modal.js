@@ -41,16 +41,23 @@ $(function()
 
 		var $selector = $(selector),
 			h = null,
-			top = null;
+			w = null,
+			top = null,
+			mleft = null;
 
 		window.closeModal();
 		$overlay.stop().height($document.height()).show();
 		$other.addClass('md-hide-other');
+
 		h = $selector.outerHeight();
 		top = $window.scrollTop() + Math.abs(($window.height() - h) / 2);
 		if (top + h > $document.height()) top = $document.height() - h;
+
+		w = $modal.outerWidth();
+		mleft = -w/2;
+
 		$selector
-			.css("top", top + "px")
+			.css({ "top": top, "margin-left": mleft, "width": w })
 			.fadeIn(FADE_IN_TIME, function(){ $selector.addClass('md-show'); });
 		$modal.not($selector).hide();
 	}

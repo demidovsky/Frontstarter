@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fx-modal</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="fx-modal.js"></script>
+	<link href="fx-modal.css" rel="stylesheet">
+	<style>body{margin:0; padding: 20px;} #message { width: 400px; padding: 20px; } </style>
+</head>
+<body>
+
+		<div class="md-other">
+			<button data-modal-open="#message"><h1>Open modal</h1></button>
+			<br><br>
+			For different effects, see <a href="fx-modal.css">fx-modal.css</a> or <a href="http://tympanus.net/Development/ModalWindowEffects">http://tympanus.net/Development/ModalWindowEffects</a>
+			and adjust number of <b>md-effect-*</b> class.
+		</div>
+		
+		<div class="md-overlay md-perspective">
+			<div id="message" class="md-modal md-effect-10">
+				<span class="md-close" data-modal-close="#message"></span>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat harum eos ipsa molestiae tempora animi necessitatibus, vitae cupiditate culpa, ad deserunt illum porro ipsum nam rerum nulla sed totam?
+			</div>
+		</div>
+
+</body>
+</html>
