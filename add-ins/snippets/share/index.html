@@ -5,56 +5,55 @@
 	<meta charset="UTF-8">
 	<script src="share.js"></script>
 
-	<title>Page Title</title>
-	<meta name="description" content="Page Description" />
+	<title>Заголовок страницы (title)</title>
+	<meta name="description" content="Описание страницы в теге" />
 	<link rel="image_src" href="http://dimmy.pro/img/favicon/android-icon-192x192.png" />
 
-	<!-- Twitter Card data -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@twitter_username">
-	<meta name="twitter:title" content="Page Title">
-	<meta name="twitter:description" content="Page Description">
-	<meta name="twitter:creator" content="@twitter_username">
-	<!-- Twitter Summary card images must be at least 120x120px -->
-	<meta name="twitter:image" content="http://dimmy.pro/img/favicon/android-icon-192x192.png">
-
 	<!-- Open Graph data -->
-	<meta property="og:title" content="Page Title" />
+	<meta name="twitter:title" content="Заголовок страницы (твиттер-карточка)">
+	<meta property="og:title" content="Заголовок страницы (open graph)" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://github.com/demidovsky/Frontstarter/" />
 	<meta property="og:image" content="http://dimmy.pro/img/favicon/android-icon-192x192.png" />
-	<meta property="og:description" content="Page Description" />
+	<meta property="og:description" content="Описание страницы (open graph)" />
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:description" content="Описание страницы (твиттер-карточка)">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@twitter_username">
+	<meta name="twitter:creator" content="@twitter_username">
+	<meta name="twitter:image" content="http://dimmy.pro/img/favicon/android-icon-192x192.png"><!-- at least 120x120px -->
 
 </head>
 
 <body>
 
-	<h2>Share custom data</h2>
+	<h2>Шаринг произвольных данных</h2>
 
 	<ul>
 		<li><b>image:</b> <img width="14" src="http://dimmy.pro/img/bg/video_xs.jpg" valign="middle"></li>
-		<li><b>title:</b> Custom Title</li>
-		<li><b>description:</b> Custom Description</li>
+		<li><b>title:</b> Произвольный заголовок</li>
+		<li><b>description:</b> Произвольное описание</li>
 		<li><b>url:</b> http://dimmy.pro</li>
 	</ul>
 
-	<button onclick="Share.vkontakte('http://dimmy.pro','Custom Title','http://dimmy.pro/img/bg/video_xs.jpg','Custom Description')">
+	<button onclick="Share.vkontakte('http://dimmy.pro','Произвольный заголовок (js)','http://dimmy.pro/img/bg/video_xs.jpg','Произвольное описание (js)')">
 		VK
 	</button>
 
-	<button disabled title="not allowed" style="cursor:not-allowed; opacity:0.5">
+	<button disabled title="Невозможно" style="cursor:not-allowed; opacity:0.5">
 		FB
 	</button>
 
-	<button disabled title="not allowed" style="cursor:not-allowed; opacity:0.5">
+	<button disabled title="Невозможно" style="cursor:not-allowed; opacity:0.5">
 		OK
 	</button>
 
-	<button onclick="Share.twitter('http://dimmy.pro','Custom Title', 'demidovsky')">
+	<button onclick="Share.twitter('http://dimmy.pro','Произвольный заголовок (js)', 'demidovsky')">
 		Twitter
 	</button>
 
-	<button disabled title="not allowed" style="cursor:not-allowed; opacity:0.5">
+	<button disabled title="Невозможно" style="cursor:not-allowed; opacity:0.5">
 		G+
 	</button>
 
@@ -62,24 +61,25 @@
 
 
 	<br><br><br>
-	<h2>Share current page data <i>(hosting required)</i></h2>
+	<h2>Шаринг текущей страницы <i>(возможен только на внешнем сервере)</i></h2>
 
 	<ul>
 		<li><b>image:</b> <img width="14" src="http://dimmy.pro/img/favicon/android-icon-192x192.png" valign="middle"></li>
-		<li><b>title:</b> Page Title</li>
-		<li><b>description:</b> Page Description</li>
-		<li><b>url:</b> <script>document.write(document.location)</script></li>
+		<li><b>title:</b> Заголовок страницы</li>
+		<li><b>description:</b> Описание страницы</li>
+		<li><b>url (document.location):</b> <script>document.write(document.location)</script></li>
 		<li><b>og url:</b> https://github.com/demidovsky/Frontstarter/</li>
 	</ul>
 
 	<small>
-		Notes:
+		Заметки:
 		<ol>
-			<li>When location and og:url doesn't match - <b>og:url is the winner</b>.</li>
-			<li>Facebook goes to current page, then takes url from og tag there, and then scrapes data <b>only</b> from that url.</li>
-			<li>Google+ scrapes all data from current page, <b>except location</b> &ndash; it is taken from og:url tag.</li>
-			<li>Although the only thing Twitter shows in sharing dialog is url, it is appeared as card then.</li>
-			<li>Do not forget to <a href="https://developers.facebook.com/tools/debug/">clean FB cache</a></li>
+			<li>Если переданный адрес и og:url не совпадают &mdash; <b>Google+</b> парсит данные с того, что передали, но <b>ссылка в самой записи</b> будет из og:url.</li>
+			<li><b>Остальные</b> отобразят в записи переданный адрес.</li>
+			<li>Кроме <b>Facebook</b> &mdash; он переходит по переданному адресу, но ищет там og:url, <b>и парсит данные уже по нему</b>.</li>
+			<li><b>Twitter</b> в окне шаринга показывает <b>только ссылку</b>, но в ленте отображается карточка с данными.</li>
+			<li><b>Вконтакте</b> берёт <b>последний</b> из метатегов :title, но <b>первый</b> из метатегов :description &mdash; т.е. слегка конфликтует с твиттер-карточками. </li>
+			<li>Для обновления данных в <b>Facebook</b> нужно <a href="https://developers.facebook.com/tools/debug/">сбросить его кэш</a>.</li>
 		</ol>
 
 	</small>
