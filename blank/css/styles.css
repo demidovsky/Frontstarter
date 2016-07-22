@@ -1744,7 +1744,6 @@ hr {
 	}
 }
 
-
 /* Общие стили для разных проектов */
 /* ----------------------- Ресеты -----------------*/
 /* ресет отступов */
@@ -1875,7 +1874,7 @@ html {
 	text-decoration: underline;
 }
 ._dashed {
-	border-bottom: 0.11rem dashed;
+	border-bottom: 1px dashed;
 }
 ._uppercase {
 	text-transform: uppercase;
@@ -2119,27 +2118,15 @@ html {
 }
 /* ----------------------------- Универсальные элементы --------------------------*/
 /* сообщения для старых браузеров */
-noscript,
-#old_browser {
+noscript {
 	position: absolute;
 	z-index: 9999;
 	top: 0;
 	left: 0;
 	width: 100%;
 	background: #c00;
-	font-size: 14px;
 	text-align: center;
 	color: white;
-}
-#old_browser {
-	display: none;
-}
-#old_browser b {
-	float: right;
-	padding: 0 10px;
-	font-size: 32px;
-	font-weight: normal;
-	cursor: pointer;
 }
 /* затемнение */
 .b-overlay {
