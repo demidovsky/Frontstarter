@@ -1,27 +1,40 @@
-// Плавная прокрутка
-;(function SmoothScrollTo()
+$(function()
 {
-	var $htmlbody = $('html, body');
 
-	$('a[href^=#]').on("click", function(event)
+
+
+	// Плавная прокрутка
+	;(function SmoothScrollTo()
 	{
-		if ($(this).attr("href")[0] != "#") return;
+		var $htmlbody = $('html, body');
 
-		event.preventDefault();
-		$(this).blur();
 
-		var hash = this.hash,
-			top = (hash ? $(hash).offset().top : 0);
-
-		$htmlbody.animate(
+		function hasScrollbar(node)
 		{
-			scrollTop: top
-		}, 
-		300,
-		function()
+			if (node === null) return null;
+			if (node.scrollHeight > node.clientHeight) return node;
+			else return hasScrollbar(node.parentNode);
+		}
+
+
+		$('a[href^=#]').on("click", function(event)
 		{
-			window.location.hash = hash;
+			if ($(this).attr("href")[0] != "#") return;
+
+			event.preventDefault();
+			$(this).blur();
+
+			var hash = this.hash,
+				top = (hash ? $(hash).position().top : 0);
+
+			if (node = hasScrollbar(this))
+			{
+				$(node).animate({ scrollTop: top }, 300, function() { window.location.hash = hash; });
+			}
 		});
-	});
 
-})();
+	})();
+
+
+
+});
