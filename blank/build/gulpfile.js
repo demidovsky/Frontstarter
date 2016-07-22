@@ -23,7 +23,7 @@ gulp.task('css', function()
 
 	gulp.src([	'../css/libs/normalize.css', 
 				'../css/libs/*.css',
-				'../css/modules/common.less',
+				'../css/modules/default.less',
 				'../css/modules/*'
 			])
 		.pipe(lessFilter)
@@ -46,8 +46,9 @@ gulp.task('css', function()
 			'iOS >= 6',
 			'Opera >= 12',
 			'Safari >= 6']))
+		.on('error', function(error){ console.log('Autoprefixer error: ' + error.message); })
 		.pipe(csscomb())
-		.pipe(replace(/0\.1rem/g, '0.11rem')) // iphone
+		/*.pipe(replace(/0\.1rem/g, '0.11rem')) // iphone */
 		.pipe(gulp.dest('../css/'))
 		.pipe(minifyCSS())
 		.pipe(rename('styles.min.css'))
