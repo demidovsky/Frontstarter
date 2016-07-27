@@ -20,7 +20,7 @@
 
 		forEachElement(targets, function(element, i)
 		{
-			element.style.minHeight = 'auto';
+			element.style.height = 'auto';
 			var group = element.getAttribute('data-equal-height');
 			if (typeof heights[group] == "undefined") heights[group] = [];
 			heights[group].push(element.offsetHeight);
@@ -30,7 +30,7 @@
 		forEachElement(targets, function(element, i)
 		{
 			var group = element.getAttribute('data-equal-height');
-			element.style.minHeight = Math.max.apply(null, heights[group]) + "px";
+			element.style.height = Math.max.apply(null, heights[group]) + "px";
 		});
 	}
 
