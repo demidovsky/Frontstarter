@@ -45,12 +45,12 @@ Share = {
 	{
 		if (typeof purl == "undefined")
 		{
-			url  = 'https://www.facebook.com/sharer.php?p[url]=' + document.location;
+			url  = 'https://www.facebook.com/sharer.php?u=' + document.location;
 		}
 		else
 		{
 			url  = 'https://www.facebook.com/sharer.php?s=100';
-			url += '&p[url]='       + encodeURIComponent(purl);
+			url += '&u='       + encodeURIComponent(purl);
 			// url += '&p[title]='     + encodeURIComponent(ptitle);
 			// url += '&p[summary]='   + encodeURIComponent(text);
 			// url += '&p[images][0]=' + encodeURIComponent(pimg);
