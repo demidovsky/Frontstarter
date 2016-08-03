@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="jqModal.min.js"></script>
+	<script src="modal.js"></script>
+	<link href="b-modal.css" rel="stylesheet">
+	<style>
+		body { font-family: sans-serif; }
+		._text-center { text-align: center; }
+		._text-left { text-align: left; }
+	</style>
+</head>
+<body>
+
+	<button onclick="message.show('Hello there', 'I am the modal window. Nice to meet you.')">Message</button>
+	<button onclick="loading.show()">Loading</button>
+
+
+	<div class="b-modal" id="custom_message">
+		<div class="b-modal__close">
+			<i class="fa fa-close js-close"></i>
+		</div>
+
+		<div class="b-modal__title"><!-- Заголовок --></div>
+		<div class="b-modal__message">
+			<!-- Текст -->
+		</div>
+		<div class="_text-center">
+			<button class="js-close"> &nbsp; &nbsp; &nbsp; OK &nbsp; &nbsp; &nbsp; </button>
+		</div>
+	</div>
+
+
+	<div class="b-modal _text-center" id="loading">
+		<div class="b-modal__title">Loading...</div>
+		<div class="b-modal__message _text-left">
+			Please wait.
+			<br>
+			Or type <code>loading.hide()</code> in console.
+		</div>
+		<img src="loading.gif" alt="">
+		<div class="_text-center">
+			<button class="js-close">Cancel</button>
+		</div>
+	</div>
+
+
+</body>
+</html>
