@@ -10,13 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<link href="fonts/fontawesome/fontawesome.min.css" rel="stylesheet">
 
-	<?
-		// подключение стилей:
-		if (Frontstarter::IS_PRODUCTION) 
-			Frontstarter::antiCache('css/styles.min.css');
-		else 
-			Frontstarter::antiCache('css/styles.css');
-	?>
+	<? Frontstarter::antiCache('css/styles.css'); ?>
 
 	<!--[if lte IE 8]>
 		<script src="js/ie8/html5.js" type="text/javascript"></script>

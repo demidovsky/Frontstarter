@@ -4,17 +4,8 @@
 	</noscript>
 
 <?
-	// подключение скриптов:
-	if (Frontstarter::IS_PRODUCTION)
-	{
-		Frontstarter::antiCache('js/libs.min.js');
-		Frontstarter::antiCache('js/script.min.js');
-	}
-	else
-	{
-		Frontstarter::antiCache('js/libs.js');
-		Frontstarter::antiCache('js/script.js');
-	}
+	Frontstarter::antiCache('js/libs.min.js');
+	Frontstarter::antiCache('js/script.min.js');
 ?>
 
 </body>
