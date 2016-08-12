@@ -307,15 +307,20 @@ hr {
 }
 @media (min-width: 480px) {
   .container {
-    width: 768px;
+    width: 480px;
   }
 }
 @media (min-width: 768px) {
   .container {
-    width: 960px;
+    width: 768px;
   }
 }
 @media (min-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
   .container {
     width: 1280px;
   }
