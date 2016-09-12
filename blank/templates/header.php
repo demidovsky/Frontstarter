@@ -2,7 +2,7 @@
 	require_once('classes/Frontstarter.php');
 ?>
 <!doctype html>
-<html class="<? foreach (Frontstarter::detectMobile() as $key => $value) if ($value === TRUE) echo $key.' '; ?>">
+<html class="<? foreach (Frontstarter::detectMobile() as $key => $value) if ($value) echo $key.' '; ?>">
 <head>
 	<title><?=PAGE_TITLE?></title>
 	<meta charset="utf-8">
