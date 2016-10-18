@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js-template</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="underscore-min.js"></script>
+</head>
+<body>
+
+	<script>
+		var data = 
+		{
+			title: "Olympic Volleyball Players",
+			items: 
+			[
+				{
+					name: "Misty May-Treanor",
+					hasOlympicGold: true
+				},
+				{
+					name: "Kerri Walsh Jennings",
+					hasOlympicGold: true
+				},
+				{
+					name: "Jennifer Kessy",
+					hasOlympicGold: false
+				},
+				{
+					name: "April Ross",
+					hasOlympicGold: false
+				}
+			]
+		};
+
+		$.get("list_template.html", function(response)
+		{
+			var template = _.template(response);
+			$('#list').append(template(data));
+		});
+
+	</script>
+
+
+	template source: 
+	<p>
+		<iframe src="list_template.html" height="240px" width="100%"></iframe>
+	</p>
+
+	template start
+	<hr>
+
+	<div id="list"></div>
+
+	<hr>
+	template end
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<h2>
+	<%= title %>
+</h2>
+<ul>
+	<% _.each(items, function(item) { %>
+		<li>
+			<%= item.name %>
+			<sup><b><%= item.hasOlympicGold ? '*' : '' %></b></sup>
+		</li>
+	<% }); %>
+</ul>
+<h3>
+	Total: <%= items.length %>
+</h3>
