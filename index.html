@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Frontstarter by demidovsky</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Frontstarter</h1>
+        <h2>шаблон для вёрстки</h2>
+        <a href="https://github.com/demidovsky/Frontstarter" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="frontstarter" class="anchor" href="#frontstarter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Frontstarter</h1>
+
+<p>Frontstarter — это шаблон для вёрстки сайтов с нуля. Его цель — ускорить и упорядочить процесс преобразования макетов в код. </p>
+
+<p>Frontstarter состоит из двух частей: самого шаблона (каталог blank), а также набора типовых решений (каталог add-ins). </p>
+
+<p>Frontstarter задумывался как очень простой инструмент, поэтому для работы нужен только вебсервер с PHP. Тем не менее, предусмотрена возможность использовать Gulp для сборки стилей и скриптов. </p>
+
+<p>Результат может быть выгружен в виде статических HTML-страниц; впрочем, можно использовать вёрстку и без них, как есть.</p>
+
+<h1>
+<a id="en" class="anchor" href="#en" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EN</h1>
+
+<p>Frontstarter is a boilerplate for quick creation of HTML pages from ground. It is aimed to speed-up and organize the process of turning design into code.</p>
+
+<p>Frontstarter consists of two parts: a boilerplate itself (blank folder) and a set of typical solutions (add-ins folder).</p>
+
+<p>Frontstarter is designed to be simple, so the only requirement is webserver with PHP installed. However, it is possible to use Gulp to build styles and scripts.</p>
+
+<p>The result markup can be converted into HTML pages or be used as is. </p>
+
+<hr>
+
+<ol>
+<li>
+<a href="#1-%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0">Содержимое-проекта</a><br>
+</li>
+<li>
+<a href="#2-%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9-%D0%B8-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B2">Сборка стилей и скриптов</a><br>
+</li>
+<li>
+<a href="#3-%D0%92%D1%8B%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-html-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86">Выгрузка html-страниц</a><br>
+</li>
+<li>
+<a href="#4-%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%B5">Размещение на сервере</a><br>
+</li>
+</ol>
+
+<h2>
+<a id="1-Содержимое-проекта" class="anchor" href="#1-%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Содержимое проекта</h2>
+
+<pre><code>index.html                - оглавление страниц проекта  
+</code></pre>
+
+<h3>
+<a id="Разметка" class="anchor" href="#%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Разметка:</h3>
+
+<pre><code>*.php в корне проекта     - основная разметка страниц  
+templates/*.php           - повторяющиеся фрагменты разметки  
+</code></pre>
+
+<h3>
+<a id="Скрипты" class="anchor" href="#%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Скрипты:</h3>
+
+<pre><code>js/libs                   - сторонние библиотечные скрипты  
+js/modules                - скрипты текущего проекта  
+js/ie                     - заплатки для IE  
+</code></pre>
+
+<h3>
+<a id="Стили" class="anchor" href="#%D0%A1%D1%82%D0%B8%D0%BB%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Стили:</h3>
+
+<pre><code>css/libs                  - сторонние библиотечные стили  
+css/modules               - стили текущего проекта  
+</code></pre>
+
+<h4>
+<a id="Прочее" class="anchor" href="#%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Прочее:</h4>
+
+<pre><code>classes/Mobile_Detect.php - предоставляет методы для определения типов устройств  
+classes/Frontstarter.php  - добавляет антикэш для стилей и скриптов; позволяет выгружать html-страницы.  
+build                     - сборщик стилей и скриптов (gulp)  
+fonts                     - иконочные и обычные шрифты  
+</code></pre>
+
+<h4>
+<a id="В-особо-крупных-проектах-могут-также-присутствовать" class="anchor" href="#%D0%92-%D0%BE%D1%81%D0%BE%D0%B1%D0%BE-%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D1%8B%D1%85-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%D1%85-%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D1%82%D0%B0%D0%BA%D0%B6%D0%B5-%D0%BF%D1%80%D0%B8%D1%81%D1%83%D1%82%D1%81%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>В особо крупных проектах могут также присутствовать:</h4>
+
+<pre><code>js/pages/                 - скрипты для отдельных страниц  
+css/pages/                - стили для отдельных страниц  
+ui.php                    - набор типовых компонентов (ui kit)
+</code></pre>
+
+<p><strong>pages</strong> указываются в <strong>build/gulpfile.js</strong> аналогично <strong>modules</strong>.</p>
+
+<h2>
+<a id="2-Сборка-стилей-и-скриптов" class="anchor" href="#2-%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9-%D0%B8-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Сборка стилей и скриптов</h2>
+
+<p>Производится из папки <strong>build</strong> c использованием <a href="http://gulpjs.com/">gulp</a>.</p>
+
+<p>Собранные файлы (в т.ч. их min-версии) попадают не в <strong>build</strong>, а в папки <strong>css</strong> и <strong>js</strong>:</p>
+
+<pre><code>js/libs.js                - скрипты из папки js/libs  
+js/script.js              - скрипты из папки js/modules  
+css/styles.css            - стили из папок css/libs и css/modules  
+</code></pre>
+
+<p>Установка необходимых модулей:</p>
+
+<pre><code>$ npm install
+</code></pre>
+
+<p>Сборка + слежение за изменениями:</p>
+
+<pre><code>$ gulp watch
+</code></pre>
+
+<p>Разовая сборка:</p>
+
+<pre><code>$ gulp css
+$ gulp js
+</code></pre>
+
+<h2>
+<a id="3-Выгрузка-html-страниц" class="anchor" href="#3-%D0%92%D1%8B%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-html-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Выгрузка html-страниц</h2>
+
+<p>Если нужно получить страницы в виде <strong>.html</strong> вместо <strong>.php</strong>, можно сделать это следующим образом:</p>
+
+<h3>
+<a id="Способ-А" class="anchor" href="#%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Способ А:</h3>
+
+<p>Запросить php-страницу с параметром: <code>?html</code><br>
+<em>Обычно применяется, когда нужно выгрузить одну-две страницы.</em></p>
+
+<h3>
+<a id="Способ-Б" class="anchor" href="#%D0%A1%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%91" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Способ Б:</h3>
+
+<p>В <strong>templates/header.php</strong>: <code>define('SAVE_HTML', true);</code><br>
+и запросить php-страницу как обычно.<br>
+<em>Обычно применяется, когда нужно выгрузить много страниц сразу.</em></p>
+
+<h2>
+<a id="4-Размещение-на-сервере" class="anchor" href="#4-%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Размещение на сервере</h2>
+
+<p>Обычно применяется только для демонстрации проекта.</p>
+
+<ol>
+<li>в <strong>classes/Frontstarter.php</strong>: <code>define('IS_PRODUCTION', true);</code>
+</li>
+<li>переименовать <strong>main</strong>.php в <strong>index</strong>.php, а <strong>index.html</strong> удалить</li>
+<li>выгрузить на хостинг с версией PHP не ниже 5.3</li>
+</ol>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/demidovsky/Frontstarter/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/demidovsky/Frontstarter/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/demidovsky/Frontstarter"></a> is maintained by <a href="https://github.com/demidovsky">demidovsky</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
