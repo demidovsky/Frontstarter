@@ -1786,6 +1786,12 @@ li {
 	list-style-position: inside;
 	/*list-style-type:none;*/
 }
+/* ресет для fieldset */
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
 /* оптимальный размер мелкого текста */
 small {
 	font-size: 75%;
