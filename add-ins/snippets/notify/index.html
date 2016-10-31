@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="notify.js"></script>
+	<link href="notify.css" rel="stylesheet">
+	<link href="../../../blank/fonts/fontawesome/fontawesome.min.css" rel="stylesheet" >
+	<style>
+		body { font-family: sans-serif; }
+	</style>
+</head>
+<body>
+	<h2>
+		Toast-like notifications from 
+		<a target="_blank" href="https://getuikit.com/docs/notify.html">UIkit</a> &copy;
+	</h2>
+	<button onclick="UIkit.notify('Hi, I am a toast!');"><h2>&nbsp;&nbsp;&nbsp;Toast!&nbsp;&nbsp;&nbsp;</h2></button>
+
+
+	<hr>
+	See also: 
+
+	<button onclick="UIkit.notify('Hi, I am an info',   { status:'info',    pos:'bottom-center'})">Info</button>
+	<button onclick="UIkit.notify('Hi, I am a success', { status:'success', pos:'bottom-left'})">Success</button>
+	<button onclick="UIkit.notify('Hi, I am a warning', { status:'warning', pos:'top-center'})">Warning</button>
+	<button onclick="UIkit.notify('Hi, I am a danger',  { status:'danger',  pos:'top-center'})">Danger</button>
+	<button onclick="UIkit.notify('Hi, I am sticky',  { status:'sticky',  pos:'top-right', timeout: 0})">Sticky</button>
+
+</body>
+</html>
