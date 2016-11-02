@@ -1,22 +1,22 @@
-// http://gregfranko.com/jquery.selectBoxIt.js/
-;(function SelectBoxIt()
+$(function()
 {
-	$(function()
+	$('select[data-use-selectboxit]').each(function(index, element)
 	{
-		$('select[data-selectboxit]').each(function(index, element)
-		{
-			var $this = $(element);
-			$this
-				.selectBoxIt({ showFirstOption: false })
-				.on("change", function(){ $this.trigger("blur"); }); 	// для валидации
-		});
+		var $this = $(element),
+			widthParam = $this.attr("data-selectboxit-width"),
+			width = parseInt(widthParam, 10);
 
-		$('select[data-selectboxit-autowidth]').each(function(index, element)
+		$this
+			.selectBoxIt({ showFirstOption: true, autoWidth: (widthParam == "auto") })
+			.on("change", function(){ $this.trigger("blur"); /*для валидации*/ })
+
+		if (!isNaN(width))
 		{
-			var $this = $(element);
-			$this
-				.selectBoxIt({ showFirstOption: true, autoWidth: true })
-				.on("change", function(){ $this.trigger("blur"); }); 	// для валидации
-		});
+			var ARROW_WIDTH = 30,
+				markup = $this.data("selectBox-selectBoxIt"); // получаем нечто вроде конфига
+
+			$(markup.dropdown).width(width);
+			$(markup.dropdownText).css("max-width", (width - ARROW_WIDTH) + "px");
+		}
 	});
-})();
+});

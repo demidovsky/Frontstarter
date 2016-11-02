@@ -6,8 +6,9 @@
 	<script src="../../../blank/js/libs/jquery.min.js"></script>
 	<script src="jquery-ui.core.min.js"></script>
 	<script src="jquery.selectBoxIt.min.js"></script>
+	<script src="use-selectboxit.js"></script>
 	<link href="selectboxit.css" rel="stylesheet">
-	<style> body {line-height:30px } section { margin-bottom:120px } select { height:30px } button { float: right; }</style>
+	<style> body {line-height:30px } section { margin-bottom:100px } select { height:30px } button { float: right; }</style>
 </head>
 <body>
 	<button onclick="$('.selectboxit-options').hide()">Hide all</button>
@@ -23,16 +24,16 @@
 	</section>
 
 	<section>
-		<select  data-selectboxit>
+		<select data-use-selectboxit>
 			<option value="1">short</option>
 			<option value="2">medium</option>
 			<option value="3">long time ago in a galaxy far away</option>
 		</select>
-		&nbsp;Fixed
+		&nbsp;Fixed default width
 	</section>
 
 	<section>
-		<select data-selectboxit class="selectboxit-autowidth">
+		<select data-use-selectboxit data-selectboxit-width="auto">
 			<option value="1">short</option>
 			<option value="2">medium</option>
 			<option value="3">long time ago in a galaxy far away</option>
@@ -41,35 +42,43 @@
 	</section>
 
 	<section>
-		<select data-selectboxit class="selectboxit-autowidth">
+		<select data-use-selectboxit data-selectboxit-width="auto">
 			<option value="1">short</option>
 			<option value="2">medium</option>
 			<option value="3">long time ago in a galaxy far away</option>
-			<option value="3">long time ago in a galaxy lorem ipsum dolor sit amet, consectetur adipisicing elit.</option>
+			<option value="4">long time ago in a galaxy lorem ipsum dolor sit amet, consectetur adipisicing elit.</option>
 		</select>
 		&nbsp;Overflow test
 	</section>
 
 	<section>
 		Dashed
-		<select data-selectboxit class="selectboxit-autowidth selectboxit-dashed">
+		<select data-use-selectboxit data-selectboxit-width="auto" class="selectboxit-dashed">
 			<option value="1">short</option>
 			<option value="2">medium</option>
 			<option value="3">long time ago in a galaxy far away</option>
 		</select>, useful for inline dropdowns.
 	</section>
 
-	<script>
-		$(function()
-		{
-			$('select[data-selectboxit]').each(function(index, element)
-			{
-				var $this = $(element);
-				$this
-					.selectBoxIt({ showFirstOption: true, autoWidth: true })
-					.on("change", function(){ $this.trigger("blur"); }); 	// для валидации
-			});
-		});
-	</script>
+	<section>
+		<select data-use-selectboxit data-selectboxit-width="200">
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+			<option value="4">long time ago in a galaxy lorem ipsum dolor sit amet, consectetur adipisicing elit.</option>
+		</select>
+		&nbsp;Fixed width 200
+	</section>
+
+	<section>
+		<select data-use-selectboxit data-selectboxit-width="100">
+			<option value="1">short</option>
+			<option value="2">medium</option>
+			<option value="3">long time ago in a galaxy far away</option>
+			<option value="4">long time ago in a galaxy lorem ipsum dolor sit amet, consectetur adipisicing elit.</option>
+		</select>
+		&nbsp;Fixed width 100
+	</section>
+
 </body>
 </html>
