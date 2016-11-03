@@ -6,8 +6,10 @@ $(function()
 			widthParam = $this.attr("data-selectboxit-width"),
 			width = parseInt(widthParam, 10);
 
+		if (!widthParam) $this.attr("data-selectboxit-width", "auto");
+
 		$this
-			.selectBoxIt({ showFirstOption: true, autoWidth: (widthParam == "auto") })
+			.selectBoxIt({ showFirstOption: true, autoWidth: (widthParam == "auto" || !widthParam) })
 			.on("change", function(){ $this.trigger("blur"); /*для валидации*/ })
 
 		if (!isNaN(width))

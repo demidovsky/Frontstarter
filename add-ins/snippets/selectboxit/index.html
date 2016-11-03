@@ -6,13 +6,13 @@
 	<script src="../../../blank/js/libs/jquery.min.js"></script>
 	<script src="jquery-ui.core.min.js"></script>
 	<script src="jquery.selectBoxIt.min.js"></script>
-	<script src="use-selectboxit.js"></script>
+	<script src="selectboxit.js"></script>
 	<link href="selectboxit.css" rel="stylesheet">
 	<style> body {line-height:30px } section { margin-bottom:100px } select { height:30px } button { float: right; }</style>
 </head>
 <body>
-	<button onclick="$('.selectboxit-options').hide()">Hide all</button>
-	<button onclick="$('.selectboxit-options').show()">Show all</button>
+	<button onclick="$('.selectboxit-options').hide()">Hide dropdowns</button>
+	<button onclick="$('.selectboxit-options').show()">Show dropdowns</button>
 
 	<section>
 		<select>
@@ -29,16 +29,7 @@
 			<option value="2">medium</option>
 			<option value="3">long time ago in a galaxy far away</option>
 		</select>
-		&nbsp;Fixed default width
-	</section>
-
-	<section>
-		<select data-use-selectboxit data-selectboxit-width="auto">
-			<option value="1">short</option>
-			<option value="2">medium</option>
-			<option value="3">long time ago in a galaxy far away</option>
-		</select>
-		&nbsp;Fluid
+		&nbsp;Default auto width (<code>data-selectboxit-width="auto"</code> is set automatically)
 	</section>
 
 	<section>
@@ -53,7 +44,7 @@
 
 	<section>
 		Dashed
-		<select data-use-selectboxit data-selectboxit-width="auto" class="selectboxit-dashed">
+		<select data-use-selectboxit class="selectboxit-dashed">
 			<option value="1">short</option>
 			<option value="2">medium</option>
 			<option value="3">long time ago in a galaxy far away</option>
