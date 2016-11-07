@@ -1,0 +1,68 @@
+/* Подсказки (начало) */
+	
+[data-tooltip]
+{
+	position: relative;
+	cursor: help;
+	border-bottom: 1px dotted;
+}
+
+/* тело подсказки */
+[data-tooltip]:before
+{
+	content: attr(data-tooltip);
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: 150%;
+	margin-bottom: 0px;
+	padding: 0.5em 1em;
+	width: 16em;
+	margin-left: -8em;
+	background: white;
+	color: black;
+	white-space: normal;
+	font-size: auto;
+	line-height: normal;
+	text-shadow: none;
+	border-radius:5px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+	box-sizing: border-box;
+}
+
+/* хвостик */
+[data-tooltip]:after
+{
+	display: none;
+	content: "";
+	position: absolute;
+	bottom: 150%;
+	left: 50%;
+	margin-bottom: -0.5em;
+	margin-left: -0.5em;
+	width: 1em;
+	height: 1em;
+	background: white;
+	/* border-style: none solid solid none;
+	border-width: 0 1px 1px 0;
+	border-color: rgba(50,50,50,0.5); */
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after
+{
+	display: block;
+}
+
+a[data-tooltip]
+{
+	border: 0;
+}
+
+/* Подсказки (конец) */
+
+
