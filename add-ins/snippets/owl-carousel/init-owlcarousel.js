@@ -6,6 +6,8 @@ $(function owlCarousel()
 		var $this = $(element),
 			items = parseInt($this.attr("data-owlcarousel-items"), 10);
 
+		if ($this.children().length == 1) return;
+
 		if (isNaN(items)) items = 1;
 
 		$this.owlCarousel(
