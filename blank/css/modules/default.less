@@ -115,15 +115,14 @@ html { font-size: 10px; }
 ._float-right     { float: right; }
 ._float-left      { float: left; }
 
-._vertical-center // Разместить дочерний блок по центру
-{
+/* Разместить дочерний блок по центру */
+._vertical-center {
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	font-size: 0;
 
-	&:before
-	{
+	&:before {
 		content: '';
 		display: inline-block;
 		width: 0;
@@ -131,8 +130,7 @@ html { font-size: 10px; }
 		vertical-align: middle;
 	}
 
-	& > *
-	{
+	& > * {
 		display: inline-block;
 		vertical-align: middle;
 		font-size: medium;
@@ -140,13 +138,12 @@ html { font-size: 10px; }
 	}
 }
 
-._block-nowrap // Разместить дочерние блоки вплотную
-{
+/* Разместить дочерние блоки вплотную */
+._block-nowrap {
 	white-space: nowrap;
 	font-size: 0;
 
-	& > *
-	{
+	& > * {
 		display: inline-block;
 		vertical-align: middle;
 		float: none;
@@ -158,22 +155,20 @@ html { font-size: 10px; }
 	&._bottom > * { vertical-align: bottom; }
 }
 
-._block-justify // Разместить дочерние блоки по ширине
-{
+/* Разместить дочерние блоки по ширине */
+._block-justify {
 	text-align: justify;
 	// text-align-last: justify;
 	line-height: 0;
 
-	& > *
-	{
+	& > * {
 		display: inline-block;
 		vertical-align: middle;
 		float: none;
 		line-height: normal;
 	}
 
-	&:after
-	{
+	&:after {
 		content: "";
 		display: inline-block;
 		vertical-align: top;
@@ -187,8 +182,7 @@ html { font-size: 10px; }
 
 
 /* хватательный курсор */
-._grab
-{
+._grab {
 	cursor: grab;
 	cursor: -moz-grab;
 	cursor: -webkit-grab;
@@ -203,8 +197,17 @@ html { font-size: 10px; }
 
 
 
+/* очистка потока */
+._clearfix:after {
+	clear: both;
+	content: "";
+	display: table;
+}
 
-/* ----------------------------- Универсальные элементы --------------------------*/
+
+
+
+/* ---------------------- Универсальные элементы ------------------------*/
 
 /* сообщения для старых браузеров */
 noscript { position:absolute; left:0; top:0; width:100%; z-index:9999; text-align:center; background:#cc0000; color:white; }
@@ -227,7 +230,20 @@ noscript { position:absolute; left:0; top:0; width:100%; z-index:9999; text-alig
 
 
 
-/* ----------------------------- Константы --------------------------*/
+/* ------------------------------ Функции -------------------------------*/
+
+/* вытащить картинку из спрайта по координатам */
+.sprite(@x, @y, @w, @h)
+{
+	@bg-x: -@x*@w;
+	@bg-y: -@y*@h;
+	background-position: @bg-x @bg-y;
+}
+
+
+
+
+/* ----------------------------- Константы ------------------------------*/
 
 // сглаживания
 @sine-out: cubic-bezier(0.39, 0.575, 0.565, 1);
