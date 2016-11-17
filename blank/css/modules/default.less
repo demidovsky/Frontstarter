@@ -233,12 +233,7 @@ noscript { position:absolute; left:0; top:0; width:100%; z-index:9999; text-alig
 /* ------------------------------ Функции -------------------------------*/
 
 /* вытащить картинку из спрайта по координатам */
-.sprite(@x, @y, @w, @h)
-{
-	@bg-x: -@x*@w;
-	@bg-y: -@y*@h;
-	background-position: @bg-x @bg-y;
-}
+.sprite(@x, @y, @w, @h) { background-position: -@x*@w -@y*@h; }
 
 
 
