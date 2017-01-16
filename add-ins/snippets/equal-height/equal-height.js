@@ -2,7 +2,7 @@
 	Добавляет поддержку атрибутов для выравнивания высоты
 */
 
-(function EqualHeightSiblings(glob)
+(function EqualHeightSiblings(scope)
 {
 	// Replicate jQuery .each method (http://youmightnotneedjquery.com/)
 	function forEachElement(selector, fn) 
@@ -14,7 +14,7 @@
 
 
 	// основная функция
-	glob.equalheight = function(targets)
+	scope.equalheight = function(targets)
 	{
 		var heights = {};
 
@@ -44,13 +44,14 @@
 		if (timer) clearTimeout(timer);
 		timer = setTimeout(doit, 50);
 	};
-	glob.onresize = wait;
+	scope.onresize = wait;
 
 
 
 	// начальная отрисовка
-	glob.onload = function() {
+	scope.addEventListener("load", function()
+	{
 		equalheight('[data-equal-height]');
-	};
+	});
 
 })(window);
