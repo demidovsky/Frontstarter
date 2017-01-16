@@ -1,0 +1,139 @@
+/* @sine-out: cubic-bezier(0.39, 0.575, 0.565, 1);
+@quad-out:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+@cubic-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@quart-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+@quint-out: cubic-bezier(0.23, 1, 0.32, 1);
+@expo-out:  cubic-bezier(0.19, 1, 0.22, 1);
+@back-out:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+@sine-in: cubic-bezier(0.47, 0, 0.745, 0.715); */
+
+
+
+
+html,
+body,
+#map {
+	height: 100%;
+}
+
+
+// карта
+.b-routes {
+	// position: absolute;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #f6f6f6;
+	// padding-bottom: 20rem;
+	font-family: "Open Sans","Trebuchet MS",sans-serif;
+}
+
+.b-routes__map-filter {
+	position: absolute;
+	left: 5rem;
+	top: 5rem;
+	width: 16rem;
+	height: 2rem;
+}
+
+.b-routes__map {
+	width: 100%;
+	height: 100%;
+}
+
+.b-routes__popup {
+	width: 36rem;
+	font-weight: 400;
+}
+
+.b-routes__popup-image {
+	display: block;
+	width: 13rem;
+	height: 13rem;
+	float: left;
+	margin-right: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.b-routes__popup-text {
+	padding-left: 13rem + 1.5rem;
+}
+
+.b-routes__popup-time {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.3rem;
+	color: #636363;
+}
+
+.b-routes__popup-type {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #636363;
+	text-transform: uppercase;
+}
+
+.b-routes__popup-title {
+	font-size: 1.6rem;
+	line-height: 1.9rem;
+	a { color: inherit; }
+}
+
+
+
+
+
+
+
+/* 
+// следуй за нами
+.b-routes__promo {
+	display: block;
+	position: relative;
+	height: 28rem;
+	background: url(../img/bg/routes_turn.jpg) center center no-repeat;
+	background-size: 120%;
+	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	transform: translate3d(0,0,0);
+
+	i {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 40%;
+		width: 100%;
+		height: 60%;
+		background: url(../img/icon/marker_large.png) center bottom no-repeat;
+		background-size: 75px;
+		transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	span {
+		display: block;
+		position: absolute;
+		width: 20rem;
+		height: 4.4rem;
+		line-height: 4.2rem;
+		margin-left: -10rem;
+		bottom: 5rem;
+		left: 50%;
+		background: #398de3;
+		border-radius: 2.2rem;
+		color: #fff;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		text-align: center;
+		letter-spacing: 0.05rem;
+		box-shadow: 0 0.7rem 1.8rem rgba(50,86,123,0.6);
+	}
+
+	&:hover {
+		background-size: 115%;
+		i { background-size: 80px; }
+	}
+}
+
+ */

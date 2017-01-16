@@ -18,7 +18,7 @@ $(function()
 		$filter = $('#map_filter'),
 
 		MAP_ID = 'map',
-		MARKERS_URL = "js/modules/map.json",
+		MARKERS_URL = "map.json",
 
 		mapObj = null,
 		markers = [],
@@ -36,7 +36,7 @@ $(function()
 		var center = new google.maps.LatLng(55.7471459, 37.6331822);
 		var myOptions = 
 		{
-			zoom: 12,
+			zoom: 11,
 			scrollwheel: true,
 			center: center,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -78,7 +78,7 @@ $(function()
 			{
 				position: new google.maps.LatLng(markersData[i].lat, markersData[i].lng),
 				map: mapObj,
-				icon: 'img/icon/map/marker_' + markersData[i].color + '.svg',
+				icon: 'marker_' + markersData[i].color + '.svg',
 				type: markersData[i].type
 			});
 
