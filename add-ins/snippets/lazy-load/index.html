@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>selectboxit</title>
+	<script src="../../../blank/js/libs/jquery.min.js"></script>
+	<script src="../owl-carousel/owl.carousel.min.js"></script>
+	<link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+	<script src="jquery.unveil.js"></script>
+	<style>#footer img { opacity: 0; transition: 1s opacity }</style>
+</head>
+<body>
+
+	<h1>Lazy slider</h1>
+	<section style="width: 480px">
+		<div id="slider" class="owl-carousel owl-theme">
+			<a href="#"><img class="owl-lazy" data-src="../owl-carousel/1.jpg" data-src-retina="../owl-carousel/1.jpg"></a>
+			<a href="#"><img class="owl-lazy" data-src="../owl-carousel/2.jpg" data-src-retina="../owl-carousel/2.jpg"></a>
+			<a href="#"><img class="owl-lazy" data-src="../owl-carousel/3.jpg" data-src-retina="../owl-carousel/3.jpg"></a>
+			<a href="#"><img class="owl-lazy" data-src="../owl-carousel/4.jpg" data-src-retina="../owl-carousel/4.jpg"></a>
+			<a href="#"><img class="owl-lazy" data-src="../owl-carousel/5.jpg" data-src-retina="../owl-carousel/5.jpg"></a>
+			<a href="#"><img class="owl-lazy" data-src="../owl-carousel/6.jpg" data-src-retina="../owl-carousel/6.jpg"></a>
+		</div>
+	</section>
+
+	<div style="height:600px"></div>
+	scroll down please 
+	<div style="height:600px"></div>
+
+	<h1>Lazy images</h1>
+	<div id="footer" style="padding-bottom:200px;">
+		<a href="#"><img data-src="button_appstore.png" data-src-retina="button_appstore.png" width="119" alt="AppStore"></a>
+		<a href="#"><img data-src="button_googleplay.png" data-src-retina="button_googleplay.png" width="119" alt="Google Play"></a>
+		<a href="#"><img data-src="button_winstore.png" data-src-retina="button_winstore.png" width="119" alt="Windows Store"></a>
+	</div>
+
+	<script>
+		$(function()
+		{
+			$('#slider').owlCarousel(
+			{
+				items: 2,
+				nav: false,
+				dots: true,
+				loop: true,
+				lazyLoad: true,
+				// autoWidth: true,
+				navRewind: false
+			});
+
+			var SCROLL_THRESHOLD = 0;
+			$('#footer').find('img').unveil(
+				SCROLL_THRESHOLD, 
+				function()
+				{
+					$(this).load(function(){ this.style.opacity = 1 });
+				}
+			);
+		});
+	</script>
+
+</body>
+</html>
