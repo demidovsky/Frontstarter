@@ -1,0 +1,96 @@
+
+body
+{
+	padding-top: 150px;
+}
+
+section
+{
+	position: relative;
+	width: 900px;
+	height: 370px;
+	margin: auto;
+	background: #cce3f1;
+}
+
+.b-peel {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+	height: 200px;
+	/*outline: 1px solid red;*/
+	overflow: hidden;
+}
+
+.b-peel__corner {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	transition: 0.3s all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+	cursor: pointer;
+}
+
+.b-peel__corner:hover {
+	width: 135px;
+	height: 135px;
+	transition: 0.3s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+
+.b-peel__bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(bg.png);
+	background-size: 100% 100%;
+}
+
+.b-peel__text {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 59px;
+	height: 65px;
+	background: url(text.png) top no-repeat;
+	background-size: 59px auto;
+}
+
+.b-peel__corner:hover .b-peel__text {
+	background-position: bottom;
+}
+
+.b-peel__gradient {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4770d+0,fab122+10,fab122+35,e6790b+50,888888+51,888888+100 */
+background: #e4770d; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #e4770d 0%, #fab122 25%, #fab122 40%, #e6790b 50%, #888888 51%, #888888 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #e4770d 0%,#fab122 25%,#fab122 40%,#e6790b 50%,#888888 51%,#888888 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #e4770d 0%,#fab122 25%,#fab122 40%,#e6790b 50%,#888888 51%,#888888 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4770d', endColorstr='#888888',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.b-peel__pattern {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(pattern.png);
+	background-size: 100px;
+}
+
+.b-peel__pattern:before {
+	content: "";
+	position: absolute;
+	left: -44px;
+	top: -44px;
+	width: 200px;
+	height: 200px;
+	background: url(edge.png) left top no-repeat;
+	background-size: 180px;
+}
