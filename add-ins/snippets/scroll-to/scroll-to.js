@@ -41,7 +41,7 @@ $(function()
 
 			if (node = hasScrollbar(this))
 			{
-				$(node).animate({ scrollTop: top }, 300, function() { window.location.hash = hash; });
+				$htmlbody.animate({ scrollTop: top }, 300, function() { window.location.hash = hash; });
 			}
 		});
 
